@@ -52,7 +52,10 @@ that is already listed is a collision; settle it before you copy:
   `diagnose-before-fixing`, and the quality floor in its inject adapt rules from
   MIT-licensed skill collections. Keep this file with any copy of them.
 - **Not copied:** this guide, `README.md`, `CHANGELOG.md`, `docs/`, `schemas/`, `scripts/`,
-  `test/`, `package.json` and `.github/`. They belong to the template.
+  `test/`, `package.json` and `.github/`. They belong to the template. `schemas/` holds the
+  OATS capability-manifest and soul schemas, copied from OATS v0.69.7 (`schemas/README.md`),
+  for `npm run validate` only. Where they and your kernel disagree, the kernel's own
+  validation is authoritative.
 
 ## 2. The principles that never change
 
