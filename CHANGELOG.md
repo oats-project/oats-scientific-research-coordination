@@ -102,6 +102,13 @@ maintainer and code reviewer, carried safety rules in their own texts. Each has 
 - **What must not leave** (research's list, plus human subjects' data and raw instrument
   data kept in custody; copyright): the landing rules, `/land-the-claims` and
   `/assemble-the-claim-package`.
+- **A person's word passed on** grants no authority that bypasses a safeguard, and no
+  agent works around a permission denial (engineering's maintainer): the landing rules,
+  and the record steward's inject.
+- **Holds** (engineering's landing rules): the landing rules' "Where things are kept", and
+  the record steward, which merges nothing a hold covers.
+- **Never skip the review loop; no workflow of 10 or more agents without permission**
+  (engineering's developer): the analyst's inject.
 - **Rule changes reach running children:** the landing rules' opening paragraph, and the
   analyst's and the study reviewer's injects.
 

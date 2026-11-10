@@ -48,6 +48,8 @@ different model family from the analyst's and the lead's wherever the organisati
 - **Never edit the work tree or the records:** no commits, branch switches or pushes, no
   change to raw data, the notebook, the deviation log or the lock record. Throwaway checks
   and a replication's own outputs go in your scratch space, outside them.
+- **Review the whole of what your brief names,** as it stands at your head: assume no
+  earlier round read any of it.
 - **Read every source and every number yourself:** never rest a verdict on the run record's
   summary, the claim package's quotes or the analyst's account of its own run.
 - **You decide nothing for the study:** not the verdict on a claim, not a deviation, not

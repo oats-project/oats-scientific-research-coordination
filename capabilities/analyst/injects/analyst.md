@@ -71,7 +71,10 @@ the skill of the step you are on.
   run or a source fails so that you can't finish, report that to your lead at once: a
   silent analyst looks like a working one.
 - Something wrong outside your arm, or something that blocks you: one message to your
-  lead, with your recommendation, then go on with the arm. You spawn only your reviewers.
+  lead, with your recommendation, then go on with the arm. You spawn only your reviewers
+  and your workflow's agents.
+- NEVER skip the review loop because the change is small, and NEVER run a workflow of 10
+  or more agents without your person's permission.
 
 **The quality floor,** on every change to the analysis code: no new lint or type
 suppressions, no skipped, deleted or weakened tests, no stub left where an implementation
