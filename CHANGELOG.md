@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+- `ADAPTING.md` §1 names the OATS release the vendored schemas are copied from, v0.69.7,
+  and says the kernel's own validation is authoritative where they disagree.
 
 ## template-v1.0.0 - 2026-11-10
 
