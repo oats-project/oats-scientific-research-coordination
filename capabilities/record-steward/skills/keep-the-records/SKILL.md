@@ -96,5 +96,28 @@ git -C <tree> diff --no-renames --name-status <base>...<head> \
   | grep -v -E "^[AM]\sstudies/[^/]+/(README\.md|notebook\.md|deviations\.md|claims/)"   # must print nothing
 ```
 
+## Holds without a forge
+Where the records have no forge, a hold is a line in `holds.md` at the repository's root,
+and a later line lifts it (your landing rules, "Where things are kept"). Each is one line:
+```
+<time, UTC, ISO 8601> | hold <id> | scope: <a change at its head, or the default branch> | reason: <why> | lifted by: <who> | called by <who>, <link>
+<time, UTC, ISO 8601> | lifts <id> | called by <who>, <link>
+```
+A change that adds such lines merges on its caller's message at an exact head, even while
+a hold stands: it changes nothing a hold covers. Check it:
+```bash
+git -C <tree> diff --no-renames --name-status <base>...<head> \
+  | grep -v -E "^[AM]\sholds\.md$"                                   # must print nothing
+git -C <tree> diff <base>...<head> -- holds.md | grep '^+[^+]'       # the lines it adds
+```
+- Sections 1 and 3 pass: the file only grows.
+- Each added line has one of the two forms above, and its `called by` is who sent you the
+  call; a line that names anyone else is a no.
+- **To place a hold,** the caller is a study lead or a person your landing rules name.
+- **To lift one,** the line names the hold it lifts, and its caller is the one that hold
+  names in `lifted by`, or a person your landing rules name. A lead lifts only a hold it
+  placed itself, never one a person placed.
+- Nothing else rides with it: any other change goes by its own route.
+
 Adapted from the engineering template's maintainer, template-v2.2.0; new for a study's
 records.

@@ -30,11 +30,18 @@ for the study), naming this revision, by `C` or by the hash you are about to com
   no lock yet.
 
 ## 3. Merge it, and hash it
-The protocol, and only the study's files the call names, merge as any record does: with
-`/keep-the-records` passing between `origin/<default>` and `C`, through the forge's merge
-guarded by `C` where the records repository is on a forge, or with a merge of `C` where it
-isn't (`/land-a-run-record`, "Merge it"). Then hash the file as it now stands on the default
-branch, and check it is the approved one:
+A lock merge carries the protocol and nothing else: a run's files land only by
+`/land-a-run-record`, and a study's status, notebook, deviations or claims by
+`/keep-the-records`, "A study's other records". Check it:
+```bash
+git -C <tree> diff --no-renames --name-status origin/<default>...C \
+  | grep -v -E "^[AM]\s<s>/protocol\.md$"                          # must print nothing
+```
+Any line it prints is a no: that change goes by its own route. The protocol then merges as
+any record does: with `/keep-the-records` passing between `origin/<default>` and `C`,
+through the forge's merge guarded by `C` where the records repository is on a forge, or
+with a merge of `C` where it isn't (`/land-a-run-record`, "Merge it"). Then hash the file
+as it now stands on the default branch, and check it is the approved one:
 ```bash
 git -C <tree> fetch origin
 git -C <tree> show origin/<default>:<s>/protocol.md | sha256sum
@@ -50,7 +57,12 @@ none), on a branch from `origin/<default>`, merged the same way:
 ```bash
 date -u +%Y-%m-%dT%H:%M:%SZ
 ```
-Then run `/keep-the-records` on that commit too: the lock record only grows.
+Then run `/keep-the-records` on that commit too: the lock record only grows. The commit
+carries the lock line and nothing else:
+```bash
+git -C <tree> diff --no-renames --name-status origin/<default>...<lock commit> \
+  | grep -v -E "^[AM]\s<s>/locks\.md$"                             # must print nothing
+```
 
 ## 5. What you refuse
 - **A hold** on the protocol's change or on the records' default branch (your landing

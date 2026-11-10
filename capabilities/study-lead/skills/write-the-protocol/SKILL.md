@@ -29,7 +29,9 @@ Arms:         <each arm: what it runs, on which data, the outputs it records>
 Analysis plan: <for each arm: the method, the specifications, exclusions, the held-out or
                blinded data, and how many analyses may be tried>
 Environment:  <the pinned environment for each arm: its image or lockfile, and its hash>
-Replication:  <the comparison rule: which outputs, what tolerance, for each arm's re-run>
+Independent check: <for each arm, the one that isn't LLM judgement: a re-run and its
+               comparison rule (which outputs, what tolerance); a formal proof check (the
+               checker, its version, the statement it checks); or an expert referee, named>
 Checks:       <for each claim: the checks it gets, each marked "not LLM judgement" where
                it is a re-run, a locked held-out set, a formal proof check, a physical
                measurement or a human expert>

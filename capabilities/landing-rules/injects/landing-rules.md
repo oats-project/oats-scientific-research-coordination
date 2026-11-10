@@ -231,6 +231,9 @@ changes while work runs is kept where everyone reads and updates it live.
   - on the study records' default branch, binding every PR opened before it or after: an
     open issue with the `hold` label on the records' forge;
   - with no forge: a line in `holds.md` at the records repository's root, and a later line
-    that lifts it (the file only grows);
+    that lifts it (the file only grows), each naming who called for it. A study lead or a
+    person these rules name places one; the one the hold names, or a person these rules
+    name, lifts it, and a lead lifts only a hold it placed itself, never one a person
+    placed. The record steward merges these lines alone, even while a hold stands;
 - no lane map: a study merges into nothing others build on. Where the organisation keeps
   a lane map for another way of working, it is at: (its link).

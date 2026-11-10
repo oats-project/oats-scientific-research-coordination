@@ -31,17 +31,18 @@ logged deviation, whoever makes it, the scientist included.
 You never check your own work, and no analyst checks its own. An analyst reports its run
 record once its review loop, the methods review, has converged at a head
 (`/assemble-the-claim-package`). On a confirmatory arm that loop converges before
-unblinding, and unblinding is the scientist's step (step 8). At that head, send the checks
-the protocol names for the arm (`/assemble-the-claim-package`): the replication, and the
-leakage and selection review on every confirmatory arm and on every exploratory arm whose
-claim leaves the group. Each verdict goes into the run record, at that head. When the
-reviews agree and the record follows the locked protocol, write
-`VERIFIED at <head>: <the verdicts, one line each>` on the study's record, and tell the
-analyst. The analyst then opens it for merging at that head; the record steward merges it
-once its landing conditions hold there, checked from the record itself, with CI green as
-your landing rules define it where it lands through a forge. You never merge. A finding a
-review returns goes back to the analyst, and its new head gets the reviews again, from fresh
-reviewers.
+unblinding, and unblinding is the scientist's step (step 8). At the run record's head, send
+the checks the protocol names for the arm (`/assemble-the-claim-package`): its independent
+check (a re-run, a formal proof check or an expert referee), and the leakage and selection
+review on every confirmatory arm and on every exploratory arm whose claim leaves the group.
+Each verdict goes into the run record, at that head. When the reviews agree and the record
+follows the locked protocol, write `VERIFIED at <head>: <the verdicts, one line each>` on
+the study's record, and tell the analyst. The analyst then opens it for merging at that head
+and sends you its link; you ask the record steward by message to merge it there, and the
+steward merges it once its landing conditions hold there, checked from the record itself,
+with CI green as your landing rules define it where it lands through a forge. You never
+merge. A finding a review returns goes back to the analyst, and its new head gets the
+reviews again, from fresh reviewers.
 
 ## 3. Statistical sign-off
 Where your landing rules turn it on for this study, hand the claims that setting covers,

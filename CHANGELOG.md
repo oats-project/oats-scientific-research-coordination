@@ -44,18 +44,20 @@ gives it the review loop, two craft skills, the host rules and the definition of
     recorded; never the hoped-for direction in a confirmatory brief. Research's checkpoint
     recipe, unchanged but for its pointer.
   - `/write-the-protocol`: new. The protocol's shape (mode per claim, decision rules, the
-    analysis plan, the replication's comparison rule, the checks marked "not LLM
-    judgement"), no hoped-for direction in any brief, the scientist's approval of one
-    revision, the record steward's lock, a change after the lock as a new revision or a
-    logged deviation, and "Find the record steward".
+    analysis plan, each arm's independent check (a re-run and its comparison rule, a formal
+    proof check or an expert referee), the checks marked "not LLM judgement"), no hoped-for
+    direction in any brief, the scientist's approval of one revision, the record steward's
+    lock, a change after the lock as a new revision or a logged deviation, and "Find the
+    record steward".
   - `/assemble-the-claim-package`: from research's `/write-the-report` and
     `/check-the-claims`. Each arm from its report to a merged run record (unblinding on a
-    card, the replication and the leakage review, `VERIFIED at <head>`, the steward's
-    merge), then the package: each claim's mode, evidence, rule, checks, deviations, full
-    count of attempts and the AI use by stage, and a citation check on every cited claim,
-    each of whose verdicts the lead acts on as research's `/check-the-claims` acts on the
-    verifier's: weak narrowed or shown, unsupported corrected or dropped with what rested on
-    it, a disputed verdict to a fresh reviewer or shown as disputed.
+    card, the independent check the protocol names and the leakage review,
+    `VERIFIED at <head>`, the analyst's PR link to the lead and the lead's call to the
+    steward), then the package: each claim's mode, evidence, rule, checks, deviations, full count of attempts
+    and the AI use by stage, and a citation check on every cited claim, each of whose
+    verdicts the lead acts on as research's `/check-the-claims` acts on the verifier's: weak
+    narrowed or shown, unsupported corrected or dropped with what rested on it, a disputed
+    verdict to a fresh reviewer or shown as disputed.
   - `/land-the-claims`: from research's `/land-the-report`. Acceptance inside the group,
     with statistical sign-off where the setting says; leaving the group only with every
     human author's approval, a check that isn't LLM judgement, AI use by stage and no AI
@@ -68,7 +70,8 @@ gives it the review loop, two craft skills, the host rules and the definition of
   `/diagnose-before-fixing` are engineering's, below. Under the experimental profile it is
   the experimenter.
 - `oats.study-reviewer`: an inject and four skills, one kind of review per brief:
-  `/review-methods`, `/replicate` (mechanical, by the protocol's comparison rule),
+  `/review-methods`, `/replicate` (mechanical, by the protocol's comparison rule, or by a
+  formal proof checker's exit status and the statement it checked),
   `/review-for-leakage-and-selection` and `/check-citations`. Adapted from engineering's
   `oats.code-review` and research's `oats.verifier`.
 - `oats.record-steward`: an inject and three skills, `/lock-the-protocol`,
@@ -76,9 +79,11 @@ gives it the review loop, two craft skills, the host rules and the definition of
   commands; no runtime code. `/keep-the-records` checks every commit a change brings in,
   merges included, so an edit restored before the head is still caught; it protects each
   arm's attempt and deviation logs as well as the study's logs, and merges a study's other
-  records. `/land-a-run-record` lands only its own arm (a protocol or a lock never rides
-  in a run record), binds the methods review to the code and the environment it read and
-  the lead's checks to the run as it lands, and reads both kinds of hold. Adapted from
+  records, and a line that places or lifts a hold where the records have no forge, with its
+  caller checked against the hold. `/lock-the-protocol` merges the protocol alone, and its
+  lock line alone. `/land-a-run-record` lands only its own arm (a protocol or a lock never
+  rides in a run record), binds the methods review to the code and the environment it read
+  and the lead's checks to the run as it lands, and reads both kinds of hold. Adapted from
   engineering's `oats.maintainer` where it fits (called at an exact head, never a station;
   never merge over a RETURN or a hold; relayed word grants no authority). One standing
   instance per study records repository, started top-level by the first lead that needs one.
@@ -118,7 +123,9 @@ maintainer and code reviewer, carried safety rules in their own texts. Each has 
   and the record steward's inject.
 - **Holds** (engineering's landing rules): the landing rules' "Where things are kept", on
   one change and on the records' default branch, and the record steward, which reads both
-  before every merge and lock.
+  before every merge and lock. With no forge, a hold is a line in `holds.md`, placed by a
+  lead or a person the rules name and lifted by the one it names or such a person (a lead
+  only one it placed itself), merged on its own even while a hold stands.
 - **Acting on each verdict** (research's landing rules and `/check-the-claims`): the
   landing rules' "What landed means", for a claim inside the group, and
   `/assemble-the-claim-package` §4, for the citation check's verdicts.

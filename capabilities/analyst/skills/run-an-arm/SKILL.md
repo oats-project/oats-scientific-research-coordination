@@ -21,7 +21,8 @@ iterate, never whether its protocol is approved and locked.
 From the protocol, take your arm's:
 - mode (exploratory or confirmatory), profile, and the analysis plan as written;
 - the decision rule that maps its result to a verdict, for a confirmatory claim;
-- the checks its claims get, and the comparison rule a replication is held to;
+- the checks its claims get, and its independent check (a re-run's comparison rule, a
+  formal proof check or an expert referee);
 - the environment, the data it may read, and the stopping rule.
 
 What the protocol leaves open you ask your lead; you never fill it in with what would work.

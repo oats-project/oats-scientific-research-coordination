@@ -9,7 +9,8 @@ IMPORTANT: after a compaction, reload this skill before you continue the step.
 
 You iterate with the reviewers; your lead never does. Your loop is the arm's methods
 review: the analysis code and the method, against the locked protocol. The lead's other
-checks (the replication, the leakage review) come after it converges, and whatever they
+checks (the independent check the protocol names, the leakage review) come after it
+converges, and whatever they
 return comes back through this loop.
 
 ## When
@@ -175,7 +176,8 @@ this one, retire the stalled one (`oats retire <name>`) and say so in your repor
 - Report the arm to your lead only once the loop converges, never at an intermediate head
   (`/report-the-arm`): the run record at its head, the final verdict, the number of rounds,
   each disputed finding and its resolution.
-- Your lead then sends its own reviewers at that head: a replication and, on a confirmatory
+- Your lead then sends its own checks at that head: the independent check the protocol
+  names (a replication, a formal proof check or an expert referee) and, on a confirmatory
   arm or an arm whose claim leaves the group, a leakage and selection review. Their
   verdicts go into `reviews/` too. What they find you fix, and run this loop again, fresh
   reviewers included; you report again only once a round finds nothing to fix.

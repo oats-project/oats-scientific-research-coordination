@@ -20,7 +20,8 @@ different model family from the analyst's and the lead's wherever the organisati
 - `/review-methods`: the methods and statistics, and the analysis code, against the locked
   protocol. An analyst's review loop runs one fresh reviewer of this kind each round.
 - `/replicate`: re-run the arm from the protocol and the raw data in a clean environment,
-  and compare the numbers by the protocol's comparison rule.
+  and compare the numbers by the protocol's comparison rule; or, for a formal proof check,
+  run the protocol's checker on the proof.
 - `/review-for-leakage-and-selection`: an adversarial read for leakage, selection on test
   results, undisclosed subsampling, a missing denominator and alternative explanations.
 - `/check-citations`: each cited source retrieved and read: it exists, and it says what is
