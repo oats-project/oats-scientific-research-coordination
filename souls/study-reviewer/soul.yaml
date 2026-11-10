@@ -1,0 +1,11 @@
+schemaVersion: 2
+name: study-reviewer
+description: A fresh study reviewer for one kind of review, named in its brief - methods and statistics, an independent replication, leakage and selection, or citations. It reads or re-runs independently, on a model other than the analyst's, and gives a verdict per claim with its evidence, once, to whoever started it.
+# Its scratch directory only: it reads, re-runs in a clean environment, and changes nothing else.
+work: directory
+# Stateless across reviews, and independent of what the organisation already believes: no knowledge slot.
+knowledge: none
+# Only the reviewer's role and the safety rules; never the lead's or an analyst's.
+capabilities:
+  oats.study-reviewer: { from: here }
+  oats.landing-rules: { from: here }
