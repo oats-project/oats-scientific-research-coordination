@@ -193,13 +193,13 @@ under `studies/<study>/`: `README.md` (its status), `protocol.md`, `locks.md`, `
 data kept in custody elsewhere (large instrument data, personal or human-subjects data), a
 hash manifest there: one line per file, its path, size and sha256 separated by tabs (so a
 path holds no tab or newline). Everything under `studies/` is an ordinary file, never a
-symlink, a submodule or a `.gitattributes`. Raw data is write-once in either form;
-`locks.md`, `notebook.md` and `deviations.md`, and each arm's `attempts.md` and
-`deviations.md` under `runs/<arm>/`, are append-only; only the record steward merges into
-the repository's default branch. A record is private to the group. Opening one (making it
-readable outside the group) is a one-way door, decided each time, for that record, by the
-scientist. Why: an opened record can't be closed again, and it may carry what must not
-leave.
+symlink, a submodule or a `.gitattributes`, and there is no `.gitattributes` at the records'
+root either. Raw data is write-once in either form; `locks.md`, `notebook.md` and
+`deviations.md`, and each arm's `attempts.md` and `deviations.md` under `runs/<arm>/`, are
+append-only; only the record steward merges into the repository's default branch. A record
+is private to the group. Opening one (making it readable outside the group) is a one-way
+door, decided each time, for that record, by the scientist. Why: an opened record can't be
+closed again, and it may carry what must not leave.
 
 **Findings worth keeping.**
 <!-- adapt: Which knowledge layer keeps the findings worth keeping, who approves what goes in, and can anyone outside the organisation read it? -->

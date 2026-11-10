@@ -38,10 +38,13 @@ while what it points at changes, and no submodule:
 git -C <tree> ls-tree -r C -- studies holds.md | awk '$1 != "100644" && $1 != "100755"'   # must print nothing
 ```
 A linked directory on the way (`studies/<study>` or its `raw/`) shows here too. Nor is
-there a `.gitattributes` under `studies/`: it can change how a file reads once checked out
-(its encoding, its line endings, a filter) while the file's own entry stays the same:
+there a `.gitattributes` under `studies/` or at the repository's root: it can change how a
+file reads once checked out (its encoding, its line endings, a filter) while the file's own
+entry stays the same. Read the paths NUL-delimited, as git stores them, never as it prints
+them (it quotes a name with an unusual character):
 ```bash
-git -C <tree> ls-tree -r --name-only C -- studies | grep -E '(^|/)\.gitattributes$'     # must print nothing
+git -C <tree> ls-tree -r -z --name-only C -- studies .gitattributes \
+  | grep -z -E '(^|/)\.gitattributes$'                                # must print nothing
 ```
 Data kept elsewhere comes in only as a hash manifest (section 2), never as a link.
 
