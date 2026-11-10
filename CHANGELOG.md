@@ -104,14 +104,24 @@ once its artefact is on the study's record.
 - `oats.json`: the description.
   Port: the reports' templates, the paragraph after each, and the inject's steps 1 to 3.
 
+**`oats.study-lead`**
+- `/assemble-the-claim-package`, changed: each study reviewer's brief is closed (its
+  bounds, what is out of scope, when to stop, reporting a review bigger than that) and
+  asks for what the reviewer checked; step 4 and section 4 first check that each verdict
+  says what it checked, a `checked:` line for every citation, and send back one that
+  doesn't, which counts toward neither a claim nor `CHECKED`. Port: the brief in section
+  1, step 4's opening, section 4's first paragraph and the description.
+
 **`oats.analyst`**
 - `/run-the-review-loop`, changed, after engineering's at template-v3.0.1: each round's
-  verdict carries a Checked section, and a round passes only with one that covers every
-  part of the arm's analysis plan and every test; the report to the lead carries it.
-  Engineering's re-read of a minor's fix by the same reviewer is not taken up: every round
-  here has a fresh reviewer (principle 5). `/test-first` and `/diagnose-before-fixing`
-  didn't change in engineering. Port: steps 1 and 3 of "Iterate", the native reviewer's
-  brief, the first bullet of "Close" and the description.
+  brief is closed (its bounds, what is out of scope, when to stop, reporting a round
+  bigger than that) and asks for a Checked section; each round's verdict carries one, and
+  a round passes only with one that covers every part of the arm's analysis plan and
+  every test; the report to the lead carries it. Engineering's re-read of a minor's fix by
+  the same reviewer is not taken up: every round here has a fresh reviewer (principle 5).
+  `/test-first` and `/diagnose-before-fixing` didn't change in engineering. Port: items 5
+  and 6 of "Brief it", steps 1 and 3 of "Iterate", the native reviewer's brief, the first
+  bullet of "Close" and the description.
 - `/report-the-arm`, changed: "Reviews" names what each round checked, and "Couldn't run"
   where the arm outgrew its brief's bounds. Port: those two lines.
 - inject, changed: the capitals keep-loading line; the reviewers bullet says
