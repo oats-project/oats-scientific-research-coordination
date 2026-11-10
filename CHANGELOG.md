@@ -81,7 +81,9 @@ gives it the review loop, two craft skills, the host rules and the definition of
   arm's attempt and deviation logs as well as the study's logs, and merges a study's other
   records, and a line that places or lifts a hold where the records have no forge, with its
   caller checked against the hold. `/lock-the-protocol` merges the protocol alone, and its
-  lock line alone. `/land-a-run-record` lands only its own arm (a protocol or a lock never
+  lock line alone. Every route merges through a forge only with CI green at the head and a
+  merge commit, never a squash or a rebase, and checks the head is in the default branch's
+  history after. `/land-a-run-record` lands only its own arm (a protocol or a lock never
   rides in a run record), binds the methods review to the code and the environment it read
   and the lead's checks to the run as it lands, and reads both kinds of hold. Adapted from
   engineering's `oats.maintainer` where it fits (called at an exact head, never a station;
@@ -204,14 +206,16 @@ From oats-project/oats-engineering-coordination at template-v2.2.0 (commit
   fresh `study-reviewer` briefed for `/review-methods`, attached to the analyst's branch of
   the study records; on a confirmatory arm the loop runs before unblinding, on blinded,
   held-back or synthetic data, and reviews the code and the method, never the result; each
-  round's verdict is committed under the run record's `reviews/`; a finding that would
-  change the protocol goes to the lead; the brief carries the protocol's lock hash and never
-  the hoped-for direction; model families replace the named models and harnesses; the close
-  and finish hand back to the lead, then the PR on the lead's `VERIFIED at <head>`, its link
-  to the lead, which calls the record steward, as engineering's expert hands a PR to its
-  maintainer, and the steward's merge. On a confirmatory arm the report names the methods
-  head beside the run record's later head, which adds only the run on the real data, its
-  attempts and its reviews.
+  round's verdict is committed under the run record's `reviews/`; the loop converges only on
+  a passing verdict, never on a disputed finding or the lead's decision after the cap, and
+  where no fresh reviewer passes the head the lead narrows the claim or stops the arm; a
+  finding that would change the protocol goes to the lead; the brief carries the protocol's
+  lock hash and never the hoped-for direction; model families replace the named models and
+  harnesses; the close and finish hand back to the lead, then the PR on the lead's `VERIFIED
+  at <head>`, its link to the lead, which calls the record steward, as engineering's expert
+  hands a PR to its maintainer, and the steward's merge. On a confirmatory arm the report
+  names the methods head beside the run record's later head, which adds only the run on the
+  real data, its attempts and its reviews.
 - **`/test-first`,** from `oats.developer`: the locked protocol in place of the spec; fixed
   seeds; expected values from hand-worked or published cases; on a confirmatory arm, never
   the real outcome data.

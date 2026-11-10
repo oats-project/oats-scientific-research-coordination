@@ -40,7 +40,7 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    builds its analysis in a pinned environment on synthetic tickets, logs every attempt and
    deviation, and keeps its traces. It iterates with fresh study reviewers on
    `/review-methods` (`/run-the-review-loop`), each its child on another model, until a
-   round finds nothing to fix: every fix comes before anyone sees the result.
+   round passes the head: every fix comes before anyone sees the result.
 5. **Unblinding.** The scientist unblinds the held-out quarter, an irreversible step on a
    card from the lead. The analyst runs the locked analysis once on it and reports its run
    record at its head (`/report-the-arm`): the result against the locked rule, the count of

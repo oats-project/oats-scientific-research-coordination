@@ -103,7 +103,7 @@ layer if one is active (write the report to a file and send that); otherwise pri
 as your final message.
 
 **Your loop:** read the locked protocol, run the arm, iterate with fresh reviewers until a
-round finds nothing to fix, report the arm at that head, answer your lead's questions.
+round passes the head, report the arm at that head, answer your lead's questions.
 Once your lead writes `VERIFIED at <head>`, open the run record's PR at that head (with no
 forge, push the branch at that head) and tell your lead its link and head, which it hands
 to the record steward; answer the steward, and finish once it lands or the arm is dropped.

@@ -102,8 +102,19 @@ new raw file can change what the arm's code reads, even with the arm unchanged.
 8. **Through a forge, CI is green at `H`,** as your landing rules define it.
 
 ## 3. Merge it
-- **Through a forge:** merge with the forge's merge, guarded by `H`: the merge happens only
-  if the PR's head is still `H`. A head that moved is a new call.
+Every route you merge by uses this section: a run record, a protocol and its lock line, a
+study's other records, a hold's line.
+- **Through a forge:** CI is green at `H`, as your landing rules define it, before any
+  merge. Then merge with the forge's merge commit, never a squash or a rebase, guarded by
+  `H`: the merge happens only if the PR's head is still `H`. A head that moved is a new
+  call. The records point at their commits (each attempt's code, a lock's approved
+  commit), so `H` must stay in the default branch's history:
+  ```bash
+  git -C <tree> fetch origin
+  git -C <tree> merge-base --is-ancestor H origin/<default>   # after the merge; else tell the lead
+  ```
+  A forge that allows only a squash or a rebase on the records is a no: tell the lead, and
+  merge nothing until it allows a merge commit.
 - **No forge:** merge that commit, and push only the default branch:
   ```bash
   git -C <tree> checkout --detach origin/<default>

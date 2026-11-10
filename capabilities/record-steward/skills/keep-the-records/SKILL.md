@@ -103,8 +103,9 @@ and a later line lifts it (your landing rules, "Where things are kept"). Each is
 <time, UTC, ISO 8601> | hold <id> | scope: <a change at its head, or the default branch> | reason: <why> | lifted by: <who> | called by <who>, <link>
 <time, UTC, ISO 8601> | lifts <id> | called by <who>, <link>
 ```
-A change that adds such lines merges on its caller's message at an exact head, even while
-a hold stands: it changes nothing a hold covers. Check it:
+A change that adds such lines merges on its caller's message at an exact head, with a merge
+of that commit (`/land-a-run-record`, "Merge it"), even while a hold stands: it changes
+nothing a hold covers. Check it:
 ```bash
 git -C <tree> diff --no-renames --name-status <base>...<head> \
   | grep -v -E "^[AM]\sholds\.md$"                                   # must print nothing

@@ -14,10 +14,13 @@ once the scientist accepts it (`/land-the-claims`).
 ## 1. From an arm's report to a merged run record
 For each arm, in turn:
 1. **Its methods review converged.** The analyst iterates with fresh study reviewers on the
-   code and the method until a round finds nothing to fix; its report names the last
-   round's verdict, in the run record. On a confirmatory arm, that loop runs before
-   unblinding, on blinded, held-back or synthetic data, so every fix comes before anyone
-   sees the result.
+   code and the method until a round passes the head, `APPROVE` or `APPROVE WITH NITS`; its
+   report names that verdict, in the run record. A finding you overrule after the analyst's
+   cap still needs a fresh reviewer's pass: your decision is never the pass. Where none
+   passes the head, narrow the claim or stop the study, and record why on its record; never
+   ask for unblinding, or take the arm further, without the pass. On a confirmatory arm,
+   that loop runs before unblinding, on blinded, held-back or synthetic data, so every fix
+   comes before anyone sees the result.
 2. **Unblinding, for a confirmatory arm:** the scientist's irreversible step (your landing
    rules, "Irreversible steps, all the scientist's"). Send them one card (`/ask-a-person`):
    the arm, the run record's head, the converged review, the locked rule it will be judged

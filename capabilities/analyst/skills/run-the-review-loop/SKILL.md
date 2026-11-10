@@ -1,6 +1,6 @@
 ---
 name: run-the-review-loop
-description: The analyst's review loop - you, never your lead, iterate with fresh study reviewers on the methods review - a new study-reviewer instance each round, spawned as your OATS child on a different model from yours where one is available, never the previous round's, briefed with the locked protocol and not your reasoning or the hoped-for direction, until a round finds nothing to fix; each verdict written into the run record; on a confirmatory arm the loop runs on blinded, held-back or synthetic data, before unblinding, and reviews the code and the method, never the result; retire each reviewer once its findings are settled; finish once your run record lands. Use when your arm runs end to end, before you report it, for whatever your lead returns, and when your record has landed or the arm is dropped.
+description: The analyst's review loop - you, never your lead, iterate with fresh study reviewers on the methods review - a new study-reviewer instance each round, spawned as your OATS child on a different model from yours where one is available, never the previous round's, briefed with the locked protocol and not your reasoning or the hoped-for direction, until a round passes the head (APPROVE or APPROVE WITH NITS); each verdict written into the run record; on a confirmatory arm the loop runs on blinded, held-back or synthetic data, before unblinding, and reviews the code and the method, never the result; retire each reviewer once its findings are settled; finish once your run record lands. Use when your arm runs end to end, before you report it, for whatever your lead returns, and when your record has landed or the arm is dropped.
 ---
 
 IMPORTANT: after a compaction, reload this skill before you continue the step.
@@ -15,8 +15,8 @@ return comes back through this loop.
 
 ## When
 Once the arm runs end to end in your tree and your own tests pass there, round by round
-until one finds nothing to fix. Again for whatever your lead returns. Not per commit, not
-before the arm runs.
+until one passes the head. Again for whatever your lead returns. Not per commit, not before
+the arm runs.
 
 **On a confirmatory arm, before unblinding.** The loop runs on the blinded, held-back or
 synthetic data the protocol names, so every fix comes before anyone sees the result. A
@@ -102,16 +102,20 @@ verdict".
 3. Once every finding is fixed or disputed, close the round and retire its reviewer
    (Close); a native reviewer ends with its report.
 4. Start the next round's fresh reviewer at the new head.
-5. Repeat until a round finds nothing to fix: `APPROVE` or `APPROVE WITH NITS`, or only
-   findings you already dispute with a concrete reason. A nit you take moves the head, and
-   a moved head gets a fresh round. Report only a methods head a clean round reviewed; the
+5. Repeat until a round passes the head: `APPROVE` or `APPROVE WITH NITS`. A finding you
+   dispute goes to the next round's fresh reviewer with both sides, and its verdict stands:
+   the loop converges only on a pass, never on a dispute, because unblinding and landing
+   both need one. A nit you take moves the head, and a moved head gets a fresh round.
+   Report only a methods head a passing round reviewed; the
    run record's head after it may add only the run's outputs, its attempts and its
    reviews (`/report-the-arm`).
 
 Cap: 4 rounds. Still `CHANGES NEEDED` after round 4: stop, and take the open findings with
-your position on each to your lead, who decides each. One it overrules counts as disputed
-with a concrete reason (its decision, in your report); one it upholds you fix, then run a
-fresh round.
+your position on each to your lead, who decides each. One it upholds you fix; one it
+overrules goes, with its decision, to the next fresh reviewer. Either way a fresh round must
+still pass the head: the lead's decision is never the pass. Where no fresh reviewer passes
+it after the lead's decisions, the lead narrows the claim or stops the arm, and records
+why; you never ask for unblinding or report the arm without the pass.
 
 ## Set a checkpoint before you wait
 Once your turn ends you run no instructions, and a stalled reviewer may report nothing: a
@@ -176,11 +180,11 @@ this one, retire the stalled one (`oats retire <name>`) and say so in your repor
 - Report the arm to your lead only once the loop converges, never at an intermediate head
   (`/report-the-arm`): the run record at its head, the final verdict, the number of rounds,
   each disputed finding and its resolution.
-- Your lead then sends its own checks at that head: the independent check the protocol
-  names (a replication, a formal proof check or an expert referee) and, on a confirmatory
-  arm or an arm whose claim leaves the group, a leakage and selection review. Their
-  verdicts go into `reviews/` too. What they find you fix, and run this loop again, fresh
-  reviewers included; you report again only once a round finds nothing to fix.
+- Your lead then sends its own checks at that head: the independent check the protocol names
+  (a replication, a formal proof check or an expert referee) and, on a confirmatory arm or
+  an arm whose claim leaves the group, a leakage and selection review. Their verdicts go
+  into `reviews/` too. What they find you fix, and run this loop again, fresh reviewers
+  included; you report again only once a round passes the head.
 - Once your lead writes `VERIFIED at <head>`, open the run record's PR at that head (with
   no forge, push the branch at that head) and tell your lead its link and head: your lead
   asks the record steward to merge it, and the steward merges it once its landing
