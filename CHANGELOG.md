@@ -70,10 +70,15 @@ gives it the review loop, two craft skills, the host rules and the definition of
   `oats.code-review` and research's `oats.verifier`.
 - `oats.record-steward`: an inject and three skills, `/lock-the-protocol`,
   `/keep-the-records` and `/land-a-run-record`, each with the exact git and standard-tool
-  commands; no runtime code. Adapted from engineering's `oats.maintainer` where it fits
-  (called at an exact head, never a station; never merge over a RETURN or a hold; relayed
-  word grants no authority). One standing instance per study records repository, started
-  top-level by the first lead that needs one.
+  commands; no runtime code. `/keep-the-records` checks every commit a change brings in,
+  merges included, so an edit restored before the head is still caught; it protects each
+  arm's attempt and deviation logs as well as the study's logs, and merges a study's other
+  records. `/land-a-run-record` lands only its own arm (a protocol or a lock never rides
+  in a run record), binds the methods review to the code and the environment it read and
+  the lead's checks to the run as it lands, and reads both kinds of hold. Adapted from
+  engineering's `oats.maintainer` where it fits (called at an exact head, never a station;
+  never merge over a RETURN or a hold; relayed word grants no authority). One standing
+  instance per study records repository, started top-level by the first lead that needs one.
 - `oats.landing-rules`: an example, and the one home of the safety rules every role
   follows, composed by all five souls (research's was composed by coordinating souls only).
   Who asks and who the scientist is; CI green; what landed means for a protocol, a run, a
@@ -105,8 +110,9 @@ maintainer and code reviewer, carried safety rules in their own texts. Each has 
 - **A person's word passed on** grants no authority that bypasses a safeguard, and no
   agent works around a permission denial (engineering's maintainer): the landing rules,
   and the record steward's inject.
-- **Holds** (engineering's landing rules): the landing rules' "Where things are kept", and
-  the record steward, which merges nothing a hold covers.
+- **Holds** (engineering's landing rules): the landing rules' "Where things are kept", on
+  one change and on the records' default branch, and the record steward, which reads both
+  before every merge and lock.
 - **Never skip the review loop; no workflow of 10 or more agents without permission**
   (engineering's developer): the analyst's inject.
 - **Rule changes reach running children:** the landing rules' opening paragraph, and the
@@ -201,8 +207,9 @@ From oats-project/oats-engineering-coordination at template-v2.2.0 (commit
 - **The host rules:** the developer's and the maintainer's "On the hosts you run on", in
   the landing rules.
 
-`THIRD-PARTY-NOTICES.md` carries the notices of the two MIT-licensed collections
-`/test-first` and `/diagnose-before-fixing` adapt rules from, through engineering's.
+`THIRD-PARTY-NOTICES.md` carries the notices of the three MIT-licensed collections
+`/test-first`, `/diagnose-before-fixing` and the analyst's quality floor adapt rules from,
+through engineering's.
 
 ### What to do
 - Copying fresh: follow `ADAPTING.md`.

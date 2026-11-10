@@ -44,7 +44,8 @@ README.md       the arm, the protocol's commit and lock hash, the mode, how to r
 environment/    the pinned environment: its lockfile, container digest or image reference
 code/           the analysis code, at the commit each attempt ran
 attempts.md     every attempt, appended: when, the code commit, the inputs, the outcome
-deviations.md   every departure from the locked protocol, appended: what, when, why, who
+deviations.md   every departure of this arm from the locked protocol, appended: what, when,
+                why, who (the study's own deviations are the lead's, in the study's log)
 outputs/        raw outputs of each attempt, never overwritten
 traces/         full traces wherever the runtime exposes them
 reviews/        each review round's verdict, at the head it reviewed

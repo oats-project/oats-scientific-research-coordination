@@ -21,7 +21,9 @@ before the arm runs.
 synthetic data the protocol names, so every fix comes before anyone sees the result. A
 round reviews the code and the method, never the result: "iterate until it passes" is not
 a stopping rule here, and no round tunes a result. After unblinding, a change is a logged
-deviation (`/run-an-arm`), and goes round this loop as one.
+deviation (`/run-an-arm`), and goes round this loop as one: its brief says it reviews a
+change made after unblinding, logged in your deviation log, the one case in which a methods
+reviewer reads a run whose result is visible.
 
 ## A fresh reviewer each round
 Each round's reviewer is fresh: a new `study-reviewer` instance, your OATS child, briefed

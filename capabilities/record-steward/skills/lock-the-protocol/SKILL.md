@@ -53,6 +53,8 @@ date -u +%Y-%m-%dT%H:%M:%SZ
 Then run `/keep-the-records` on that commit too: the lock record only grows.
 
 ## 5. What you refuse
+- **A hold** on the protocol's change or on the records' default branch (your landing
+  rules, "Where things are kept"): no merge and no lock until it is lifted.
 - **No readable approval of that revision:** no lock (step 2).
 - **A change to an earlier lock:** never. A revised protocol gets a new line that also says
   `supersedes <the earlier hash>`, on the scientist's approval of the new revision. Where

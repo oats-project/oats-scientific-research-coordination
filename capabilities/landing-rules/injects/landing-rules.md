@@ -64,11 +64,11 @@ weigh anything.
 
 **Statistical sign-off.**
 <!-- adapt: Which studies need a human statistician's sign-off, and who signs off? -->
-A confirmatory claim in a study whose protocol marks it clinical or policy-relevant needs
-a human statistician's sign-off, `SIGNED OFF by <statistician>`, before its claim package
-goes for acceptance. Other studies need none: the methods review stands. Why: an
-independent statistical reviewer has improved papers in a medical journal's trial, a human
-finding, and the stakes of clinical and policy work justify one.
+Every claim in a study whose protocol marks it clinical or policy-relevant, exploratory or
+confirmatory, needs a human statistician's sign-off, `SIGNED OFF by <statistician>`, before
+its claim package goes for acceptance. Other studies need none: the methods review stands.
+Why: an independent statistical reviewer has improved papers in a medical journal's trial,
+a human finding, and the stakes of clinical and policy work justify one.
 
 **Who does the work.** The study lead plans the study, writes the protocol, sends the
 analysts and the probes, has the claims checked, assembles the claim package and lands it
@@ -186,8 +186,9 @@ under `studies/<study>/`: `README.md` (its status), `protocol.md`, `locks.md`, `
 `runs/<arm>/`, `notebook.md`, `deviations.md` and `claims/`. Raw data is in `raw/`, or, for
 data kept in custody elsewhere (large instrument data, personal or human-subjects data), a
 hash manifest there: one line per file, its path, size and sha256. Raw data is write-once in
-either form; `locks.md`, `notebook.md` and `deviations.md` are append-only; only the record
-steward merges into the repository's default branch. A record is private to the group.
+either form; `locks.md`, `notebook.md` and `deviations.md`, and each arm's `attempts.md` and
+`deviations.md` under `runs/<arm>/`, are append-only; only the record steward merges into
+the repository's default branch. A record is private to the group.
 Opening one (making it readable outside the group) is a one-way door, decided each time, for
 that record, by the scientist. Why: an opened record can't be closed again, and it may carry
 what must not leave.
@@ -218,8 +219,12 @@ changes while work runs is kept where everyone reads and updates it live.
   check's verdict beside the revision it checked;
 - the record stewards: one standing instance per study records repository, named
   `record-steward-<records>`;
-- a hold: the `hold` label on a run record's PR (or, with no forge, a line in the study's
-  `notebook.md`), with its reason, its scope and who lifts it; the record steward merges
-  nothing a hold covers;
+- holds, each with its reason, its scope and who lifts it, read by the record steward
+  before every merge and lock:
+  - on one change: the `hold` label on its PR;
+  - on the study records' default branch, binding every PR opened before it or after: an
+    open issue with the `hold` label on the records' forge;
+  - with no forge: a line in `holds.md` at the records repository's root, and a later line
+    that lifts it (the file only grows);
 - no lane map: a study merges into nothing others build on. Where the organisation keeps
   a lane map for another way of working, it is at: (its link).

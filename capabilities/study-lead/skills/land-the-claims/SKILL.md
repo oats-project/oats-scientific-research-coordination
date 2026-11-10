@@ -26,7 +26,7 @@ scientist (`/hand-off`):
 - what you need back: their acceptance, or what it still lacks.
 
 Where your landing rules' "Statistical sign-off" turns it on for this study, hand the
-package's confirmatory claims to the statistician it names, at the same revision, and wait
+claims that setting covers to the statistician it names, at the same revision, and wait
 for `SIGNED OFF by <statistician>` before you ask for acceptance. Set needs-input
 (`oats instance attention --message "<one line>"`) and end your turn.
 

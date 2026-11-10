@@ -22,8 +22,11 @@ On a confirmatory arm you review **before unblinding**: the code and the method 
 blinded, held-back or synthetic data, never on the data the confirmatory claim rests on.
 Every fix comes before anyone sees the result. If the run record shows a confirmatory
 result already, or your brief hands you one, say so at the top of your report and review
-nothing past it: that is a finding for the lead, not a round. Never ask for the result,
-and never say whether it supports the hypothesis.
+nothing past it: that is a finding for the lead, not a round. The one exception is a brief
+that asks you to review a change made after unblinding, logged in the arm's deviation log:
+review that change's code and method, say at the top of your report that the result was
+visible, and judge nothing by it. Never ask for the result, and never say whether it
+supports the hypothesis.
 
 ## 3. Attack it
 Go through these deliberately:

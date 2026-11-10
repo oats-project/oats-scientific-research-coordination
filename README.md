@@ -113,7 +113,7 @@ around it, and the evidence the design rests on.
 - **[CHANGELOG.md](CHANGELOG.md):** what changed per skill in each template release, so a
   copy can take up a change.
 - **[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md):** the MIT-licensed skill collections
-  two of the analyst's skills adapt rules from.
+  two of the analyst's skills and its quality floor adapt rules from.
 
 Every place where the template assumes something about an organisation carries one marker,
 `<!-- adapt: <the question to ask> -->`. An adapted copy has none left.
@@ -160,5 +160,5 @@ children, never a lead's own subagents.
 
 ## License
 MIT. The texts taken from the research and engineering templates are awebai's, under the
-same licence. Two of the analyst's skills adapt rules from MIT-licensed skill collections
-([THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)).
+same licence. Two of the analyst's skills and its quality floor adapt rules from
+MIT-licensed skill collections ([THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)).

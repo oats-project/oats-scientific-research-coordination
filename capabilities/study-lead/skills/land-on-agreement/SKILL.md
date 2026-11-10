@@ -44,11 +44,12 @@ review returns goes back to the analyst, and its new head gets the reviews again
 reviewers.
 
 ## 3. Statistical sign-off
-Where your landing rules turn it on for this study, hand the claim package's confirmatory
-claims at their checked revision to the statistician those rules name (`/hand-off`), and
-wait for their verdict by message. Record it: `SIGNED OFF by <statistician>, <link>: <their
-words>`. What they find you fix in a new revision, which goes back through the checks where
-it changes a claim, and back to them for the delta.
+Where your landing rules turn it on for this study, hand the claims that setting covers,
+at the claim package's checked revision, to the statistician those rules name
+(`/hand-off`), and wait for their verdict by message. Record it:
+`SIGNED OFF by <statistician>, <link>: <their words>`. What they find you fix in a new
+revision, which goes back through the checks where it changes a claim, and back to them
+for the delta.
 
 ## 4. To the scientist
 When every agreement holds at one revision of the claim package (each claim's checks

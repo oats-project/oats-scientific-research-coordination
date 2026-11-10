@@ -23,7 +23,19 @@ git -C <tree> fetch origin
 git -C <tree> merge-base --is-ancestor origin/<default> H   # else: ask for an update from the default branch
 git -C <tree> diff --name-only origin/<default>...H         # what this record would land
 ```
-Everything it would land is under `<s>/`. Anything else is a no.
+A run record lands only its own arm. Everything it would land must be one of:
+- a file under `<s>/runs/<arm>/`;
+- a new file under `<s>/raw/` (data or a hash manifest an experimental arm brings in);
+
+and nothing else: no change to `<s>/protocol.md` or `<s>/locks.md` (they land only by
+`/lock-the-protocol`), to another arm, to `<s>/claims/`, or to the study's `README.md`,
+`notebook.md` or `deviations.md` (the lead's, by `/keep-the-records`, "A study's other
+records"). Check it:
+```bash
+git -C <tree> diff --no-renames --name-status origin/<default>...H \
+  | grep -v -E "^[AM]\s<s>/runs/<arm>/|^A\s<s>/raw/"                 # must print nothing
+```
+Any line it prints is a no: that change goes by its own route.
 
 ## 2. The conditions, each from the record
 Every one must hold at `H`. Each failure is a no, with the evidence.
@@ -53,23 +65,38 @@ Every one must hold at `H`. Each failure is a no, with the evidence.
      selection review, `CLEAN`, or each concern answered in the record (a fix the methods
      review read again, or a logged deviation).
 
-   Each review read an ancestor of `H`, and the arm's content is unchanged since, apart from
-   its reviews:
-   ```bash
-   git -C <tree> merge-base --is-ancestor <reviewed head> H
-   git -C <tree> diff --name-only <reviewed head> H -- <s>/runs/<arm>/ ':(exclude)<s>/runs/<arm>/reviews/**'
-   ```
-   The second must print nothing. A change since is a new head, and its reviews start
-   again.
+   Each review names the head it read, an ancestor of `H`
+   (`git -C <tree> merge-base --is-ancestor <reviewed head> H`). What may have changed since
+   depends on what it reviewed:
+   - **The methods review** read the code and the method, on a confirmatory arm before
+     unblinding. Since its head, the analysis and how it runs are unchanged; only the run's
+     evidence (appended attempts and deviations, new outputs, traces, the result, the
+     reviews) has grown:
+     ```bash
+     git -C <tree> diff --name-only <methods head> H -- <s>/runs/<arm>/code/ <s>/runs/<arm>/environment/ <s>/runs/<arm>/README.md
+     ```
+     must print nothing.
+   - **The independent check and the leakage and selection review** read the run as it
+     lands, its result included. Nothing of the arm but its reviews has changed since:
+     ```bash
+     git -C <tree> diff --name-only <reviewed head> H -- <s>/runs/<arm>/ ':(exclude)<s>/runs/<arm>/reviews/**'
+     ```
+     must print nothing.
+
+   A change the first command shows is a new head for the methods review: a fresh round,
+   and on a confirmatory arm after unblinding, a logged deviation in the arm's
+   `deviations.md`. A change the second shows needs those checks again at the new head.
 5. **The verdict follows the locked rule.** Apply the protocol's decision rule, as written,
    to the numbers the record reports: the record's verdict must be the rule's. Where the
-   verdict departs from it, `<s>/deviations.md` holds a line for that departure (who, when,
-   why), even when the scientist made it. A rule you can't apply mechanically is a no: ask
+   verdict departs from it, the arm's `<s>/runs/<arm>/deviations.md` or the study's
+   `<s>/deviations.md` holds a line for that departure (who, when, why), even when the
+   scientist made it. A rule you can't apply mechanically is a no: ask
    the lead. An exploratory arm has no decision rule: its record says `exploratory`, and so
    does every result in it.
 6. **The records rules pass:** `/keep-the-records` between `origin/<default>` and `H`.
-7. **No hold, no RETURN** is recorded on the PR or on the records' default branch, where
-   your landing rules keep holds.
+7. **No hold, no RETURN:** read both places your landing rules keep holds ("Where things
+   are kept"), before every merge: the PR's own hold, and a hold on the records' default
+   branch, which binds every PR, opened before it or after.
 8. **Through a forge, CI is green at `H`,** as your landing rules define it.
 
 ## 3. Merge it
