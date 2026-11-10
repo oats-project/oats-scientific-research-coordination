@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## template-v1.0.0
+## template-v1.0.0 - 2026-11-10
 
 The first release of the scientific research template, in its own repository,
 oats-project/oats-scientific-research-coordination. It is a template, never a package: an
