@@ -236,6 +236,16 @@ From oats-project/oats-engineering-coordination at template-v2.2.0 (commit
 `/test-first`, `/diagnose-before-fixing` and the analyst's quality floor adapt rules from,
 through engineering's.
 
+### Known limits
+- **The record steward's `.gitattributes` check counts what it prints on stderr too.** A path
+  holding a byte the host's locale can't read (`0xff` under UTF-8, say) makes `grep -z`
+  report `binary file matches` on stderr instead of printing the path. The skill's "must
+  print nothing", and the steward's rule that output it can't read is a no, make that a
+  refusal; a steward that read stdout alone would miss it.
+- **Case-insensitive and normalising filesystems were not tested.** The record steward's
+  checks were tried on a case-sensitive filesystem; whether a checkout elsewhere reads a
+  differently spelled name (`.GitAttributes`) as `.gitattributes` was not established.
+
 ### What to do
 - Copying fresh: follow `ADAPTING.md`.
 - Beside a research or engineering copy: `ADAPTING.md`, section 5.
