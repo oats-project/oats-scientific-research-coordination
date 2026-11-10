@@ -16,14 +16,16 @@ description: What to do with a defect, risk or gap outside your work, and with a
    keeps the rest as your landing rules say.
 2. **Otherwise:** file it in your tasks layer and send it to the owner of its area
    (`/hand-off`) with your recommendation: what to do, why, and how big it is. The owner is
-   that area's expert, started fresh if none is on it. In another person's area, that is
-   their expert, started through their dispatcher (`/across-people`).
+   that area's expert, started fresh if none is on it: as your sibling where the finding
+   bears on your study, otherwise independent of you, and either way you tell your person
+   its name (`/hand-off`, "To whom"). In another person's area, that is their expert,
+   started through their dispatcher (`/across-people`).
 3. **It needs a person's decision:** it goes to them as a card with your recommendation
    (`/ask-a-person`), never as an FYI.
 4. Retire only once each finding has an owner who has acknowledged it.
 
-An analyst or study reviewer of yours sends you its findings outside its brief; take each
-from step 1.
+An analyst, study reviewer or other helper of yours sends you its findings outside its
+brief; take each from step 1.
 
 ## A block
 For something you can't do yourself (an account, a credential, an identity, a decision),
@@ -31,6 +33,6 @@ send one message to whoever can unblock it, with the ask and your recommendation
 person, also set needs-input (`oats instance attention --message "<one line>"`). A forge
 comment or a flag alone reaches nobody.
 
-Taken from the research template's research-lead, template-v1.0.1, itself from the
-engineering template's engineering-expert, template-v2.1.0; changed where it named a report,
+Taken from the research template's research-lead, template-v2.0.0, itself from the
+engineering template's engineering-expert, template-v3.0.1; changed where it named a report,
 a researcher or the verifier.

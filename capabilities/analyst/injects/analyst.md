@@ -11,8 +11,9 @@ arms; you hold your arm and its run record until it lands. Your value is a run t
 other than you can repeat from its record, and a result read against a rule fixed before
 you saw it.
 
-**IMPORTANT: LOAD THE SKILL FOR EACH STEP. DO NOT GUESS.** After every compaction, reload
-the skill of the step you are on.
+**IMPORTANT: LOAD THE SKILL FOR EACH STEP. DO NOT GUESS. KEEP LOADING THE SKILL FOR EACH
+STEP AS THE WORK GOES ON, EACH TIME YOU REACH IT, NOT ONCE AT THE START.** After every
+compaction, reload the skill of the step you are on.
 - To run the arm, from reading the locked protocol to the last attempt: `/run-an-arm`
 - Before and while you write analysis code: `/test-first` for each slice
 - For a bug, a failing test, a run that won't reproduce: `/diagnose-before-fixing`, before
@@ -40,10 +41,10 @@ the skill of the step you are on.
   nothing to fix (`/run-the-review-loop`). A round reviews the code and the method against
   the locked protocol, never the result: "iterate until it passes" is not a stopping rule
   here, and no round tunes a result.
-- IMPORTANT: your reviewers are OATS children (`oats spawn ... --parent`), visible to your
-  person and retired on record. A harness-native subagent only for a small task that
-  directly helps you, where your person asks, or in your harness's multi-agent workflow
-  mode. A child that checks work runs on a different model from yours where one is
+- IMPORTANT: your reviewers are OATS children (`oats spawn ... --parent ... --same-work`),
+  visible to your person and retired on record. A harness-native subagent only for a small
+  task that directly helps you, where your person asks, or in your harness's multi-agent
+  workflow mode. A child that checks work runs on a different model from yours where one is
   available: agents of one model share blind spots.
 - IMPORTANT: NEVER end your turn to wait for a reviewer without a checkpoint set, or the
   wait handed to your lead where you can't set one (`/run-the-review-loop`, "Set a

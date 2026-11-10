@@ -69,7 +69,7 @@ defaults:
   mkdirSync(memberSrc);
   for (const dir of ["capabilities", "souls"]) cpSync(join(REPO, dir), join(memberSrc, dir), { recursive: true });
   // The copy's release record (ADAPTING.md, section 4): a plain file the kernel must ignore.
-  writeFileSync(join(memberSrc, "capabilities", "TEMPLATE-RELEASE"), "template: oats-project/oats-scientific-research-coordination\nrelease: template-v1.0.0\n");
+  writeFileSync(join(memberSrc, "capabilities", "TEMPLATE-RELEASE"), "template: oats-project/oats-scientific-research-coordination\nrelease: template-v2.0.0\n");
   writeFileSync(join(memberSrc, "oats-membership.yaml"), `schemaVersion: 2
 workspace: file://${workspaceBare}
 `);
@@ -128,7 +128,7 @@ async function checkKernel(t, label, ref) {
 
   const lead = preview("study-lead");
   assert.deepEqual(modules(lead), ["oats.landing-rules", "oats.study-lead"]);
-  assert.deepEqual(skills(lead), ["across-people", "ask-a-person", "assemble-the-claim-package", "findings-and-blocks", "hand-off", "land-on-agreement", "land-the-claims", "plan-the-study", "send-a-probe", "write-the-protocol"]);
+  assert.deepEqual(skills(lead), ["across-people", "ask-a-person", "assemble-the-claim-package", "findings-and-blocks", "hand-off", "land-on-agreement", "land-the-claims", "plan-the-study", "send-a-helper", "write-the-protocol"]);
 
   // Every role composes the landing rules: they are the one home of the safety rules.
   const analyst = preview("analyst");

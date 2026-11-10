@@ -42,6 +42,6 @@ ask them to repeat it, sign it or post it elsewhere. Record it on the study's re
 (`DECISION by <person>, <link>: <their words>`). It holds until the behaviour it decided
 changes. Clear needs-input (`oats instance attention --clear`).
 
-Taken from the research template's research-lead, template-v1.0.1, itself from the
-engineering template's engineering-expert, template-v2.1.0; changed where it named a report,
+Taken from the research template's research-lead, template-v2.0.0, itself from the
+engineering template's engineering-expert, template-v3.0.1; changed where it named a report,
 a researcher or the verifier.
