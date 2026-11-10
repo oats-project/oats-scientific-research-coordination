@@ -112,9 +112,25 @@ Each claim:
 ## 4. The citations
 Every claim that cites a source goes to a study reviewer briefed for a citation check, as
 in section 1: does each source exist, and does it say what the claim says? A source nobody
-retrieved is not cited. Its verdicts go beside each claim. Once every claim has its checks
-recorded at one revision of the package, write `CHECKED at <revision>: <the checks, one
-line each>` on the study's record (`/land-on-agreement`, "To the scientist").
+retrieved is not cited. Its verdicts go beside each claim, and you act on each:
+- **Supports:** the claim stays, its check noted beside it.
+- **Weak:** narrow the claim to what the source supports (restore the dropped qualifier,
+  population, version or condition), or show it as weak, with why, and lower its
+  confidence.
+- **Doesn't support or doesn't exist:** correct the claim from the evidence, or drop the
+  citation and, where nothing else carries the claim, the claim; and follow what it
+  changes: a conclusion that rested on it changes too, even one the scientist has seen, and
+  you tell them so in the study's thread.
+- **Couldn't check:** say so in the package, beside the claim.
+- **A verdict you think is wrong** is not yours to overrule: you are the claim's author.
+  Send the claim, the reviewer's evidence and your reason to a fresh study reviewer, whose
+  verdict stands, or show the claim as disputed, with both sides' evidence.
+
+Every correction is a new revision, and a claim it changes or adds gets a fresh check
+(section 5), never from the reviewer that checked the old wording. Once every claim has its
+checks recorded at one revision of the package, and each verdict acted on, write
+`CHECKED at <revision>: <the checks, one line each>` on the study's record
+(`/land-on-agreement`, "To the scientist").
 
 ## 5. Revisions
 Every revision has an exact reference (its commit). Write each change against the last

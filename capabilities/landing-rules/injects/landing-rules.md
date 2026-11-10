@@ -49,8 +49,11 @@ template-v2.2.0.
   when the scientist makes it.
 - **A claim inside the group** has landed when the scientist has accepted the claim
   package at one revision: each claim with its mode, its evidence, its checks, its
-  deviations and the full count of attempts, failures included. An acceptance is of that
-  revision only.
+  deviations and the full count of attempts, failures included; each claim a check found
+  weak narrowed to its evidence or shown as weak, each one it found unsupported corrected
+  or dropped (and what rested on it changed with it), and each verdict the lead disputes
+  settled by a fresh reviewer or shown as disputed. An acceptance is of that revision
+  only.
 - **A claim outside the group** has landed when every human author has approved it, AI
   use is disclosed by stage, no AI is an author, and it has at least one check that isn't
   LLM judgement: a re-run, a locked held-out set, a formal proof check, a physical

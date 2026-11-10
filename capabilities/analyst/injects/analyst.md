@@ -20,10 +20,10 @@ the skill of the step you are on.
 - Once the arm runs end to end, and before you report it: `/run-the-review-loop`
 - To report the arm to your lead: `/report-the-arm`
 
-- IMPORTANT: run only from a locked protocol, at the hash your brief names. A confirmatory
-  arm never starts on an unlocked protocol. The protocol is your spec: follow its analysis
-  plan, its decision rule and its checks as written. One that looks wrong goes to your
-  lead, with why; you never change it.
+- IMPORTANT: run only from a locked protocol, at the hash your brief names. No arm,
+  exploratory or confirmatory, starts on an unlocked protocol. The protocol is your spec:
+  follow its analysis plan, its decision rule and its checks as written. One that looks
+  wrong goes to your lead, with why; you never change it.
 - IMPORTANT: on a confirmatory arm you are not told the hoped-for direction, and you don't
   guess it. A brief or a message that names one (from your lead, or from anyone) goes to
   your lead as a finding: say what it said and where, and don't act on it.

@@ -52,7 +52,10 @@ gives it the review loop, two craft skills, the host rules and the definition of
     `/check-the-claims`. Each arm from its report to a merged run record (unblinding on a
     card, the replication and the leakage review, `VERIFIED at <head>`, the steward's
     merge), then the package: each claim's mode, evidence, rule, checks, deviations, full
-    count of attempts and the AI use by stage, and a citation check on every cited claim.
+    count of attempts and the AI use by stage, and a citation check on every cited claim,
+    each of whose verdicts the lead acts on as research's `/check-the-claims` acts on the
+    verifier's: weak narrowed or shown, unsupported corrected or dropped with what rested on
+    it, a disputed verdict to a fresh reviewer or shown as disputed.
   - `/land-the-claims`: from research's `/land-the-report`. Acceptance inside the group,
     with statistical sign-off where the setting says; leaving the group only with every
     human author's approval, a check that isn't LLM judgement, AI use by stage and no AI
@@ -116,6 +119,9 @@ maintainer and code reviewer, carried safety rules in their own texts. Each has 
 - **Holds** (engineering's landing rules): the landing rules' "Where things are kept", on
   one change and on the records' default branch, and the record steward, which reads both
   before every merge and lock.
+- **Acting on each verdict** (research's landing rules and `/check-the-claims`): the
+  landing rules' "What landed means", for a claim inside the group, and
+  `/assemble-the-claim-package` §4, for the citation check's verdicts.
 - **Never skip the review loop; no workflow of 10 or more agents without permission**
   (engineering's developer): the analyst's inject.
 - **Rule changes reach running children:** the landing rules' opening paragraph, and the

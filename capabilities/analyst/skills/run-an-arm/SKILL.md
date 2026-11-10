@@ -14,9 +14,9 @@ run from it alone, and read in it every attempt you made, not only the one that 
 Your brief names the study, your arm, the protocol's commit and its locked hash. Before
 anything else, check the protocol you read is the one that was locked: compute its hash at
 that commit (`git show <commit>:studies/<study>/protocol.md | sha256sum`) and find it in
-`studies/<study>/locks.md`. A mismatch, or no lock, stops a confirmatory arm: tell your
-lead and run nothing. An exploratory arm may run on an unlocked protocol only where your
-brief says so, and every claim it yields stays labelled exploratory.
+`studies/<study>/locks.md`. A mismatch, or no lock, stops the arm, exploratory or
+confirmatory: tell your lead and run nothing. Exploratory mode changes how an arm may
+iterate, never whether its protocol is approved and locked.
 
 From the protocol, take your arm's:
 - mode (exploratory or confirmatory), profile, and the analysis plan as written;

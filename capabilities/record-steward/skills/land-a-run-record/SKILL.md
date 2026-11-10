@@ -77,15 +77,17 @@ Every one must hold at `H`. Each failure is a no, with the evidence.
      ```
      must print nothing.
    - **The independent check and the leakage and selection review** read the run as it
-     lands, its result included. Nothing of the arm but its reviews has changed since:
+     lands, its result and its inputs included. Nothing of the arm but its reviews has
+     changed since, and nothing in the study's raw data either, whichever arm added it:
      ```bash
-     git -C <tree> diff --name-only <reviewed head> H -- <s>/runs/<arm>/ ':(exclude)<s>/runs/<arm>/reviews/**'
+     git -C <tree> diff --name-only <reviewed head> H -- <s>/runs/<arm>/ <s>/raw/ ':(exclude)<s>/runs/<arm>/reviews/**'
      ```
      must print nothing.
 
    A change the first command shows is a new head for the methods review: a fresh round,
    and on a confirmatory arm after unblinding, a logged deviation in the arm's
-   `deviations.md`. A change the second shows needs those checks again at the new head.
+   `deviations.md`. A change the second shows needs those checks again at the new head: a
+new raw file can change what the arm's code reads, even with the arm unchanged.
 5. **The verdict follows the locked rule.** Apply the protocol's decision rule, as written,
    to the numbers the record reports: the record's verdict must be the rule's. Where the
    verdict departs from it, the arm's `<s>/runs/<arm>/deviations.md` or the study's
