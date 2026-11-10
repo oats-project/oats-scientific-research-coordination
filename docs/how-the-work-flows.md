@@ -22,9 +22,10 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    it, what "answered" means, the constraints (which tickets it may read, no contact with
    customers). The profile is computational. It lists the competing hypotheses: the model
    shortens open time; it only moves the easy tickets; the gain comes from a staffing change
-   in the same months, which the lead doubts least. It sends two probes (`/send-a-probe`): a
-   fresh `study-lead` as a probe on alternative explanations, and a `study-reviewer` on
-   `/check-citations` for the two papers the plan cites.
+   in the same months, which the lead doubts least. It sends two probes (`/send-a-helper`),
+   each with a closed question, its bounds and what to send back: a fresh `study-lead` as a
+   probe on alternative explanations, and a `study-reviewer` on `/check-citations` for the
+   two papers the plan cites.
 3. **The protocol** (`/write-the-protocol`). The lead writes it: the confirmatory claim (open
    time falls by at least a stated margin on tickets from a held-out quarter), its decision
    rule, the analysis plan, the arms, the comparison rule a replication must meet (which
@@ -34,26 +35,30 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    finds the study records' record steward, starts one where none runs, and asks it to lock
    the protocol: the steward records its hash, who approved it and when (`/lock-the-protocol`).
    The held-out quarter is locked away from every agent.
-4. **The analysts** (`/run-an-arm`). One `analyst` per arm, in parallel, as the lead's OATS
-   children, across two model families, each briefed with the locked protocol at its hash,
-   its one arm and its mode, and nothing of the hoped-for direction. The confirmatory analyst
+4. **The analysts** (`/run-an-arm`). One `analyst` per arm, the small exploratory staffing
+   arm included, in parallel, as the lead's OATS children, across two model families: the
+   lead runs no arm itself. Each brief is closed: the locked protocol at its hash, its one
+   arm and its mode, its bounds and the protocol's stopping rule, what to send back, and
+   nothing of the hoped-for direction. The confirmatory analyst
    builds its analysis in a pinned environment on synthetic tickets, logs every attempt and
    deviation, and keeps its traces. It iterates with fresh study reviewers on
    `/review-methods` (`/run-the-review-loop`), each its child on another model, until a
-   round passes the head: every fix comes before anyone sees the result.
+   round passes the head, each round's verdict with its Checked section: every fix comes
+   before anyone sees the result.
 5. **Unblinding.** The scientist unblinds the held-out quarter, an irreversible step on a
    card from the lead. The analyst runs the locked analysis once on it and reports its run
    record at its head (`/report-the-arm`): the result against the locked rule, the count of
    attempts, the mode label.
-6. **The checks.** The lead sends a fresh `study-reviewer` on `/replicate`, on a model family
-   the analyst doesn't run on: it re-runs from the protocol and the raw data in a clean
-   environment and reports both runs' numbers against the comparison rule. Another fresh one
-   on `/review-for-leakage-and-selection` finds that tickets reopened after closing were
-   dropped from one month only: a deviation, logged. Each verdict goes into the run record at
-   that head. The lead writes `VERIFIED at <head>`; the analyst opens the run record's PR
-   and sends the lead its link; the lead asks the record steward to merge it, and the
-   steward checks the landing conditions from the record itself and merges it
-   (`/land-a-run-record`).
+6. **The checks.** The lead sends a fresh `study-reviewer` on `/replicate`, on a model
+   family the analyst doesn't run on: it re-runs from the protocol and the raw data in a
+   clean environment and reports both runs' numbers against the comparison rule. Another
+   fresh one on `/review-for-leakage-and-selection` finds that tickets reopened after
+   closing were dropped from one month only: a deviation, logged. Each verdict goes into the
+   run record at that head, with its Checked lines: the outputs compared and the inputs
+   whose hashes it checked, the kinds of leakage it looked for. The lead writes `VERIFIED at
+   <head>`; the analyst opens the run record's PR and sends the lead its link; the lead asks
+   the record steward to merge it, and the steward checks the landing conditions from the
+   record itself and merges it (`/land-a-run-record`).
 7. **The claim package** (`/assemble-the-claim-package`). For each claim: its mode, its
    evidence, its checks (the re-run and the locked held-out quarter, which aren't LLM
    judgement), its deviation, the full count of attempts, and the AI use by stage. The
@@ -110,6 +115,16 @@ ticket text with customers' names. It takes it out in a new revision, and the sc
 accepts that revision. The claim carries its mode, its checks (the re-run and the locked
 held-out quarter, which aren't LLM judgement) and the AI use by stage; no AI is an author.
 Opening the study record itself is a separate door, the scientist's, decided for that record.
+
+## A second study
+
+The leakage review shows that the ticket system's "reopened" status changed meaning
+partway through the year, and the person wants to know whether that moved earlier
+studies' results, on its own. It bears on this study, so its lead is the first lead's
+sibling (`/hand-off`, "To whom"): the first lead starts it with the question as its task,
+opens its record linked both ways, and tells the person at once, in the study's thread,
+the new lead's exact name and where to talk to it. A step this study itself needs never
+goes to a second lead: it stays in the study, with a helper or an analyst.
 
 ## Work across people
 

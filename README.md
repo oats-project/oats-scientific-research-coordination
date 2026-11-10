@@ -17,7 +17,11 @@ one lead, which holds the whole problem, on a fresh instance. Responsibility spl
 accountability: the scientist owns the question, the claims and the irreversible steps;
 agents own the runs and the checks. Context splits across fresh, independent instances,
 which for proper work are OATS instances the person can see; one that checks work runs on
-a different model. Every hand-off is a message about a finished artefact at its exact
+a different model, and its verdict says what it checked. An analyst runs every arm and the
+lead runs none: in the engineering and research templates a lead may build or read a small
+piece itself, but here the one who writes the protocol and reads the claims never touches
+the data, so blinding and the lock hold. This template differs from the other two there on
+purpose. Every hand-off is a message about a finished artefact at its exact
 reference. People give direction and decisions, as one card with a recommendation, with no
 deadline and no default if they are silent.
 
@@ -41,12 +45,12 @@ The template's roles:
 
 - **Dispatcher,** for each person who wants a front door. It reads a request against the
   record, starts a fresh lead for it, introduces that lead once and steps aside. It is
-  research's, unchanged.
+  research's, at template-v2.0.0, unchanged.
 - **Study lead,** one soul per way of working that plainly differs, plus a generalist. Its
   instance plans the study with the scientist, writes the protocol, sends an analyst per
-  arm and probes for prior art, citation support and alternative explanations, has each run
-  reviewed and independently checked, assembles the claim package and lands it with the
-  scientist. It never validates its own claim alone.
+  arm (it runs none itself) and probes for prior art, citation support and alternative
+  explanations, has each run reviewed and independently checked, assembles the claim
+  package and lands it with the scientist. It never validates its own claim alone.
 - **Analyst,** fresh for each arm: the lead's OATS child. It runs one arm of a locked
   protocol in a pinned environment, logs every attempt, failure and deviation, keeps full
   traces, never changes raw data, and iterates with fresh study reviewers on the code and
@@ -54,7 +58,8 @@ The template's roles:
   profile it is the experimenter.
 - **Study reviewer,** fresh for each review, on a model other than the analyst's: methods
   and statistics, an independent replication (on a different model family wherever there is
-  one), leakage and selection, or citations. A verdict per claim with its evidence.
+  one), leakage and selection, or citations. A verdict per claim with its evidence and
+  what it checked.
 - **Record steward,** one standing instance per study records repository. Mostly
   mechanism: it locks protocols by hash, keeps raw data write-once and the notebook,
   deviation log and lock record append-only, and merges a run record only when its landing
@@ -86,16 +91,17 @@ around it, and the evidence the design rests on.
 - **`capabilities/`:** six capabilities, each an inject (the always-on briefing) plus the
   skills an agent loads when it needs them.
   - `oats.dispatcher`: `/dispatch`. Taken unchanged from the research template,
-    template-v1.0.1, itself the engineering template's at template-v2.1.0.
-  - `oats.study-lead`: `/plan-the-study`, `/write-the-protocol`, `/send-a-probe`,
+    template-v2.0.0, itself the engineering template's at template-v3.0.1.
+  - `oats.study-lead`: `/plan-the-study`, `/write-the-protocol`, `/send-a-helper`,
     `/assemble-the-claim-package`, `/land-the-claims`, `/hand-off`, `/ask-a-person`,
     `/land-on-agreement`, `/across-people`, `/findings-and-blocks`. The last five and
-    `/send-a-probe` are the lead's shared skills, taken from the research template's
-    research-lead at template-v1.0.1 and changed where they named a report, a researcher or
+    `/send-a-helper` are the lead's shared skills, taken from the research template's
+    research-lead at template-v2.0.0 and changed where they named a report, a researcher or
     the verifier ([CHANGELOG.md](CHANGELOG.md) lists each change).
   - `oats.analyst`: `/run-an-arm`, `/report-the-arm`, `/run-the-review-loop`,
     `/test-first`, `/diagnose-before-fixing`. The last three are adapted from the
-    engineering template's developer, template-v2.2.0.
+    engineering template's developer, template-v2.2.0, with template-v3.0.1's Checked
+    section in the review loop.
   - `oats.study-reviewer`: `/review-methods`, `/replicate`,
     `/review-for-leakage-and-selection`, `/check-citations`.
   - `oats.record-steward`: `/lock-the-protocol`, `/keep-the-records`,

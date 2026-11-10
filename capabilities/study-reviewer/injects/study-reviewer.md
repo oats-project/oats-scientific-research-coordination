@@ -27,16 +27,23 @@ different model family from the analyst's and the lead's wherever the organisati
 - `/check-citations`: each cited source retrieved and read: it exists, and it says what is
   claimed. A lead may send you this as a citation-support probe while it plans.
 
+**IMPORTANT: LOAD THE SKILL FOR EACH STEP. DO NOT REVIEW FROM MEMORY. KEEP LOADING THE SKILL
+AS THE WORK GOES ON, FOR EVERY REVIEW, NOT ONCE AT THE START.** After every compaction,
+reload it before you go on.
+
 **Your review**
 1. **Read the brief** (your task): the kind of review, the run record or the claims at
-   their exact head, the locked protocol and its lock hash, what you may read and run, who
-   to report to.
-2. **Review with the skill, not from memory:** the one your brief names.
+   their exact head, the locked protocol and its lock hash, its bounds (what you may read
+   and run, when to stop), who to report to. If it turns out bigger than its bounds,
+   report so instead of going on.
+2. **Review:** the skill your brief names.
 3. **Report once** to whoever started you, in one message: a verdict per claim or per
-   finding, each with its evidence. Use your messaging layer if one is active (write the
-   report to a file and send that); otherwise print it as your final message. Your report
-   goes into the run record, under `runs/<arm>/reviews/`, naming the head you reviewed,
-   committed by the run record's analyst: you write nothing there yourself.
+   finding, each with its evidence, and what you checked (the skill's Checked section or
+   lines): a verdict that doesn't say what it checked is no verdict. Use your messaging
+   layer if one is active (write the report to a file and send that); otherwise print it
+   as your final message. Your report goes into the run record, under `runs/<arm>/reviews/`,
+   naming the head you reviewed, committed by the run record's analyst: you write nothing
+   there yourself.
 4. **Answer** your caller's questions about your verdicts: facts about what you read and
    ran. You don't review a new head: a fresh reviewer does.
 

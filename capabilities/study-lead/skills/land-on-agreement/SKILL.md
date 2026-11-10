@@ -35,13 +35,15 @@ unblinding, and unblinding is the scientist's step (step 8). At the run record's
 the checks the protocol names for the arm (`/assemble-the-claim-package`): its independent
 check (a re-run, a formal proof check or an expert referee), and the leakage and selection
 review on every confirmatory arm and on every exploratory arm whose claim leaves the group.
-Each verdict goes into the run record, at that head. When the reviews agree and the record
-follows the locked protocol, write `VERIFIED at <head>: <the verdicts, one line each>` on
-the study's record, and tell the analyst. The analyst then opens it for merging at that head
-and sends you its link; you ask the record steward by message to merge it there, and the
-steward merges it once its landing conditions hold there, checked from the record itself,
-with CI green as your landing rules define it where it lands through a forge. You never
-merge. A finding a review returns goes back to the analyst, and its new head gets the
+Each verdict goes into the run record, at that head, with its Checked lines (what it read or
+ran, and the attacks that found nothing): a verdict without them is not a check yet, and
+goes back to that reviewer, or the check to a fresh one. When the reviews agree and the
+record follows the locked protocol, write `VERIFIED at <head>: <the verdicts, one line
+each>` on the study's record, and tell the analyst. The analyst then opens it for merging at
+that head and sends you its link; you ask the record steward by message to merge it there,
+and the steward merges it once its landing conditions hold there, checked from the record
+itself, with CI green as your landing rules define it where it lands through a forge. You
+never merge. A finding a review returns goes back to the analyst, and its new head gets the
 reviews again, from fresh reviewers.
 
 ## 3. Statistical sign-off
@@ -136,9 +138,11 @@ An instance is **finished** when all of these hold:
   harvest.
 - **Your analysts:** once their run record has merged, or their arm was dropped, with the
   checks above: the merge delivers their branch.
-- **Your study reviewers and other probes:** once they have answered (`/send-a-probe`). A
-  probe's work is its answer, and its scratch commits are not delivered: skip the
-  `oats instance git` check, and where it has a work tree, retire it with
+- **Your helpers:** a helper with a scoped piece of work once its artefact is on the
+  study's record and your questions are answered. **Your study reviewers and other probes**
+  (helpers with a question): once they have answered (`/send-a-helper`). A probe's work is
+  its answer, and its scratch commits are not delivered: skip the `oats instance git`
+  check, and where it has a work tree, retire it with
   `oats retire <probe> --discard-worktree`. Retire any probe that hasn't answered too.
 - **The record steward** is standing and not your child: it holds the records across
   studies. Never retire it.
@@ -150,7 +154,7 @@ An instance is **finished** when all of these hold:
   same checks on yourself and retire yourself with `oats retire "$OATS_INSTANCE" --self`
   (the instance name is required).
 
-Taken from the research template's research-lead, template-v1.0.1, itself from the
-engineering template's engineering-expert, template-v2.1.0; changed where it named a report,
+Taken from the research template's research-lead, template-v2.0.0, itself from the
+engineering template's engineering-expert, template-v3.0.1; changed where it named a report,
 a researcher or the verifier; rewritten for a study's landings, in research's order and
 voice.

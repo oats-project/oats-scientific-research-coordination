@@ -73,13 +73,16 @@ its claim package goes for acceptance. Other studies need none: the methods revi
 Why: an independent statistical reviewer has improved papers in a medical journal's trial,
 a human finding, and the stakes of clinical and policy work justify one.
 
-**Who does the work.** The study lead plans the study, writes the protocol, sends the
-analysts and the probes, has the claims checked, assembles the claim package and lands it
-with the scientist. Analysts run one arm each of a locked protocol and own its run record;
-study reviewers check, one kind of review each; the record steward locks protocols, keeps
-the records and merges run records. The lead never validates its own claim alone, and no
-analyst checks its own result. Every irreversible step is the scientist's (below). Why: one
-agent holds the whole study, and a claim is checked by someone other than its author.
+**Who does the work.** The study lead plans the study, writes the protocol, decides how
+many arms there are and which run in parallel, sends the analysts and its other helpers,
+has the claims checked, assembles the claim package and lands it with the scientist.
+Analysts run every arm, one each, of a locked protocol and own its run record: the lead
+runs none. Study reviewers check, one kind of review each; the record steward locks
+protocols, keeps the records and merges run records. The lead never validates its own
+claim alone, and no analyst checks its own result. Every irreversible step is the
+scientist's (below). Why: one agent holds the whole study, a claim is checked by someone
+other than its author, and the one who wrote the protocol and reads the claims never
+touches the data, so blinding and the lock hold.
 
 **Profiles.**
 <!-- adapt: Which profiles apply to this organisation's studies: theory, computational, experimental? -->

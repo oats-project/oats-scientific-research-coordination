@@ -64,17 +64,27 @@ These have no adapt markers. A copy that changes one is no longer this way of wo
 1. **The design never splits a problem; it splits responsibility and context.** One study
    has one lead, which holds the whole problem. Responsibility splits by accountability:
    the scientist owns the question, the claims and the irreversible steps, and agents own
-   the runs and the checks. Context splits across fresh, independent instances.
+   the runs and the checks. Context splits across fresh, independent instances: an extra
+   agent earns its place by splitting context, testing, specialisation or parallel work.
 2. **One lead per study,** on a fresh instance, from the question to the landed claims,
-   compacting and never respawning. Its children are probes, one question each, never
-   co-planners or co-authors: an analyst per arm, a study reviewer per check, a probe per
-   question.
+   compacting and never respawning. Its children are helpers, each with one closed task,
+   never co-planners or co-authors: a question to answer (a probe: an analyst's arm, a
+   study reviewer's check, any other question), or a scoped piece of the study that needs
+   another soul's capabilities and touches no data. **An analyst runs every arm; the lead
+   runs none.** In the engineering and research templates a lead may build a spec or read
+   an angle itself; here the split is by accountability and by what each instance may see,
+   not only by context: the lead writes the protocol and reads the claims, and blinding
+   and the lock rest on its never touching the data. This template differs from the other
+   two there on purpose. The lead decides how many arms there are, which run in parallel,
+   and when a specialist helper is worth it. Another area's step of the study goes to a
+   helper, never to a second lead; a lead for another, related study is the first lead's
+   sibling, and the person is told its name.
 3. **No agent validates its own claim alone.** Every result has its methods review and an
-   independent check, each by a fresh study reviewer on another model; a probe never
-   checks its own claim, and the lead never checks its own. Every claim that leaves the
-   group has at least one check that isn't LLM judgement: a re-run whose agreement the
-   protocol's rule decides, a locked held-out set, a formal proof check, a physical
-   measurement or a human expert.
+   independent check, each by a fresh study reviewer on another model, each verdict saying
+   what it checked; a probe never checks its own claim, and the lead never checks its own.
+   Every claim that leaves the group has at least one check that isn't LLM judgement: a
+   re-run whose agreement the protocol's rule decides, a locked held-out set, a formal proof
+   check, a physical measurement or a human expert.
 4. **A rule fixed before the data.** Each claim has its mode, exploratory or confirmatory,
    and the label travels with it. A confirmatory claim's decision rule is approved by the
    scientist and locked by hash before any confirmatory data is seen; no brief names the
@@ -83,8 +93,8 @@ These have no adapt markers. A copy that changes one is no longer this way of wo
 5. **The analyst iterates with fresh reviewers,** a new one each round, until a round finds
    nothing to fix. On a confirmatory arm the loop reviews the code and the method before
    unblinding, never the result: "iterate until it passes" isn't allowed.
-6. **Proper work goes to OATS children, and checks are model-diverse.** Every analyst,
-   every study reviewer, every probe, and any work that needs a soul's knowledge or an
+6. **Proper work goes to OATS children, and checks are model-diverse.** Every analyst, every
+   study reviewer, every other helper, and any work that needs a soul's knowledge or an
    environment goes to an OATS child: visible to the person (its status, the Desktop), with
    its own messaging and knowledge, and retired on record. A harness's native subagent,
    invisible to everyone but its parent, is for a small investigation or task that directly
@@ -108,8 +118,9 @@ These have no adapt markers. A copy that changes one is no longer this way of wo
     approval, with AI use disclosed by stage and no AI as an author. Every irreversible
     step is the scientist's.
 12. **Every short-lived instance has a retire rule:** analysts once their run record has
-    landed, study reviewers and probes once they have answered, leads when their study is
-    done. The record steward stands.
+    landed, study reviewers and probes once they have answered, helpers with a scoped piece
+    once its artefact is on the study's record, leads when their study is done. The record
+    steward stands.
 13. **The source is the truth about a claim.** Split knowledge before souls, and skills
     before souls. Knowledge an upstream owns stays upstream: the node holds only the
     organisation's findings and lessons about it.
@@ -144,8 +155,9 @@ A copy is adapted when no marker is left; until then, the markers left are its o
 - **With more than one person, who owns which areas?** Assumes one person, who owns everything. With several, write one line per area: the subjects and records it holds, and its owner. Default: one owner.
 - **Where are the studies' status lines and the claim packages kept?** Assumes each study's `README.md` in the study records, its status at the top, with one item per study in the tasks layer where there is one, the claim packages in each study's `claims/`, and holds, each with its reason, its scope and who lifts it: on one change, the `hold` label on its PR; on the records' default branch, an open issue with the `hold` label on the records' forge; with no forge, a line in the append-only `holds.md` at the records' root, lifted by a later line. Never in the rules themselves: they are copied into each instance at spawn and can't change while work runs. Default: that.
 
-### `capabilities/study-lead/skills/send-a-probe/SKILL.md`
+### `capabilities/study-lead/skills/send-a-helper/SKILL.md`
 - **How many probes may a lead run in parallel for one decision?** This is the parallel cap for analysts too: analysts are the lead's probes, so it bounds the analysts running for one study (`plan-the-study` says so). Assumes up to 4. An arm costs a full instance's run, often with compute, so name a lower cap where runs are expensive, or a higher one where studies are worth it. Default: up to 4.
+- **Which specialist souls can a lead call as helpers, and what does each bring (an environment, instruments, skills, a domain)?** Assumes the template's roster: an analyst for an arm, a study reviewer for a check, a fresh study lead as a probe for prior art or alternative explanations, an expert soul for an area's knowledge or a scoped piece of its area that touches no data, and a soul with an environment where the organisation has one. Name the organisation's own: each analyst copy and the environment, data access or instruments it brings (section 1), each area's expert soul and what it can take on as a lead's child. Default: the template's roster.
 
 ### `capabilities/study-lead/skills/plan-the-study/SKILL.md`
 - **Which model families does this organisation have for analysts and study reviewers?** Assumes the lead finds out at spawn, by preview. Name the model families this organisation can launch, and through which launch configurations, so the lead varies its analysts across them, gives each study reviewer a model other than the analyst's, and keeps for the replicator a family none of the arm's analysts runs on (section 2, principle 6). The organisation may also pin the study reviewer and the analysts to a family other than the leads': in each soul's `launch:` (`harness` and `model`), or in each machine's `oats-local.yaml` `souls.launch`. The template's own souls name no model. Default: vary them wherever the organisation has more than one family.
@@ -157,7 +169,7 @@ A copy is adapted when no marker is left; until then, the markers left are its o
 
 Every copied capability records the template release it came from, in its `oats.json`
 description. The template's descriptions already end with that sentence:
-"Copied from the scientific research template, template-v1.0.0." Keep it as it is when you
+"Copied from the scientific research template, template-v2.0.0." Keep it as it is when you
 copy, and set `version` to the copy's own numbering from then on. The template's own
 validator, which requires `version` to be the template release, stays with the template
 (section 1): nothing in the copy checks it. The dispatcher's description, the landing
@@ -168,7 +180,7 @@ Souls carry no such record, so write one for the whole copy, in the host reposit
 `capabilities/TEMPLATE-RELEASE` (a plain file, which OATS ignores):
 ```
 template: oats-project/oats-scientific-research-coordination
-release: template-v1.0.0
+release: template-v2.0.0
 commit: <the full commit SHA that tag points to>
 capabilities: <the ids you copied>
 souls: <the souls you copied, under their names in the copy>
@@ -182,8 +194,8 @@ per template, separated by a blank line.
 
 An organisation whose groups use more than one template keeps one dispatcher and one set of
 landing rules:
-- **`oats.dispatcher`:** this template's is the research template's at template-v1.0.1,
-  itself engineering's at template-v2.1.0, unchanged. Keep the copy already in the
+- **`oats.dispatcher`:** this template's is the research template's at template-v2.0.0,
+  itself engineering's at template-v3.0.1, unchanged. Keep the copy already in the
   workspace (take up the newer release in it if yours is older), and add `study-lead` and
   the area it covers to each dispatcher soul's `AGENTS.md` roster.
 - **`oats.landing-rules`:** keep the existing copy, and add this template's rules to it as
@@ -193,7 +205,7 @@ landing rules:
   copy composed only by coordinating souls is now composed by the analyst, the study
   reviewer and the record steward too.
 - **The lead's shared skills:** `oats.study-lead` carries its own copies of `hand-off`,
-  `ask-a-person`, `send-a-probe`, `findings-and-blocks`, `across-people` and
+  `ask-a-person`, `send-a-helper`, `findings-and-blocks`, `across-people` and
   `land-on-agreement`, under the same names as the research lead's and the engineering
   expert's. A soul composes one lead capability, never two, so the names never meet in one
   instance.
@@ -214,6 +226,16 @@ landing rules:
 - **A later release:** read [CHANGELOG.md](CHANGELOG.md) from the release your copy records
   up to the new one. Each skill's line says what to port. Port what fits, keep your
   adaptations, and update the release sentence in each capability you ported.
+- **A copy at template-v1.x renames `send-a-probe`** before it ports the rest of
+  template-v2.0.0:
+  1. Move `capabilities/study-lead/skills/send-a-probe/` to `send-a-helper/`, keeping your
+     answer to its adapt marker, and set its frontmatter `name: send-a-helper`.
+  2. In the study lead's `oats.json`, replace `skills/send-a-probe` with
+     `skills/send-a-helper`.
+  3. Change every skill reference to `send-a-probe` in the copy to `/send-a-helper`: the
+     injects, the skills, your adaptation notes, your docs and any test.
+  4. Check it as above: the study lead's preview lists `send-a-helper` and no
+     `send-a-probe`.
 - **A later research or engineering release:** the dispatcher and the lead's shared skills
   follow research's, and the analyst's review loop and craft skills follow engineering's.
   This template takes up their changes at its next release, and its CHANGELOG says which
