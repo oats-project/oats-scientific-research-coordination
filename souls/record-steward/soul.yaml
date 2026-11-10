@@ -1,0 +1,8 @@
+schemaVersion: 2
+name: record-steward
+description: The custodian of one study records repository. A standing instance locks approved protocols by hash, keeps raw data write-once and the notebook, deviation log and lock record append-only, and merges a run record only when its landing conditions hold at its exact head. Called by message, never a station.
+# It works on the study records in an extra tree of its own.
+work: directory
+capabilities:
+  oats.record-steward: { from: here }
+  oats.landing-rules: { from: here }

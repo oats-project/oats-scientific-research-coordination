@@ -1,0 +1,9 @@
+schemaVersion: 2
+name: analyst
+description: One arm of one locked protocol. A fresh instance, the lead's probe, runs its analysis, simulation, experiment or proof attempt in a pinned environment, logs every attempt, failure and deviation, keeps full traces, never changes raw data, iterates with fresh study reviewers on the code and the method, reports its run record once and retires. Under the experimental profile it is the experimenter, acting on an instrument only through its gate.
+# Its scratch directory; its run record goes on a branch of the study records, in an extra tree.
+work: directory
+# The analyst's role and the safety rules' one home; it lands nothing itself.
+capabilities:
+  oats.analyst: { from: here }
+  oats.landing-rules: { from: here }
