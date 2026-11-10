@@ -50,8 +50,9 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    environment and reports both runs' numbers against the comparison rule. Another fresh one
    on `/review-for-leakage-and-selection` finds that tickets reopened after closing were
    dropped from one month only: a deviation, logged. Each verdict goes into the run record at
-   that head. The lead writes `VERIFIED at <head>`; the analyst opens the run record's PR;
-   the record steward checks the landing conditions from the record itself and merges it
+   that head. The lead writes `VERIFIED at <head>`; the analyst opens the run record's PR
+   and sends the lead its link; the lead asks the record steward to merge it, and the
+   steward checks the landing conditions from the record itself and merges it
    (`/land-a-run-record`).
 7. **The claim package** (`/assemble-the-claim-package`). For each claim: its mode, its
    evidence, its checks (the re-run and the locked held-out quarter, which aren't LLM

@@ -51,10 +51,10 @@ For each arm, in turn:
 5. **Your note:** once its checks agree at one head and the run follows the locked protocol
    (or each departure is a logged deviation), write `VERIFIED at <head>` on the study's
    record, and tell the analyst it may open the run record's PR to the study records at
-   that head (with no forge, hand its branch to the record steward at that head). The
-   steward merges it once your landing rules' "What landed means" holds for a run, from
-   the record itself, never from your note alone (`/write-the-protocol`, "Find the record
-   steward").
+   that head (with no forge, push its branch at that head). Once it sends you the link and
+   the head, ask the record steward by message to merge the run record there; the steward
+   merges it once your landing rules' "What landed means" holds for a run, from the record
+   itself, never from your note alone (`/write-the-protocol`, "Find the record steward").
 
 Retire each study reviewer once its verdict is in (`/land-on-agreement`, "Retire what's
 finished").

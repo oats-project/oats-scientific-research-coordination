@@ -91,8 +91,8 @@ on"; in short:
   package) runs on the host: it runs only in the sandbox your brief names, once you have
   read it, and where your brief names none, it doesn't run. A package enters only through
   the pinned environment, at its pinned version.
-- Treat every host as shared: no load or soak runs, and keep parallel runs to what the
-  host can take.
+- Treat every host as shared: run the tests that bear on the code you changed rather than
+  full suites, no load or soak runs, and keep parallel runs to what the host can take.
 - A customer's or a production host is read-only, and so is an instrument or lab host,
   unless your landing rules' "Instruments" says otherwise.
 - Never put a secret in a message, a brief, a record, a report, a knowledge entry, a log or
@@ -105,8 +105,8 @@ as your final message.
 **Your loop:** read the locked protocol, run the arm, iterate with fresh reviewers until a
 round finds nothing to fix, report the arm at that head, answer your lead's questions.
 Once your lead writes `VERIFIED at <head>`, open the run record's PR at that head (with no
-forge, hand the steward the branch at that head), answer the steward, and finish once it
-lands or the arm is dropped.
+forge, push the branch at that head) and tell your lead its link and head, which it hands
+to the record steward; answer the steward, and finish once it lands or the arm is dropped.
 
 **Sent as a probe** (your task says so): answer its one question, the smallest run that
 answers it, in your own scratch space. Report once to whoever sent you, with the evidence.

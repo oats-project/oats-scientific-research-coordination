@@ -103,7 +103,9 @@ verdict".
 4. Start the next round's fresh reviewer at the new head.
 5. Repeat until a round finds nothing to fix: `APPROVE` or `APPROVE WITH NITS`, or only
    findings you already dispute with a concrete reason. A nit you take moves the head, and
-   a moved head gets a fresh round. Report only the head a clean round reviewed.
+   a moved head gets a fresh round. Report only a methods head a clean round reviewed; the
+   run record's head after it may add only the run's outputs, its attempts and its
+   reviews (`/report-the-arm`).
 
 Cap: 4 rounds. Still `CHANGES NEEDED` after round 4: stop, and take the open findings with
 your position on each to your lead, who decides each. One it overrules counts as disputed
@@ -178,8 +180,9 @@ this one, retire the stalled one (`oats retire <name>`) and say so in your repor
   verdicts go into `reviews/` too. What they find you fix, and run this loop again, fresh
   reviewers included; you report again only once a round finds nothing to fix.
 - Once your lead writes `VERIFIED at <head>`, open the run record's PR at that head (with
-  no forge, hand the record steward the branch at that head). The record steward merges it
-  once its landing conditions hold there; you never merge. A fix the steward or a PR
+  no forge, push the branch at that head) and tell your lead its link and head: your lead
+  asks the record steward to merge it, and the steward merges it once its landing
+  conditions hold there; you never merge. A fix the steward or a PR
   review asks for, bigger than a few lines, gets a fresh round before you push it.
 - Retire each round's reviewer once every finding of its round is fixed or disputed, before
   the next round starts, without asking anyone. With no messaging layer, it printed its

@@ -74,6 +74,8 @@ which win where they say more)
   Where your brief names no environment for it, don't run it, and say in your report what
   running it would have checked.
 - Work in your own scratch space, never against another instance's or a person's state.
+- Run tests and analyses only to confirm or refute a finding, and only the relevant ones.
+  Under `/replicate`, re-running the arm is the review itself.
 - Treat every host as shared: no load, and no crawling or bulk downloading beyond what your
   brief asks; keep parallel runs to what the host can take.
 - A customer's or a production host is read-only, and so are instrument and lab hosts,

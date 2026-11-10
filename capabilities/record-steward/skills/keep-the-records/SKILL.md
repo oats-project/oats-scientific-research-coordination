@@ -44,7 +44,7 @@ deleted (`D`) or changed in type (`T`), and a rename shows as a deletion. Where 
 manifest names data in custody you can read, check it against the files:
 ```bash
 awk -F'\t' '{print $3"  "$1}' <manifest> | (cd <custody root> && sha256sum -c -)
-awk -F'\t' '{print $1, $2}' <manifest> | while read -r p n; do [ "$(stat -c %s "<custody root>/$p")" = "$n" ] || echo "size differs: $p"; done
+while IFS=$'\t' read -r p n h; do [ "$(stat -c %s "<custody root>/$p")" = "$n" ] || echo "size differs: $p"; done < <manifest>
 ```
 Any line that isn't `OK`, or any "size differs", is a failure. Custody you can't read: say
 so in your answer, beside the manifest.

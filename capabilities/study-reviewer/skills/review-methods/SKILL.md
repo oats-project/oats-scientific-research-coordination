@@ -53,8 +53,9 @@ Go through these deliberately:
 ## 4. Prove each finding
 - Show the path: the line or the cell, the input, what it does, what the protocol says
   instead.
-- If you can confirm it cheaply in your scratch space, on the data your brief allows, do.
-  If you can't show it, it is a question: ask it as one.
+- Run something only to confirm or refute a finding, and only what bears on it: if you can
+  confirm it cheaply in your scratch space, on the data your brief allows, do. If you
+  can't show it, it is a question: ask it as one.
 
 ## 5. Report: a verdict, signal only
 First line: `APPROVE`, `APPROVE WITH NITS` or `CHANGES NEEDED`, and the head you reviewed.
