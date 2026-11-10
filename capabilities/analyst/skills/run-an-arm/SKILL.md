@@ -64,10 +64,11 @@ environment, logged in `attempts.md` and, where the protocol fixed the environme
 
 ## 4. Raw data: read, never changed
 Raw data lives under `studies/<study>/raw/`, as files or as a hash manifest (one line per
-file: its path, its size, its sha256, separated by tabs) for data kept in custody elsewhere.
-Either way it is write-once: you read it and never edit, move, rename, clean in place or
-delete any of it. Before your first attempt, check what you read against the manifest's or
-the repository's hashes, and record that you did. Anything you derive (a cleaned table, a
+file: its path, its size, its sha256, separated by tabs) for data kept in custody elsewhere,
+never a symlink to it: nothing under `studies/` is a symlink, your code included. Either way
+it is write-once: you read it and never edit, move, rename, clean in place or delete any of
+it. Before your first attempt, check what you read against the manifest's or the
+repository's hashes, and record that you did. Anything you derive (a cleaned table, a
 subsample, an imputed value) is new data, written under `outputs/` with the code that made
 it. Never substitute, impute or synthesise data without the protocol naming it, and never
 present derived data as raw. Human subjects' data and raw instrument data stay in custody:

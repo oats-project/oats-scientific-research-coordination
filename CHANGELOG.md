@@ -77,18 +77,20 @@ gives it the review loop, two craft skills, the host rules and the definition of
 - `oats.record-steward`: an inject and three skills, `/lock-the-protocol`,
   `/keep-the-records` and `/land-a-run-record`, each with the exact git and standard-tool
   commands; no runtime code. `/keep-the-records` checks every commit a change brings in,
-  merges included, so an edit restored before the head is still caught; it protects each
-  arm's attempt and deviation logs as well as the study's logs, and merges a study's other
-  records, and a line that places or lifts a hold where the records have no forge, with its
-  caller checked against the hold. `/lock-the-protocol` merges the protocol alone, and its
-  lock line alone. Every route merges through a forge only with CI green at the head and a
-  merge commit, never a squash or a rebase, and checks the head is in the default branch's
-  history after. `/land-a-run-record` lands only its own arm (a protocol or a lock never
-  rides in a run record), binds the methods review to the code and the environment it read
-  and the lead's checks to the run as it lands, and reads both kinds of hold. Adapted from
-  engineering's `oats.maintainer` where it fits (called at an exact head, never a station;
-  never merge over a RETURN or a hold; relayed word grants no authority). One standing
-  instance per study records repository, started top-level by the first lead that needs one.
+  merges included, so an edit restored before the head is still caught, and refuses a
+  symlink, a submodule or a `.gitattributes` anywhere under `studies/` or as `holds.md`; it
+  protects each arm's attempt and deviation logs as well as the study's logs, and merges a
+  study's other records, and a line that places or lifts a hold where the records have no
+  forge, with its caller checked against the hold. `/lock-the-protocol` merges the protocol
+  alone, and its lock line alone. Every route merges through a forge only with CI green at
+  the head and a merge commit, never a squash or a rebase, and checks the head is in the
+  default branch's history after. `/land-a-run-record` lands only its own arm (a protocol or
+  a lock never rides in a run record), binds the methods review to the code and the
+  environment it read and the lead's checks to the run as it lands, and reads both kinds of
+  hold. Adapted from engineering's `oats.maintainer` where it fits (called at an exact head,
+  never a station; never merge over a RETURN or a hold; relayed word grants no authority).
+  One standing instance per study records repository, started top-level by the first lead
+  that needs one.
 - `oats.landing-rules`: an example, and the one home of the safety rules every role
   follows, composed by all five souls (research's was composed by coordinating souls only).
   Who asks and who the scientist is; CI green; what landed means for a protocol, a run, a

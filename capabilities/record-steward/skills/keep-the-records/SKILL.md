@@ -31,6 +31,20 @@ lines. A merge commit whose two sides both appended to the same log fails sectio
 against one parent: ask for that branch to be rebased onto the default branch instead,
 which keeps each step an append, and check again at the new head.
 
+At each commit `C` on those lines, everything under `studies/`, and `holds.md`, is an
+ordinary file in an ordinary directory: no symlink, which git records as its link text
+while what it points at changes, and no submodule:
+```bash
+git -C <tree> ls-tree -r C -- studies holds.md | awk '$1 != "100644" && $1 != "100755"'   # must print nothing
+```
+A linked directory on the way (`studies/<study>` or its `raw/`) shows here too. Nor is
+there a `.gitattributes` under `studies/`: it can change how a file reads once checked out
+(its encoding, its line endings, a filter) while the file's own entry stays the same:
+```bash
+git -C <tree> ls-tree -r --name-only C -- studies | grep -E '(^|/)\.gitattributes$'     # must print nothing
+```
+Data kept elsewhere comes in only as a hash manifest (section 2), never as a link.
+
 ## 2. Raw data is write-once
 Under any study's `raw/`, a commit may add files and nothing else. That holds for the data
 files and for hash manifests alike: a manifest kept in place of data that lives in custody
