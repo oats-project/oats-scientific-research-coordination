@@ -44,7 +44,7 @@ words the lines as its layer does.
 - `/land-on-agreement`, "Retire what's finished", changed: the knowledge condition is the
   final knowledge checkpoint, run and its outcome recorded as the knowledge layer says, and
   a proposal it opened at any knowledge checkpoint is in the knowledge layer's hands, not
-  one of the PRs that must land, so nobody waits for it; the done report says that
+  work that must land, so nobody waits for it; the done report says that
   checkpoint's outcome in one of four lines, three of them finished and "done, proposal
   pending: <slug and why>" not finished (retire nothing yet; it reports again with one of
   the three); and a retired one's name is never reused because the records it left and the
