@@ -13,7 +13,8 @@ each standing instance (the dispatchers and the record stewards) and the lead of
 study (the study records name them) by message, with the change at its commit; each lead
 tells its running children (analysts, study reviewers and other helpers, a standing
 specialist included) of a change that bears on their briefs (the sources they may use, the
-hosts, an instrument's bounds, say), at that commit. Each
+hosts, an instrument's bounds, say), at that commit, and an analyst passes it on to any
+study reviewer it still runs. Each
 recipient records the change, at its commit, in its state file (a lead on its study's
 record too), and from then on reads these rules with the changes it recorded, which win,
 compaction or not.

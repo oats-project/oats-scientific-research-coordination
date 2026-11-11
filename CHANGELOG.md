@@ -6,8 +6,8 @@
 
 A minor release, following research's template-v2.1.0 and engineering's template-v3.1.0:
 the lead's texts say that it leads the whole study and how it delegates. Now: the lead
-leads; its own briefing carries the test for where a study ends; an analyst runs an arm and
-a study reviewer does one kind of check, and any other task that needs knowledge or
+leads; its own briefing carries the test for where a study ends; an analyst runs an arm, or one
+small run the lead specifies, and a study reviewer does one kind of check, and any other task that needs knowledge or
 judgment goes to an expert; a standing specialist stays for the study, and never touches
 the study's data; and exploration is a task once it has bounds. Unchanged: an analyst runs
 every arm, and the lead runs none. For a copy of template-v2.0.1, port the passages below.
@@ -40,6 +40,8 @@ every arm, and the lead runs none. For a copy of template-v2.0.1, port the passa
 - `/send-a-helper`, changed: "The brief" (it reports once for the task; a standing
   specialist's first brief) and "Its answer" (when a standing specialist is retired). Port:
   the last bullet of "The brief" with the paragraph after it, and the done-line bullet.
+- `/plan-the-study`, changed: "Retire each one-task probe once it has answered"; a
+  standing specialist stays until its area is done. Port: that sentence.
 - `/send-a-helper` and `/land-on-agreement`: the last lines name research's template-v2.1.0
   and engineering's template-v3.1.0. `/land-on-agreement`, changed: "Retire what's
   finished" says when a standing specialist is retired. Port: the helpers bullet and the
@@ -47,8 +49,14 @@ every arm, and the lead runs none. For a copy of template-v2.0.1, port the passa
 
 **`oats.landing-rules`**
 - inject, changed: a lead tells all its running children of a rule change that bears on
-  their briefs, a standing specialist included, not only its analysts and study reviewers.
-  Port: that sentence of the opening paragraph.
+  their briefs, a standing specialist included, and an analyst passes it on to any study
+  reviewer it still runs. Port: that sentence of the opening paragraph.
+
+**`oats.analyst`**
+- inject, changed: "Sent as a probe" is one run the task specifies; a task that asks the
+  analyst to choose the method or judge a design goes back, for an expert. An analyst
+  passes a rule change on to any study reviewer it still runs. Port: that paragraph, and
+  the last sentence of the rule-change bullet.
 
 **`oats.dispatcher`**
 - inject and `/dispatch`, changed: "One effort, one lead, from start to done", not "one
@@ -56,9 +64,9 @@ every arm, and the lead runs none. For a copy of template-v2.0.1, port the passa
   sentence in each.
 
 **The repository**
-- `ADAPTING.md` (principle 2 and the markers): every task the lead gives a helper is closed,
-  a helper for anything but an arm or a check is an expert, and a standing specialist stays
-  for the study.
+- `ADAPTING.md` (principles 2 and 12, and the markers): every task the lead gives a helper
+  is closed, a helper for anything but a specified run or a check is an expert, and a
+  standing specialist stays for the study, until its area is done.
 - Provenance: the dispatcher's description, `README.md` and `ADAPTING.md` (section 5) say it
   is research's at template-v2.1.0, changed only where it names the lead's children; the
   study lead's description and `README.md` say which shared skills are at template-v2.1.0.

@@ -55,8 +55,8 @@ every compaction, reload the skill of the step you are on before you act.
   means and what to send back, at an exact reference; an open question is yours to frame
   first (`/send-a-helper`). NEVER split the study among co-planners or co-authors: you
   write the protocol and the claim package.
-- IMPORTANT: choose a helper's soul by what the task needs. An analyst runs an arm; a study
-  reviewer does one kind of check. Anything else that needs knowledge or judgment (testing
+- IMPORTANT: choose a helper's soul by what the task needs. An analyst runs an arm, or one
+  small run you have specified; a study reviewer does one kind of check. Anything else that needs knowledge or judgment (testing
   a theory or an approach, prior art, alternative explanations, an adversarial read of the
   plan, specialising in an area) goes to an expert: a fresh instance of the soul whose
   knowledge the task needs, your own soul included, never to an analyst or a study

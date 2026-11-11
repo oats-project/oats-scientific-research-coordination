@@ -71,7 +71,7 @@ These have no adapt markers. A copy that changes one is no longer this way of wo
    never co-planners or co-authors, and every task it gives one is closed: a question to
    answer (a probe: an analyst's arm, a study reviewer's check, any other question), or a
    scoped piece of the study that needs another soul's capabilities and touches no data. A
-   helper for anything but an arm or a check is an expert, and one the study keeps needing
+   helper for anything but a specified run or a check is an expert, and one the study keeps needing
    stays for the study as a standing specialist, which touches no data either. **An analyst runs every arm; the lead
    runs none.** In the engineering and research templates a lead may build a spec or read
    an angle itself; here the split is by accountability and by what each instance may see,
@@ -120,8 +120,9 @@ These have no adapt markers. A copy that changes one is no longer this way of wo
     approval, with AI use disclosed by stage and no AI as an author. Every irreversible
     step is the scientist's.
 12. **Every short-lived instance has a retire rule:** analysts once their run record has
-    landed, study reviewers and probes once they have answered, helpers with a scoped piece
-    once its artefact is on the study's record, leads when their study is done. The record
+    landed, study reviewers and one-task probes once they have answered, helpers with a
+    scoped piece once its artefact is on the study's record, a standing specialist once the
+    plan has no more work in its area, leads when their study is done. The record
     steward stands.
 13. **The source is the truth about a claim.** Split knowledge before souls, and skills
     before souls. Knowledge an upstream owns stays upstream: the node holds only the
@@ -160,7 +161,7 @@ A copy is adapted when no marker is left; until then, the markers left are its o
 ### `capabilities/study-lead/skills/send-a-helper/SKILL.md`
 - **How many probes may a lead run in parallel for one decision?** This is the parallel cap for analysts too: analysts are the lead's probes, so it bounds the analysts running for one study (`plan-the-study` says so). Assumes up to 4. An arm costs a full instance's run, often with compute, so name a lower cap where runs are expensive, or a higher one where studies are worth it. Default: up to 4.
 - **How many standing specialists may a lead keep at once?** Assumes up to 3. Each is a full instance kept for the study, so name a lower cap where instances are expensive, or a higher one where studies are routinely large. Default: up to 3.
-- **Which specialist souls can a lead call as helpers, and what does each bring (an environment, instruments, skills, a domain)?** Assumes the template's roster: an analyst for an arm, a study reviewer for a check, a fresh study lead as a probe for prior art or alternative explanations, an expert soul for any other knowledge or judgment (a test of an approach, a read of the plan, a scoped piece of its area or a standing specialist, none touching data), and a soul with an environment where the organisation has one. Name the organisation's own: each analyst copy and the environment, data access or instruments it brings (section 1), each area's expert soul and what it can take on as a lead's child. Default: the template's roster.
+- **Which specialist souls can a lead call as helpers, and what does each bring (an environment, instruments, skills, a domain)?** Assumes the template's roster: an analyst for an arm or one small run the lead specifies, a study reviewer for a check, a fresh study lead as a probe for prior art or alternative explanations, an expert soul for any other knowledge or judgment (a test of an approach, a read of the plan, a scoped piece of its area or a standing specialist, none touching data), and a soul with an environment where the organisation has one. Name the organisation's own: each analyst copy and the environment, data access or instruments it brings (section 1), each area's expert soul and what it can take on as a lead's child. Default: the template's roster.
 
 ### `capabilities/study-lead/skills/plan-the-study/SKILL.md`
 - **Which model families does this organisation have for analysts and study reviewers?** Assumes the lead finds out at spawn, by preview. Name the model families this organisation can launch, and through which launch configurations, so the lead varies its analysts across them, gives each study reviewer a model other than the analyst's, and keeps for the replicator a family none of the arm's analysts runs on (section 2, principle 6). The organisation may also pin the study reviewer and the analysts to a family other than the leads': in each soul's `launch:` (`harness` and `model`), or in each machine's `oats-local.yaml` `souls.launch`. The template's own souls name no model. Default: vary them wherever the organisation has more than one family.

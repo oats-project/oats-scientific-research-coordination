@@ -203,8 +203,9 @@ a use case the plan rests on, an adversarial review, a scoped piece of work), an
 anything that needs a soul's knowledge, an environment or a testing capability. Choose the
 soul by what the task needs:
 <!-- adapt: Which specialist souls can a lead call as helpers, and what does each bring (an environment, instruments, skills, a domain)? -->
-- **One arm of a locked protocol, or the smallest run that answers a question: an
-  analyst** (`analyst`) (`/plan-the-study`).
+- **A run you have specified: an analyst** (`analyst`). One arm of a locked protocol
+  (`/plan-the-study`), or, as a probe, one small run whose script, inputs and check you
+  name. It runs it and reports the result; it doesn't choose the method.
 - **One kind of check: a study reviewer** (`study-reviewer`), for a methods review, a
   replication, a leakage and selection review, or a citation check (`/plan-the-study`,
   `/assemble-the-claim-package`).
@@ -218,7 +219,8 @@ soul by what the task needs:
   soul that has it, where the organisation has one.
 
 A question about the study's design, a theory or an approach doesn't go to an analyst or a
-study reviewer, however small: it goes to an expert.
+study reviewer, however small: it goes to an expert, which says what run would answer it.
+The run, once specified, is an analyst's.
 
 An OATS child is visible to your person (its status, the Desktop), has its own messaging and
 knowledge, and is retired on record; a native subagent of your harness is invisible to
@@ -309,7 +311,7 @@ hope for. It may ask you for a fact.
   done (a probe: on its answer; a scoped piece: once its artefact is on the study's record
   and your questions are answered; a standing specialist: once the plan has no more work in
   its area), and you retire it (`/land-on-agreement`, "Retire what's finished"). You retire
-  any probe that hasn't retired on answer.
+  any one-task probe that hasn't retired on answer; a standing specialist stays.
 - Waiting on an instance, set its checkpoint first (`/plan-the-study`, "Set a checkpoint
   before you wait").
 
