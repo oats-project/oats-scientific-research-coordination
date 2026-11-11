@@ -36,6 +36,9 @@ words the lines as its layer does.
   send one of the four lines. Its last sentence names template-v3.0.2's knowledge
   checkpoint. Port: the retire sentence, that Finish condition, steps 3 and 4, and the last
   sentence.
+- `oats.json`, changed: the description's attribution names the review loop's
+  template-v3.0.1 Checked section and template-v3.0.2 knowledge checkpoint. Port: that
+  sentence.
 
 **`oats.study-lead`**
 - `/land-on-agreement`, "Retire what's finished", changed: the knowledge condition is the
