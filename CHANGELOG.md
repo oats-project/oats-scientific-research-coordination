@@ -36,7 +36,7 @@ every arm, and the lead runs none. For a copy of template-v2.0.1, port the passa
   standing specialist" with its `adapt` marker (how many a lead may keep). Port: both.
 - `/send-a-helper`, changed: "What it is worth" names the probe cap; "Who does it" chooses
   the soul by what the task needs. Port: that sentence, and from "Choose the soul by what
-  the task needs" to the paragraph that ends "it goes to an expert."
+  the task needs" to the paragraph that ends "The run, once specified, is an analyst's."
 - `/send-a-helper`, changed: "The brief" (it reports once for the task; a standing
   specialist's first brief) and "Its answer" (when a standing specialist is retired). Port:
   the last bullet of "The brief" with the paragraph after it, and the done-line bullet.
