@@ -11,8 +11,9 @@ rule sets a deadline or a default if someone is silent: a request waits for its 
 These rules are copied into each instance at spawn: after a change, whoever wrote it tells
 each standing instance (the dispatchers and the record stewards) and the lead of each open
 study (the study records name them) by message, with the change at its commit; each lead
-tells its running analysts and study reviewers of a change that bears on their briefs (the
-sources they may use, the hosts, an instrument's bounds, say), at that commit. Each
+tells its running children (analysts, study reviewers and other helpers, a standing
+specialist included) of a change that bears on their briefs (the sources they may use, the
+hosts, an instrument's bounds, say), at that commit. Each
 recipient records the change, at its commit, in its state file (a lead on its study's
 record too), and from then on reads these rules with the changes it recorded, which win,
 compaction or not.

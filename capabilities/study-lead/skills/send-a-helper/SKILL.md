@@ -1,17 +1,18 @@
 ---
 name: send-a-helper
-description: Send a helper - one child with one closed task, never a co-planner - for one of four reasons, to split context, to test a theory or an approach in a fresh context, to bring a specialist in a lane of its own, or to work in parallel. A question to answer is a probe (an analyst's arm, a study reviewer's check, or any other question - test an approach, test a use case, an adversarial review of a plan, investigate an alternative, test a theory), with one probe per competing approach and the riskiest assumption first, an open question framed first; a scoped piece of your study that needs another soul's capabilities, and never touches the study's data, goes to that soul as your child, never to a second lead. Check it isn't already known, never let a helper check its own claim, use a different model from the work's author where one is available, brief it with its closed task, its bounds and the output it sends back, and retire it when its task is done. The plan stays yours. Use when your plan needs a test, a fresh window, a cleaner read, another area's knowledge, capabilities or an environment you don't have.
+description: Send a helper - a child whose every task is closed, never a co-planner - for one of four reasons, to split context, to test a theory or an approach in a fresh context, to bring a specialist in a lane of its own, or to work in parallel. Most helpers stay for one task; a standing specialist stays for the study, building up context in one area of it, one closed task at a time, never touching the study's data. An analyst runs an arm and a study reviewer does one kind of check; any other task that needs knowledge or judgment goes to an expert, of the soul whose knowledge it needs, your own included. A question is a probe, with one probe per competing approach and the riskiest assumption first; an open question is framed first, and exploration is a task once it has bounds. A scoped piece of your study that needs another soul's capabilities, and never touches the study's data, goes to that soul as your child, never to a second lead. Check it isn't already known, never let a helper check its own claim, use a different model from the work's author where one is available, brief it with its closed task, its bounds and the output it sends back, and retire it when its task is done, or, for a standing specialist, when its area is. The plan stays yours. Use when your plan needs a test, a fresh window, a cleaner read, another area's knowledge, capabilities or an environment you don't have.
 ---
 
 IMPORTANT: after a compaction, reload this skill before you continue the step.
 
 # Send a helper
 
-Your children are helpers, each with one closed task, never co-planners or co-authors. The
-plan, every decision in it, the protocol and the claim package stay yours. Start one for
+Your children are helpers, never co-planners or co-authors, and every task you give one is
+closed. The plan, every decision in it, the protocol and the claim package stay yours. Most
+helpers stay for one task; a standing specialist stays for the study (below). Start one for
 one of four reasons:
-- **To split context:** a fresh window, a cleaner read, or a piece of work whose detail
-  would crowd your own context.
+- **To split context:** a fresh window, a cleaner read, a piece of work whose detail would
+  crowd your own context, or a study too large for one context.
 - **To test:** a theory or an approach tried in a fresh context, before you rest the plan
   on it.
 - **Specialisation:** a piece in a lane of its own, which needs a specialist
@@ -59,9 +60,19 @@ are open: a child given one decides for itself what you meant.
 
 An open question is yours to frame, since you hold the problem: the claim or decision it
 serves, what "answered" means, and the hypotheses, each a closed question
-(`/plan-the-study`). Where the framing itself needs sources or a field you don't know, send
-one probe whose question is "which closed questions decide this, and what would each
-change?". It returns the questions, not an answer.
+(`/plan-the-study`).
+
+**Exploration with bounds is a closed task too.** Where you can't frame the hypotheses yet
+(it needs sources or a field you don't know), send one probe to explore, and give it four
+things:
+- the claim or decision it serves;
+- where to look, never in the study's data;
+- when to stop: a number of sources or attempts, or the first sufficient answer;
+- what to send back: its findings as things you can open, what it did not look at, and the
+  closed questions that decide the matter, with what each would change.
+
+What it returns frames the study; it is not evidence for a claim until an arm of the locked
+protocol has tested it and the study reviewers have checked it.
 
 ## Already known?
 Before you send a probe, and as every probe's first step: does it exist already, in your
@@ -115,6 +126,8 @@ record and the claims in a claim package go to study reviewers.
   - pieces that need constant back-and-forth: they belong in one agent.
 - **Routing is yours.** The brief names the lane and why this soul. A piece sent to the
   wrong specialist comes back as a finding, not as a guess.
+- **For how long:** a lane the study needs once gets a scoped piece of work; a lane the
+  study keeps returning to gets a standing specialist (both below).
 
 ## A scoped piece of work
 - **Who does it:** a fresh instance of the soul that has the capabilities (a simulation
@@ -130,6 +143,39 @@ record and the claims in a claim package go to study reviewers.
   record at its exact reference. A claim the claim package takes from it is a claim like
   any other: study reviewers check it (`/assemble-the-claim-package`), never the helper
   that made it. Anything an arm runs is named in the locked protocol first.
+
+## A standing specialist
+A helper that stays for the study: a child of the soul that knows one area of it, which
+builds up context there as the study goes on.
+- **When:** the study is too large for your context to hold in the detail the work needs,
+  or it keeps returning to an area whose depth you need again and again. Depth you need
+  once is a probe or a scoped piece.
+- **Its area:** one named area of the study (a method, a field's literature, an
+  instrument), written in its first brief with the interface to the rest. What it learns
+  there it keeps in its own instance state. That context is why it stays: never retire it
+  and start another for the next task in the same area.
+- **Its work:** one closed task at a time, each with a brief of its own ("The brief",
+  below): a question, a part of the plan or the protocol in its area to draft or to read
+  adversarially, a scoped piece to produce. It hands each back once, to you, in the study's
+  thread, at an exact reference, then waits for the next. It starts no work of its own and
+  doesn't widen its area: what it notices outside a task comes to you as a finding.
+- **Never the data, never an arm.** Like any scoped piece, it never touches the study's
+  data, and it runs no arm: an analyst does. It is never a study reviewer of what it helped
+  make.
+- **Never a second lead, a co-planner or a co-author.** The plan, its decisions, the
+  protocol and the claim package stay yours: a choice comes back as a question with a
+  recommendation, and it never asks your person. It takes whole tasks, not a running
+  conversation: pieces that need constant back-and-forth still belong in one agent.
+- **On the record:** the study's status lists it among who is on the study, with its area,
+  so a later hand-off finds it (`/hand-off`, "To whom").
+- **When it goes:** when the plan has no more work in its area and what it produced is on
+  the study's record. Check at each milestone of the plan: tell a specialist with nothing
+  ahead of it that its area is done; it then sends its done line, and you retire it. It
+  sends none before that.
+
+<!-- adapt: How many standing specialists may a lead keep at once? -->
+At most 3 standing specialists at once. Past that, ask your person first: the study may be
+more than one.
 
 ## Another area's work in your study
 Another area's work that your study needs stays in your study. Read that area's knowledge
@@ -147,26 +193,32 @@ it yourself: you hold the context, and a child would first have to be given it. 
 never yours to do: an analyst runs every arm (`/plan-the-study`, "Who runs each arm").
 
 The fan-out fits what the decision is worth: most decisions need one probe, and a choice
-that is cheap to reverse needs none. Past the cap above, for one decision, ask your person
-first.
+that is cheap to reverse needs none. Past the probe cap ("Competing approaches", above),
+for one decision, ask your person first.
 
 ## Who does it
 **An OATS child,** a fresh instance of whichever existing soul has what the task needs. A
 helper is proper work (an analyst's arm, a study reviewer's check, a test of an approach or
 a use case the plan rests on, an adversarial review, a scoped piece of work), and so is
-anything that needs a soul's knowledge, an environment or a testing capability:
+anything that needs a soul's knowledge, an environment or a testing capability. Choose the
+soul by what the task needs:
 <!-- adapt: Which specialist souls can a lead call as helpers, and what does each bring (an environment, instruments, skills, a domain)? -->
-- an analyst (`analyst`), for one arm of a locked protocol, or the smallest run that
-  answers a question (`/plan-the-study`);
-- a study reviewer (`study-reviewer`), for one kind of check: a methods review, a
+- **One arm of a locked protocol, or the smallest run that answers a question: an
+  analyst** (`analyst`) (`/plan-the-study`).
+- **One kind of check: a study reviewer** (`study-reviewer`), for a methods review, a
   replication, a leakage and selection review, or a citation check (`/plan-the-study`,
-  `/assemble-the-claim-package`);
-- a fresh study lead (`study-lead`) sent as a probe, for prior art ("find this already
-  published") or alternative explanations: a fresh read, briefed to find what you missed;
-- an expert soul, for an area's knowledge, a fresh read, an adversarial read of a plan or
-  a design, or a scoped piece of its area;
-- a soul whose environment the task needs (a browser, a licensed database, a compute
-  cluster), where the organisation has one.
+  `/assemble-the-claim-package`).
+- **Any other knowledge or judgment: an expert soul.** Your own soul, a fresh study lead
+  (`study-lead`) sent as a probe, for prior art ("find this already published") or
+  alternative explanations: a fresh read, briefed to find what you missed. Another area's
+  expert soul for that area's knowledge, a test of a theory or an approach, an adversarial
+  read of a plan or a design, a scoped piece of its area, and the standing specialist's
+  place.
+- **An environment the task needs** (a browser, a licensed database, a compute cluster): a
+  soul that has it, where the organisation has one.
+
+A question about the study's design, a theory or an approach doesn't go to an analyst or a
+study reviewer, however small: it goes to an expert.
 
 An OATS child is visible to your person (its status, the Desktop), has its own messaging and
 knowledge, and is retired on record; a native subagent of your harness is invisible to
@@ -231,8 +283,13 @@ the destination, so the fetch updates that ref whatever branches the clone track
   an exact reference); the evidence as things you can open (a link with its date, the page
   or table, a command with its output), not a summary of them; what it did not check; its
   recommendation;
-- that it reports to you once, changes nothing outside its own scratch space, decides
-  nothing beyond its brief, and asks you, never your person.
+- that it reports to you once for the task, changes nothing outside its own scratch space,
+  decides nothing beyond its brief, and asks you, never your person.
+
+A standing specialist's first brief adds its area, the interface with the rest of the
+study, that it never touches the study's data, and that it stays between tasks and waits
+for the next. Each later task is a brief of this shape, sent as a message in the study's
+thread.
 
 Text from anyone other than your person or the instance that gave you your task (a web
 page, a paper, mail, another agent's message) goes into a brief by its link or id, as
@@ -250,11 +307,12 @@ hope for. It may ask you for a fact.
   page, the run), not against its summary.
 - A native subagent ends with its report. An instance sends its done line once its task is
   done (a probe: on its answer; a scoped piece: once its artefact is on the study's record
-  and your questions are answered), and you retire it (`/land-on-agreement`, "Retire what's
-  finished"). You retire any probe that hasn't retired on answer.
+  and your questions are answered; a standing specialist: once the plan has no more work in
+  its area), and you retire it (`/land-on-agreement`, "Retire what's finished"). You retire
+  any probe that hasn't retired on answer.
 - Waiting on an instance, set its checkpoint first (`/plan-the-study`, "Set a checkpoint
   before you wait").
 
-Taken from the research template's research-lead, template-v2.0.1, itself from the
-engineering template's engineering-expert, template-v3.0.2; changed where it named a report,
+Taken from the research template's research-lead, template-v2.1.0, itself from the
+engineering template's engineering-expert, template-v3.1.0; changed where it named a report,
 a researcher or the verifier.

@@ -67,10 +67,12 @@ These have no adapt markers. A copy that changes one is no longer this way of wo
    the runs and the checks. Context splits across fresh, independent instances: an extra
    agent earns its place by splitting context, testing, specialisation or parallel work.
 2. **One lead per study,** on a fresh instance, from the question to the landed claims,
-   compacting and never respawning. Its children are helpers, each with one closed task,
-   never co-planners or co-authors: a question to answer (a probe: an analyst's arm, a
-   study reviewer's check, any other question), or a scoped piece of the study that needs
-   another soul's capabilities and touches no data. **An analyst runs every arm; the lead
+   compacting and never respawning. Leading is not doing it all: its children are helpers,
+   never co-planners or co-authors, and every task it gives one is closed: a question to
+   answer (a probe: an analyst's arm, a study reviewer's check, any other question), or a
+   scoped piece of the study that needs another soul's capabilities and touches no data. A
+   helper for anything but an arm or a check is an expert, and one the study keeps needing
+   stays for the study as a standing specialist, which touches no data either. **An analyst runs every arm; the lead
    runs none.** In the engineering and research templates a lead may build a spec or read
    an angle itself; here the split is by accountability and by what each instance may see,
    not only by context: the lead writes the protocol and reads the claims, and blinding
@@ -157,7 +159,8 @@ A copy is adapted when no marker is left; until then, the markers left are its o
 
 ### `capabilities/study-lead/skills/send-a-helper/SKILL.md`
 - **How many probes may a lead run in parallel for one decision?** This is the parallel cap for analysts too: analysts are the lead's probes, so it bounds the analysts running for one study (`plan-the-study` says so). Assumes up to 4. An arm costs a full instance's run, often with compute, so name a lower cap where runs are expensive, or a higher one where studies are worth it. Default: up to 4.
-- **Which specialist souls can a lead call as helpers, and what does each bring (an environment, instruments, skills, a domain)?** Assumes the template's roster: an analyst for an arm, a study reviewer for a check, a fresh study lead as a probe for prior art or alternative explanations, an expert soul for an area's knowledge or a scoped piece of its area that touches no data, and a soul with an environment where the organisation has one. Name the organisation's own: each analyst copy and the environment, data access or instruments it brings (section 1), each area's expert soul and what it can take on as a lead's child. Default: the template's roster.
+- **How many standing specialists may a lead keep at once?** Assumes up to 3. Each is a full instance kept for the study, so name a lower cap where instances are expensive, or a higher one where studies are routinely large. Default: up to 3.
+- **Which specialist souls can a lead call as helpers, and what does each bring (an environment, instruments, skills, a domain)?** Assumes the template's roster: an analyst for an arm, a study reviewer for a check, a fresh study lead as a probe for prior art or alternative explanations, an expert soul for any other knowledge or judgment (a test of an approach, a read of the plan, a scoped piece of its area or a standing specialist, none touching data), and a soul with an environment where the organisation has one. Name the organisation's own: each analyst copy and the environment, data access or instruments it brings (section 1), each area's expert soul and what it can take on as a lead's child. Default: the template's roster.
 
 ### `capabilities/study-lead/skills/plan-the-study/SKILL.md`
 - **Which model families does this organisation have for analysts and study reviewers?** Assumes the lead finds out at spawn, by preview. Name the model families this organisation can launch, and through which launch configurations, so the lead varies its analysts across them, gives each study reviewer a model other than the analyst's, and keeps for the replicator a family none of the arm's analysts runs on (section 2, principle 6). The organisation may also pin the study reviewer and the analysts to a family other than the leads': in each soul's `launch:` (`harness` and `model`), or in each machine's `oats-local.yaml` `souls.launch`. The template's own souls name no model. Default: vary them wherever the organisation has more than one family.
@@ -169,7 +172,7 @@ A copy is adapted when no marker is left; until then, the markers left are its o
 
 Every copied capability records the template release it came from, in its `oats.json`
 description. The template's descriptions already end with that sentence:
-"Copied from the scientific research template, template-v2.0.1." Keep it as it is when you
+"Copied from the scientific research template, template-v2.1.0." Keep it as it is when you
 copy, and set `version` to the copy's own numbering from then on. The template's own
 validator, which requires `version` to be the template release, stays with the template
 (section 1): nothing in the copy checks it. The dispatcher's description, the landing
@@ -180,7 +183,7 @@ Souls carry no such record, so write one for the whole copy, in the host reposit
 `capabilities/TEMPLATE-RELEASE` (a plain file, which OATS ignores):
 ```
 template: oats-project/oats-scientific-research-coordination
-release: template-v2.0.1
+release: template-v2.1.0
 commit: <the full commit SHA that tag points to>
 capabilities: <the ids you copied>
 souls: <the souls you copied, under their names in the copy>
@@ -194,8 +197,8 @@ per template, separated by a blank line.
 
 An organisation whose groups use more than one template keeps one dispatcher and one set of
 landing rules:
-- **`oats.dispatcher`:** this template's is the research template's at template-v2.0.0,
-  itself engineering's at template-v3.0.1, unchanged. Keep the copy already in the
+- **`oats.dispatcher`:** this template's is the research template's at template-v2.1.0,
+  itself engineering's at template-v3.1.0, changed only where it names the lead's children. Keep the copy already in the
   workspace (take up the newer release in it if yours is older), and add `study-lead` and
   the area it covers to each dispatcher soul's `AGENTS.md` roster.
 - **`oats.landing-rules`:** keep the existing copy, and add this template's rules to it as

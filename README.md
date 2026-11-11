@@ -45,7 +45,7 @@ The template's roles:
 
 - **Dispatcher,** for each person who wants a front door. It reads a request against the
   record, starts a fresh lead for it, introduces that lead once and steps aside. It is
-  research's, at template-v2.0.0, unchanged.
+  research's, at template-v2.1.0, changed only where it names the lead's children.
 - **Study lead,** one soul per way of working that plainly differs, plus a generalist. Its
   instance plans the study with the scientist, writes the protocol, sends an analyst per
   arm (it runs none itself) and probes for prior art, citation support and alternative
@@ -90,14 +90,16 @@ around it, and the evidence the design rests on.
 
 - **`capabilities/`:** six capabilities, each an inject (the always-on briefing) plus the
   skills an agent loads when it needs them.
-  - `oats.dispatcher`: `/dispatch`. Taken unchanged from the research template,
-    template-v2.0.0, itself the engineering template's at template-v3.0.1.
+  - `oats.dispatcher`: `/dispatch`. Taken from the research template, template-v2.1.0,
+    itself the engineering template's at template-v3.1.0, and changed only where it names
+    the lead's children.
   - `oats.study-lead`: `/plan-the-study`, `/write-the-protocol`, `/send-a-helper`,
     `/assemble-the-claim-package`, `/land-the-claims`, `/hand-off`, `/ask-a-person`,
     `/land-on-agreement`, `/across-people`, `/findings-and-blocks`. The last five and
     `/send-a-helper` are the lead's shared skills, taken from the research template's
-    research-lead at template-v2.0.1 and changed where they named a report, a researcher or
-    the verifier ([CHANGELOG.md](CHANGELOG.md) lists each change).
+    research-lead (`/send-a-helper` and `/land-on-agreement` at template-v2.1.0, the others
+    at template-v2.0.1) and changed where they named a report, a researcher or the verifier
+    ([CHANGELOG.md](CHANGELOG.md) lists each change).
   - `oats.analyst`: `/run-an-arm`, `/report-the-arm`, `/run-the-review-loop`,
     `/test-first`, `/diagnose-before-fixing`. The last three are adapted from the
     engineering template's developer, template-v2.2.0, with template-v3.0.1's Checked
