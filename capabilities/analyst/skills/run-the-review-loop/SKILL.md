@@ -219,8 +219,8 @@ You are **finished** when all of these hold:
   children are retired;
 - with a duty to propose knowledge (your knowledge layer says whether you have one), your
   final knowledge checkpoint ("you finish a task") is run and its outcome recorded, as that
-  layer says. A proposal you open there is in the knowledge layer's hands from then on,
-  not one of your PRs above: nobody waits for it.
+  layer says. A proposal you opened at any knowledge checkpoint is in the knowledge layer's
+  hands from then on, not one of your PRs above: nobody waits for it.
 
 Once you learn your record has landed, or the arm was dropped, finish unprompted:
 1. Retire any reviewer you still run, as above: children are retired before their parent.

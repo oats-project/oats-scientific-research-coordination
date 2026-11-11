@@ -31,20 +31,21 @@ words the lines as its layer does.
   retires a reviewer once it replies with one of the three finished lines (after "done,
   proposal pending", it waits for one of them). At Finish, the knowledge condition is the
   final knowledge checkpoint, run and its outcome recorded as the knowledge layer says; a
-  proposal it opens there is in the knowledge layer's hands, not one of the PRs that must
-  land, so nobody waits for it. Steps 3 and 4 run that checkpoint and send one of the four
-  lines. Its last sentence names template-v3.0.2's knowledge checkpoint. Port: the retire
-  sentence, that Finish condition, steps 3 and 4, and the last sentence.
+  proposal it opened at any knowledge checkpoint is in the knowledge layer's hands, not one
+  of the PRs that must land, so nobody waits for it. Steps 3 and 4 run that checkpoint and
+  send one of the four lines. Its last sentence names template-v3.0.2's knowledge
+  checkpoint. Port: the retire sentence, that Finish condition, steps 3 and 4, and the last
+  sentence.
 
 **`oats.study-lead`**
 - `/land-on-agreement`, "Retire what's finished", changed: the knowledge condition is the
   final knowledge checkpoint, run and its outcome recorded as the knowledge layer says, and
-  a proposal it opens there is in the knowledge layer's hands, not one of the PRs that must
-  land, so nobody waits for it; the done report says that checkpoint's outcome in one of
-  four lines, three of them finished and "done, proposal pending: <slug and why>" not
-  finished (retire nothing yet; it reports again with one of the three); and a retired
-  one's name is never reused because the records it left and the provenance of the
-  knowledge it proposed still name it. Port: those three bullets.
+  a proposal it opened at any knowledge checkpoint is in the knowledge layer's hands, not
+  one of the PRs that must land, so nobody waits for it; the done report says that
+  checkpoint's outcome in one of four lines, three of them finished and "done, proposal
+  pending: <slug and why>" not finished (retire nothing yet; it reports again with one of
+  the three); and a retired one's name is never reused because the records it left and the
+  provenance of the knowledge it proposed still name it. Port: those three bullets.
 
 ### The shared skills follow research's template-v2.0.1
 
