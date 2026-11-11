@@ -145,6 +145,9 @@ An instance is **finished** when all of these hold:
   its answer, and its scratch commits are not delivered: skip the `oats instance git`
   check, and where it has a work tree, retire it with
   `oats retire <probe> --discard-worktree`. Retire any probe that hasn't answered too.
+  **A standing specialist:** once the plan has no more work in its area and what it
+  produced is on the study's record, not after each task (`/send-a-helper`, "A standing
+  specialist").
 - **The record steward** is standing and not your child: it holds the records across
   studies. Never retire it.
 - **Yourself:** once your study is finished (its claim package accepted, or the study
@@ -155,7 +158,7 @@ An instance is **finished** when all of these hold:
   same checks on yourself and retire yourself with `oats retire "$OATS_INSTANCE" --self`
   (the instance name is required).
 
-Taken from the research template's research-lead, template-v2.0.1, itself from the
-engineering template's engineering-expert, template-v3.0.2; changed where it named a report,
+Taken from the research template's research-lead, template-v2.1.0, itself from the
+engineering template's engineering-expert, template-v3.1.0; changed where it named a report,
 a researcher or the verifier; rewritten for a study's landings, in research's order and
 voice.

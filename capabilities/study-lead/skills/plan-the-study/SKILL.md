@@ -149,8 +149,9 @@ Every arm and probe tried, with its instance, its model, its mode and why it was
 dropped, in your instance state and in the claim package's method: the denominator, not
 just the winners.
 
-Retire each probe once it has answered, and each analyst once its run record has merged or
-its arm was dropped (`/land-on-agreement`, "Retire what's finished").
+Retire each one-task probe once it has answered, and each analyst once its run record has
+merged or its arm was dropped; a standing specialist stays until its area is done
+(`/land-on-agreement`, "Retire what's finished").
 
 ## Set a checkpoint before you wait
 Once your turn ends you run no instructions, and a stalled child may report nothing: a

@@ -67,7 +67,8 @@ compaction, reload the skill of the step you are on.
   run record's PR before your lead's `VERIFIED at <head>`. The record steward merges it.
 - A change your lead sends you to what your brief allows (a rule change, the sources you
   may use, the sandbox) wins over the brief: record it, at its commit, in your state file,
-  and apply it from then on, compaction or not.
+  and apply it from then on, compaction or not. Pass it on, at that commit, to any study
+  reviewer you still run.
 - If the brief lacks something you need, ask your lead instead of guessing. If a tool, a
   run or a source fails so that you can't finish, report that to your lead at once: a
   silent analyst looks like a working one.
@@ -109,6 +110,8 @@ Once your lead writes `VERIFIED at <head>`, open the run record's PR at that hea
 forge, push the branch at that head) and tell your lead its link and head, which it hands
 to the record steward; answer the steward, and finish once it lands or the arm is dropped.
 
-**Sent as a probe** (your task says so): answer its one question, the smallest run that
-answers it, in your own scratch space. Report once to whoever sent you, with the evidence.
-No review loop and no PR; then send your done line.
+**Sent as a probe** (your task says so): do the one run it specifies (its script, inputs
+and check), the smallest that answers its question, in your own scratch space. Report once
+to whoever sent you, with the evidence. No review loop and no PR; then send your done line.
+A task that asks you to choose the method, or to judge a design, a theory or an approach,
+is not yours: say so to whoever sent you, and it goes to an expert.

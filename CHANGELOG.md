@@ -2,6 +2,76 @@
 
 ## Unreleased
 
+## template-v2.1.0 - 2026-11-11
+
+A minor release, following research's template-v2.1.0 and engineering's template-v3.1.0:
+the lead's texts say that it leads the whole study and how it delegates. Now: the lead
+leads; its own briefing carries the test for where a study ends; an analyst runs an arm, or one
+small run the lead specifies, and a study reviewer does one kind of check, and any other task that needs knowledge or
+judgment goes to an expert; a standing specialist stays for the study, and never touches
+the study's data; and exploration is a task once it has bounds. Unchanged: an analyst runs
+every arm, and the lead runs none. For a copy of template-v2.0.1, port the passages below.
+
+**`oats.study-lead`**
+- inject, changed: the heading and opening paragraph ("you lead one study"; leading is not
+  doing it all yourself). Port: both, up to "the whole study stays yours."
+- inject, changed: the helpers bullet ("every task you give one is closed"; each task
+  carries its bounds, what "answered" or "done" means and what to send back). Port: the
+  bullet.
+- inject, added: two bullets after it, "choose a helper's soul by what the task needs" and
+  "keep a standing specialist". Port: both.
+- inject, changed: the bullet on another area's work now opens with where a study ends
+  ("know where your study ends"). Port: the bullet.
+- inject, added: "Sent as a helper" ends with the standing specialist's side: it hands each
+  task back, stays between tasks, never touches the study's data, and sends its done line
+  only when its parent says its area is done. Port: from "A standing specialist (your first
+  brief" to the end of the paragraph.
+- `/send-a-helper`, changed: the description and the opening (every task closed; most
+  helpers stay for one task, a standing specialist for the study; "a study too large for
+  one context" under splitting context). Port: both.
+- `/send-a-helper`, changed: "A closed question, or it isn't a probe yet" ends with
+  "Exploration with bounds is a closed task too" and its four parts. Port: from "An open
+  question is yours to frame" to the end of the section.
+- `/send-a-helper`, added: "For how long" under "Specialisation", and the section "A
+  standing specialist" with its `adapt` marker (how many a lead may keep). Port: both.
+- `/send-a-helper`, changed: "What it is worth" names the probe cap; "Who does it" chooses
+  the soul by what the task needs. Port: that sentence, and from "Choose the soul by what
+  the task needs" to the paragraph that ends "The run, once specified, is an analyst's."
+- `/send-a-helper`, changed: "The brief" (it reports once for the task; a standing
+  specialist's first brief) and "Its answer" (when a standing specialist is retired). Port:
+  the last bullet of "The brief" with the paragraph after it, and the done-line bullet.
+- `/plan-the-study`, changed: "Retire each one-task probe once it has answered"; a
+  standing specialist stays until its area is done. Port: that sentence.
+- `/send-a-helper` and `/land-on-agreement`: the last lines name research's template-v2.1.0
+  and engineering's template-v3.1.0. `/land-on-agreement`, changed: "Retire what's
+  finished" says when a standing specialist is retired. Port: the helpers bullet and the
+  last lines of each.
+
+**`oats.landing-rules`**
+- inject, changed: a lead tells all its running children of a rule change that bears on
+  their briefs, a standing specialist included, and an analyst passes it on to any study
+  reviewer it still runs. Port: that sentence of the opening paragraph.
+
+**`oats.analyst`**
+- inject, changed: "Sent as a probe" is one run the task specifies; a task that asks the
+  analyst to choose the method or judge a design goes back, for an expert. An analyst
+  passes a rule change on to any study reviewer it still runs. Port: that paragraph, and
+  the last sentence of the rule-change bullet.
+
+**`oats.dispatcher`**
+- inject and `/dispatch`, changed: "One effort, one lead, from start to done", not "one
+  instance"; the lead brings in its own analysts, study reviewers and helpers. Port: that
+  sentence in the inject, and the whole first bullet of "Start one effort" in `/dispatch`.
+
+**The repository**
+- `ADAPTING.md` (principles 2 and 12, and the markers): every task the lead gives a helper
+  is closed, a helper for anything but a specified run or a check is an expert, and a
+  standing specialist stays for the study, until its area is done.
+- Provenance: the dispatcher's description, `README.md` and `ADAPTING.md` (section 5) say it
+  is research's at template-v2.1.0, changed only where it names the lead's children; the
+  study lead's description and `README.md` say which shared skills are at template-v2.1.0.
+  Port: those sentences.
+
 ## template-v2.0.1 - 2026-11-11
 
 A patch release for oats.okf 6.0, and the lead's shared skills follow research's
