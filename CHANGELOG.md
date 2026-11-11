@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## template-v2.0.1 - 2026-11-11
+
 A patch release for oats.okf 6.0, and the lead's shared skills follow research's
 template-v2.0.1.
 
