@@ -61,7 +61,7 @@ every arm, and the lead runs none. For a copy of template-v2.0.1, port the passa
 **`oats.dispatcher`**
 - inject and `/dispatch`, changed: "One effort, one lead, from start to done", not "one
   instance"; the lead brings in its own analysts, study reviewers and helpers. Port: that
-  sentence in each.
+  sentence in the inject, and the whole first bullet of "Start one effort" in `/dispatch`.
 
 **The repository**
 - `ADAPTING.md` (principles 2 and 12, and the markers): every task the lead gives a helper
