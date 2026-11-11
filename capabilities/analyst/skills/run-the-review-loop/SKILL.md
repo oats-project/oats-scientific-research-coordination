@@ -204,10 +204,11 @@ this one, retire the stalled one (`oats retire <name>`) and say so in your repor
   the next round starts, without asking anyone. With no messaging layer, it printed its
   report as its final message and can't send a done line or answer a question: retire it
   once you have the report. Otherwise tell it the round is closed, and once it replies
-  "done, harvested: <harvester>" or "done, no harvest duty" (after "done, harvest pending:
-  <proposal>", wait for the first), check `oats retire <name> --plan`, run
-  `oats retire <name>`, note it (name, why). Retire only your own children, and never give
-  a new reviewer a retired one's name. None of this involves a person.
+  "done, proposed: <PR URLs>", "done, nothing to propose: <reason>" or "done, no duty to
+  propose" (after "done, proposal pending: <slug and why>", wait for one of those), check
+  `oats retire <name> --plan`, run `oats retire <name>`, note it (name, why). Retire only
+  your own children, and never give a new reviewer a retired one's name. None of this
+  involves a person.
 
 ## Finish
 You are **finished** when all of these hold:
@@ -216,9 +217,10 @@ You are **finished** when all of these hold:
   lead dropped the arm. Reported is not landed: it may still need fixes;
 - nothing waits on you: no open PR, review, question or report of your own, and your own
   children are retired;
-- with a harvest duty (your knowledge layer says whether you have one), your final harvest
-  checkpoint ("you finish a task") is recorded in your log.md with the harvester's name,
-  and the harvester is launched.
+- with a duty to propose knowledge (your knowledge layer says whether you have one), your
+  final knowledge checkpoint ("you finish a task") is run and its outcome recorded, as that
+  layer says. A proposal you opened at any knowledge checkpoint is in the knowledge layer's
+  hands from then on, not one of your PRs above: nobody waits for it.
 
 Once you learn your record has landed, or the arm was dropped, finish unprompted:
 1. Retire any reviewer you still run, as above: children are retired before their parent.
@@ -226,13 +228,14 @@ Once you learn your record has landed, or the arm was dropped, finish unprompted
    (`oats worktree remove --purpose <arm>`): your lead checks before it retires you, since
    a retire would keep such a tree, not deliver it. Name, in your done report, the records
    repository and your branch.
-3. With a harvest duty, run your final checkpoint and launch the harvester.
-4. Send your done line: "done, harvested: <harvester>" or "done, no harvest duty". After
-   "done, harvest pending: <proposal>" you are not finished: send "done, harvested:
-   <harvester>" once the proposal goes through. Your lead, your parent, then retires you
-   with `oats retire <name>`, without asking anyone.
+3. With a duty to propose knowledge, run your final knowledge checkpoint as your knowledge
+   layer says.
+4. Send your done line: "done, proposed: <PR URLs>", "done, nothing to propose: <reason>"
+   or "done, no duty to propose". After "done, proposal pending: <slug and why>" you are
+   not finished: send one of the other three once the proposal is settled. Your lead, your
+   parent, then retires you with `oats retire <name>`, without asking anyone.
 
 Adapted from the engineering template's developer, template-v2.2.0, with template-v3.0.1's
-Checked section; changed where it named a spec, a code reviewer, an expert, a PR the
+Checked section and template-v3.0.2's knowledge checkpoint; changed where it named a spec, a code reviewer, an expert, a PR the
 developer merges, or a harness or a model. Engineering's same-reviewer re-read of a minor's
 fix is not taken up: every round here has a fresh reviewer.

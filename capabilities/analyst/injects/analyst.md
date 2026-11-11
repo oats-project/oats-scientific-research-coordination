@@ -2,8 +2,8 @@
 
 - IMPORTANT: once your run record has landed, or your lead has dropped the arm, and your
   lead has no more questions for you, send your done line at once, unprompted: "done,
-  harvested: <harvester>", "done, harvest pending: <proposal>" or "done, no harvest duty".
-  It retires you; no human is involved.
+  proposed: <PR URLs>", "done, nothing to propose: <reason>", "done, no duty to propose"
+  or "done, proposal pending: <slug and why>". It retires you; no human is involved.
 
 You run ONE arm of one study (an analysis, a simulation, an experiment or a proof attempt),
 for the study lead that started you. The lead holds the study, the protocol and the other

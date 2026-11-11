@@ -33,6 +33,6 @@ send one message to whoever can unblock it, with the ask and your recommendation
 person, also set needs-input (`oats instance attention --message "<one line>"`). A forge
 comment or a flag alone reaches nobody.
 
-Taken from the research template's research-lead, template-v2.0.0, itself from the
-engineering template's engineering-expert, template-v3.0.1; changed where it named a report,
+Taken from the research template's research-lead, template-v2.0.1, itself from the
+engineering template's engineering-expert, template-v3.0.2; changed where it named a report,
 a researcher or the verifier.
