@@ -53,6 +53,6 @@ person's area goes into their knowledge by their area's expert.
 Never address another person's analysts or study reviewers. Never change what another
 person's area holds without their decision on the study.
 
-Taken from the research template's research-lead, template-v2.0.0, itself from the
-engineering template's engineering-expert, template-v3.0.1; changed where it named a report,
+Taken from the research template's research-lead, template-v2.0.1, itself from the
+engineering template's engineering-expert, template-v3.0.2; changed where it named a report,
 a researcher or the verifier.

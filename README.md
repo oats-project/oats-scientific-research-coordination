@@ -96,12 +96,12 @@ around it, and the evidence the design rests on.
     `/assemble-the-claim-package`, `/land-the-claims`, `/hand-off`, `/ask-a-person`,
     `/land-on-agreement`, `/across-people`, `/findings-and-blocks`. The last five and
     `/send-a-helper` are the lead's shared skills, taken from the research template's
-    research-lead at template-v2.0.0 and changed where they named a report, a researcher or
+    research-lead at template-v2.0.1 and changed where they named a report, a researcher or
     the verifier ([CHANGELOG.md](CHANGELOG.md) lists each change).
   - `oats.analyst`: `/run-an-arm`, `/report-the-arm`, `/run-the-review-loop`,
     `/test-first`, `/diagnose-before-fixing`. The last three are adapted from the
     engineering template's developer, template-v2.2.0, with template-v3.0.1's Checked
-    section in the review loop.
+    section and template-v3.0.2's knowledge checkpoint in the review loop.
   - `oats.study-reviewer`: `/review-methods`, `/replicate`,
     `/review-for-leakage-and-selection`, `/check-citations`.
   - `oats.record-steward`: `/lock-the-protocol`, `/keep-the-records`,

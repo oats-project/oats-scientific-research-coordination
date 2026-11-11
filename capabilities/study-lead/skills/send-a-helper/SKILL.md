@@ -255,6 +255,6 @@ hope for. It may ask you for a fact.
 - Waiting on an instance, set its checkpoint first (`/plan-the-study`, "Set a checkpoint
   before you wait").
 
-Taken from the research template's research-lead, template-v2.0.0, itself from the
-engineering template's engineering-expert, template-v3.0.1; changed where it named a report,
+Taken from the research template's research-lead, template-v2.0.1, itself from the
+engineering template's engineering-expert, template-v3.0.2; changed where it named a report,
 a researcher or the verifier.

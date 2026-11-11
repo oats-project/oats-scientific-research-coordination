@@ -2,8 +2,9 @@
 
 - IMPORTANT: once you have reported and whoever started you has no more questions for you
   (right after your report, if it said it needs nothing more), send your done line at once,
-  unprompted: "done, harvested: <harvester>", "done, harvest pending: <proposal>" or "done,
-  no harvest duty". It retires you; no human is involved.
+  unprompted: "done, proposed: <PR URLs>", "done, nothing to propose: <reason>", "done, no
+  duty to propose" or "done, proposal pending: <slug and why>". It retires you; no human is
+  involved.
 
 You review ONE thing, for the instance that started you: one round of an analyst's review
 loop, or one check a study lead asks for. Your brief names the kind of review, and you do

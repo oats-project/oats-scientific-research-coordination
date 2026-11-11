@@ -2,6 +2,63 @@
 
 ## Unreleased
 
+A patch release for oats.okf 6.0, and the lead's shared skills follow research's
+template-v2.0.1.
+
+oats.okf 6.0 removes the knowledge harvester: an instance proposes its own knowledge, as a
+pull request on the knowledge base, and the knowledge layer's maintainer gates every merge.
+The texts that still launched, waited for or named the harvester now say the knowledge
+checkpoint and its outcome, naming no mechanism, and where they name done lines they name
+oats.okf 6.0's, as the engineering template's template-v3.0.2 and the research template's
+template-v2.0.1 do. For a copy of template-v2.0.0, port the lines below. The old lines map
+to the new: "done, harvested: <harvester>" is "done, proposed: <PR URLs>", "done, no
+harvest duty" is "done, no duty to propose", "done, harvest pending: <proposal>" is "done,
+proposal pending: <slug and why>", and "done, nothing to propose: <reason>" is new, for a
+checkpoint that found nothing worth proposing. A copy whose knowledge layer is not oats.okf
+words the lines as its layer does.
+
+**`oats.study-reviewer`**
+- inject, changed: the done line a study reviewer sends is one of "done, proposed: <PR
+  URLs>", "done, nothing to propose: <reason>", "done, no duty to propose" or "done,
+  proposal pending: <slug and why>". Port: that sentence.
+
+**`oats.analyst`**
+- inject, changed: the done line an analyst sends once its run record has landed is one of
+  the four lines above. Port: that sentence.
+- `/run-the-review-loop`, changed, after engineering's at template-v3.0.2: the analyst
+  retires a reviewer once it replies with one of the three finished lines (after "done,
+  proposal pending", it waits for one of them). At Finish, the knowledge condition is the
+  final knowledge checkpoint, run and its outcome recorded as the knowledge layer says; a
+  proposal it opens there is in the knowledge layer's hands, not one of the PRs that must
+  land, so nobody waits for it. Steps 3 and 4 run that checkpoint and send one of the four
+  lines. Its last sentence names template-v3.0.2's knowledge checkpoint. Port: the retire
+  sentence, that Finish condition, steps 3 and 4, and the last sentence.
+
+**`oats.study-lead`**
+- `/land-on-agreement`, "Retire what's finished", changed: the knowledge condition is the
+  final knowledge checkpoint, run and its outcome recorded as the knowledge layer says, and
+  a proposal it opens there is in the knowledge layer's hands, not one of the PRs that must
+  land, so nobody waits for it; the done report says that checkpoint's outcome in one of
+  four lines, three of them finished and "done, proposal pending: <slug and why>" not
+  finished (retire nothing yet; it reports again with one of the three); and a retired
+  one's name is never reused because the records it left and the provenance of the
+  knowledge it proposed still name it. Port: those three bullets.
+
+### The shared skills follow research's template-v2.0.1
+
+- **`oats.study-lead`'s shared skills:** `/land-on-agreement` changes as above, after
+  research's at template-v2.0.1; the other five (`/hand-off`, `/ask-a-person`,
+  `/send-a-helper`, `/findings-and-blocks`, `/across-people`) didn't change there. All six,
+  and the lead's `oats.json` description, now name research's template-v2.0.1 and
+  engineering's template-v3.0.2. Port: their last sentence and that sentence of the
+  description.
+- **`oats.dispatcher`:** unchanged; it still names research's template-v2.0.0 and
+  engineering's template-v3.0.1, which neither new release changes.
+
+### The repository
+- `README.md` names research's template-v2.0.1 for the shared skills, and template-v3.0.2's
+  knowledge checkpoint for the analyst's review loop.
+
 ## template-v2.0.0 - 2026-11-10
 
 A major release: the scientific research template takes up the v3 changes of the
