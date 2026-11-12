@@ -199,7 +199,7 @@ per template, separated by a blank line.
 An organisation whose groups use more than one template keeps one dispatcher and one set of
 landing rules:
 - **`oats.dispatcher`:** this template's is the research template's at template-v2.1.1,
-  itself engineering's at template-v3.1.0, changed only where it names the lead's children. Keep the copy already in the
+  itself engineering's at template-v3.1.2, changed only where it names the lead's children. Keep the copy already in the
   workspace (take up the newer release in it if yours is older), and add `study-lead` and
   the area it covers to each dispatcher soul's `AGENTS.md` roster.
 - **`oats.landing-rules`:** keep the existing copy, and add this template's rules to it as

@@ -91,19 +91,20 @@ around it, and the evidence the design rests on.
 - **`capabilities/`:** six capabilities, each an inject (the always-on briefing) plus the
   skills an agent loads when it needs them.
   - `oats.dispatcher`: `/dispatch`. Taken from the research template, template-v2.1.1,
-    itself the engineering template's at template-v3.1.0, and changed only where it names
+    itself the engineering template's at template-v3.1.2, and changed only where it names
     the lead's children.
   - `oats.study-lead`: `/plan-the-study`, `/write-the-protocol`, `/send-a-helper`,
     `/assemble-the-claim-package`, `/land-the-claims`, `/hand-off`, `/ask-a-person`,
     `/land-on-agreement`, `/across-people`, `/findings-and-blocks`. The last five and
     `/send-a-helper` are the lead's shared skills, taken from the research template's
-    research-lead (`/send-a-helper` and `/land-on-agreement` at template-v2.1.1, the others
-    at template-v2.0.1) and changed where they named a report, a researcher or the verifier
+    research-lead (`/send-a-helper` and `/hand-off` at template-v2.1.1,
+    `/land-on-agreement` at template-v2.1.0, the others at template-v2.0.1) and changed where they named a report, a researcher or the verifier
     ([CHANGELOG.md](CHANGELOG.md) lists each change).
   - `oats.analyst`: `/run-an-arm`, `/report-the-arm`, `/run-the-review-loop`,
     `/test-first`, `/diagnose-before-fixing`. The last three are adapted from the
     engineering template's developer, template-v2.2.0, with template-v3.0.1's Checked
-    section and template-v3.0.2's knowledge checkpoint in the review loop.
+    section, template-v3.0.2's knowledge checkpoint and template-v3.1.2's reviewer names in
+    the review loop.
   - `oats.study-reviewer`: `/review-methods`, `/replicate`,
     `/review-for-leakage-and-selection`, `/check-citations`.
   - `oats.record-steward`: `/lock-the-protocol`, `/keep-the-records`,

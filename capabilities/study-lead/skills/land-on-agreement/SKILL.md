@@ -158,7 +158,7 @@ An instance is **finished** when all of these hold:
   same checks on yourself and retire yourself with `oats retire "$OATS_INSTANCE" --self`
   (the instance name is required).
 
-Taken from the research template's research-lead, template-v2.1.1, itself from the
+Taken from the research template's research-lead, template-v2.1.0, itself from the
 engineering template's engineering-expert, template-v3.1.0; changed where it named a report,
 a researcher or the verifier; rewritten for a study's landings, in research's order and
 voice.

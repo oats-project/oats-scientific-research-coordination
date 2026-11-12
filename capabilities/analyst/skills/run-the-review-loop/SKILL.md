@@ -237,6 +237,6 @@ Once you learn your record has landed, or the arm was dropped, finish unprompted
    parent, then retires you with `oats retire <name>`, without asking anyone.
 
 Adapted from the engineering template's developer, template-v2.2.0, with template-v3.0.1's
-Checked section and template-v3.0.2's knowledge checkpoint; changed where it named a spec, a code reviewer, an expert, a PR the
+Checked section, template-v3.0.2's knowledge checkpoint and template-v3.1.2's reviewer names; changed where it named a spec, a code reviewer, an expert, a PR the
 developer merges, or a harness or a model. Engineering's same-reviewer re-read of a minor's
 fix is not taken up: every round here has a fresh reviewer.
