@@ -28,9 +28,10 @@ For each arm, in turn:
    change after that is a logged deviation.
 3. **The checks, at the run record's head.** Send each study reviewer as your child, on a
    model other than the analyst's (`/plan-the-study`, "Pick the models"), its brief its
-   task:
+   task, named for its check with its role last (`holdout-rerun-reviewer`), a name no
+   instance has had:
    ```bash
-   oats spawn study-reviewer --parent "$OATS_INSTANCE" --same-work --purpose <check-slug> --task-file <check.md>
+   oats spawn study-reviewer --parent "$OATS_INSTANCE" --same-work --name <check-slug>-reviewer --task-file <check.md>
    ```
    - **the independent check the protocol names for the arm:**
      - *a re-run:* a study reviewer briefed for a replication, on a family none of the arm's

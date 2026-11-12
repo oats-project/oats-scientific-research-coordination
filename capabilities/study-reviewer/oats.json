@@ -1,10 +1,10 @@
 {
   "capability": "oats.study-reviewer",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "compatibility": {
     "oats": ">=0.69.7"
   },
-  "description": "The study reviewer's role and four methods: fresh each time, briefed for one kind of review at one head - the methods and statistics of an arm against its locked protocol (one round of an analyst's review loop, before unblinding on a confirmatory arm), an independent re-run from the protocol and the raw data compared by the protocol's rule, an adversarial read for leakage and selection, or a citation check - a verdict per finding or claim with its evidence and what it checked, once, to whoever started it; then it retires. It runs on a model other than the analyst's, the replicator on a different model family wherever the organisation has one. Assigned to the study-reviewer soul. Adapted from the engineering template's code-review, template-v2.2.0, and the research template's verifier, template-v1.0.1. Copied from the scientific research template, template-v2.1.0.",
+  "description": "The study reviewer's role and four methods: fresh each time, briefed for one kind of review at one head - the methods and statistics of an arm against its locked protocol (one round of an analyst's review loop, before unblinding on a confirmatory arm), an independent re-run from the protocol and the raw data compared by the protocol's rule, an adversarial read for leakage and selection, or a citation check - a verdict per finding or claim with its evidence and what it checked, once, to whoever started it; then it retires. It runs on a model other than the analyst's, the replicator on a different model family wherever the organisation has one. Assigned to the study-reviewer soul. Adapted from the engineering template's code-review, template-v2.2.0, and the research template's verifier, template-v1.0.1. Copied from the scientific research template, template-v2.1.1.",
   "requires": [],
   "inject": "injects/study-reviewer.md",
   "skills": [

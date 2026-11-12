@@ -42,12 +42,13 @@ It is spawned attached to your run record's tree:
 ```bash
 oats spawn study-reviewer --work attached --work-dir <your run record's tree> \
   --parent "$OATS_INSTANCE" --same-work --repo <records clone> \
-  --purpose <short-slug> --task-file <review-brief.md>
+  --name <arm-slug>-r<round>-reviewer --task-file <review-brief.md>
 ```
 Always give both `--work-dir` and `--repo`. `<records clone>` is the absolute path of the
 clone you made your tree from (`/run-an-arm`). Each reviewer is your child, on your work
 (`--same-work`), shares your tree to read the code and re-run it, and must not edit it;
-each gets a purpose of its own, so no two share a name.
+name each for the arm it reviews and its round, with its role last
+(`holdout-arm-r2-reviewer`), so no two share a name.
 
 ## Pick a different model
 A reviewer on your model shares your blind spots. Before spawning, compare:

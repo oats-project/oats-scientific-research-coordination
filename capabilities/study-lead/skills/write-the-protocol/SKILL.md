@@ -97,14 +97,14 @@ makes it. Nothing is changed in place: the lock record and the deviation log onl
 The record steward holds custody of the study records: it locks protocols and merges run
 records. It is standing, one per study-records repository, and never your child, so it
 outlives your study.
-1. **Look for it:** `oats status` lists `record-steward-<records>`, named for the study
+1. **Look for it:** `oats status` lists `<records>-record-steward`, named for the study
    records repository your landing rules name. Running: send it what you need, by message
    at an exact reference (`/hand-off`). Listed but not running: message it anyway (messages
    wait), and tell your person it is stopped, so they can start it.
 2. **None:** start one yourself, top-level, never as your child, so your retirement can't
    stop it:
    ```bash
-   oats spawn record-steward --relation unrelated --name record-steward-<records> --task-file <brief.md>
+   oats spawn record-steward --relation unrelated --name <records>-record-steward --task-file <brief.md>
    ```
    Brief: "record steward for <the study records repository>; first call: <your instance>
    asks for <a lock | a merge> of <path or branch> at <commit>". Tell your person, in one

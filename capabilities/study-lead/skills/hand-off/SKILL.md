@@ -35,8 +35,8 @@ check, the record steward of a study-records repository), then resolve it:
        relabelled partway through its collection, and whether that changed earlier
        results deserves a study of its own: its lead is your sibling.
        ```bash
-       oats spawn <soul> --relation sibling --relative-to "$OATS_INSTANCE" --purpose <slug> \
-         --task-file <message.md>
+       oats spawn <soul> --relation sibling --relative-to "$OATS_INSTANCE" \
+         --name <study-slug>-lead --task-file <message.md>
        ```
        The two show together in your person's status and sidebar, and it outlives your
        retirement, which a child would not. A sibling records no parent, so it takes no
@@ -46,8 +46,8 @@ check, the record steward of a study-records repository), then resolve it:
        parent starting it. With a parent, tell it about the second study instead.
      - **Unrelated:** a finding with nothing to do with your study's subject. Say the same
        study notices that another study's protocol in the records cites a retracted paper:
-       its owner is independent of you, `oats spawn <soul> --relation unrelated --purpose
-       <slug> --task-file <message.md>`.
+       its owner is independent of you, `oats spawn <soul> --relation unrelated --name
+       <study-slug>-lead --task-file <message.md>`.
 
      Either way your message is its task, and the new study gets its own record, linked
      from yours and back. Tell your person at once, in your study's thread, in one
@@ -56,8 +56,11 @@ check, the record steward of a study-records repository), then resolve it:
    - a role in another person's area: ask that person's dispatcher to start it, with your
      message as the request it reads by its id (`/across-people`); where they have none,
      ask them.
-3. **Its name.** Give each new instance a name no instance has had. Never reuse a retired
-   instance's name.
+3. **Its name.** `<task>-<role>`: the task first, and last the role it plays in the
+   coordination (lead, analyst, reviewer, helper, specialist, record steward, dispatcher),
+   never its soul, which the sidebar already shows (`triage-followup-lead`). Give each new
+   instance a name no instance has had, never a retired one's: when the name is taken, make
+   the task's part more specific.
 
 ## The message
 One message, in the study's thread with that role:
