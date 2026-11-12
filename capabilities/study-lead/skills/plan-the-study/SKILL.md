@@ -236,4 +236,6 @@ instead: a stopped home's pending wake starts it again.
 
 Adapted from the research template's research-lead, template-v1.0.1 (`frame-the-question`
 and `plan-the-angles`); changed where it named a report, an angle, a researcher or the
-verifier. The checkpoint recipe is research's, unchanged but for its pointer.
+verifier. The checkpoint recipe is research's, unchanged but for its pointer. "The floor
+comes first" is research's, template-v2.1.2, itself from the engineering template's
+template-v3.1.3.
