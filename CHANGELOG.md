@@ -24,7 +24,8 @@ its soul. For a copy of template-v2.1.0, port the passages below.
 - `/hand-off`, changed: a new lead, sibling or independent, is `--name <study-slug>-lead`.
   Port: both commands, and step 3, "Its name", which now states the rule.
 - `/write-the-protocol`, changed: the record steward is `<records>-record-steward`, where
-  it was `record-steward-<records>`. Port: the name in step 1 and in the command. A steward
+  it was `record-steward-<records>`. Port: the name in step 1 and in the command, and the count before the role for a
+  retired steward's successor, in steps 1 and 2. A steward
   already running under the old name keeps it: retire it and start one under the new name
   between studies, or keep the old name in your copy until then.
 
@@ -34,7 +35,8 @@ its soul. For a copy of template-v2.1.0, port the passages below.
   letter added to its round in the name" under the second overdue checkpoint.
 
 **`oats.landing-rules`**
-- inject, changed: the record stewards' name, `<records>-record-steward`. Port: that line.
+- inject, changed: the record stewards' name, `<records>-record-steward`, with a count before
+  the role after a retired one. Port: that line.
 
 **Docs**
 - `README.md`: the dispatcher is `<person>-dispatcher`, and a lead started directly is

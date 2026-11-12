@@ -98,7 +98,8 @@ The record steward holds custody of the study records: it locks protocols and me
 records. It is standing, one per study-records repository, and never your child, so it
 outlives your study.
 1. **Look for it:** `oats status` lists `<records>-record-steward`, named for the study
-   records repository your landing rules name. Running: send it what you need, by message
+   records repository your landing rules name (`<records>-<n>-record-steward` after a
+   retired one). Running: send it what you need, by message
    at an exact reference (`/hand-off`). Listed but not running: message it anyway (messages
    wait), and tell your person it is stopped, so they can start it.
 2. **None:** start one yourself, top-level, never as your child, so your retirement can't
@@ -109,7 +110,7 @@ outlives your study.
    Brief: "record steward for <the study records repository>; first call: <your instance>
    asks for <a lock | a merge> of <path or branch> at <commit>". Tell your person, in one
    line, its instance name and that it holds custody of those records. That is no one-way
-   door, so it is no card. Where that name was used by a retired steward, add `-<n>`, one
-   more than the earlier ones.
+   door, so it is no card. Where that name was used by a retired steward, put a count before
+   the role, one more than the earlier ones (`<records>-2-record-steward`).
 3. Never a second steward for one repository while one is listed, even a stopped one.
    Nothing is locked or merged until a steward runs.
