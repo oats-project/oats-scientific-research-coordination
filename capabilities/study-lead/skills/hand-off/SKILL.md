@@ -58,9 +58,9 @@ check, the record steward of a study-records repository), then resolve it:
      ask them.
 3. **Its name.** `<task>-<role>`: the task first, and last the role it plays in the
    coordination (lead, analyst, reviewer, helper, specialist, record steward, dispatcher),
-   never its soul, which the sidebar already shows (`triage-followup-lead`). Give each new
-   instance a name no instance has had, never a retired one's: when the name is taken, make
-   the task's part more specific.
+   never its soul, which the sidebar already shows (`triage-followup-lead`). Keep it short:
+   five words at most, the role included. Give each new instance a name no instance has
+   had, never a retired one's: when the name is taken, make the task's part more specific.
 
 ## The message
 One message, in the study's thread with that role:
@@ -90,6 +90,6 @@ default.
 Answer in the same thread, at the reference you were given. If it moved under you, say so
 and answer at the new one.
 
-Taken from the research template's research-lead, template-v2.1.1, itself from the
-engineering template's engineering-expert, template-v3.1.2; changed where it named a report,
+Taken from the research template's research-lead, template-v2.1.2, itself from the
+engineering template's engineering-expert, template-v3.1.3; changed where it named a report,
 a researcher or the verifier.

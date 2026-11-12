@@ -98,6 +98,11 @@ the harnesses, an unknown model counted as a match. Record each child's model in
 instance state: the reviewers' picks need them. With one family only, say so in the claim
 package's limits.
 
+**The floor comes first.** Every analyst and every study reviewer runs at or above the
+floor your landing rules set ("The models children run on"), as `/send-a-helper` says:
+check the model each would launch on, the effective one included, before you vary
+families. A family with no model at or above the floor is not one to vary across.
+
 ## 7. Send the analysts
 Only once the protocol is locked (`/write-the-protocol`). One analyst per arm, in parallel,
 each your child, its brief as its task, named for its arm with its role last

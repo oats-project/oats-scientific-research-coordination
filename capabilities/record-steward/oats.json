@@ -1,10 +1,10 @@
 {
   "capability": "oats.record-steward",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "compatibility": {
     "oats": ">=0.69.7"
   },
-  "description": "The record steward keeps one study-records repository: called by a study lead at an exact commit, never a station, it locks an approved protocol by its sha256 in an append-only lock record, checks on every change that raw data (files and hash manifests) is write-once and that the notebook, the deviation log and the lock record only grow, and merges a run record into the default branch only when its landing conditions hold at that head, checked from the record itself: locked protocol, re-runnable, every attempt logged, the independent check agreeing by the protocol's rule and the methods review passed, the verdict following the locked rule or a logged deviation, and CI green through a forge. Mostly mechanism, with git and standard tools; standing, one per records repository, started top-level by the first lead that needs one; it decides nothing about a study's claims and opens no record without the person's yes. Assigned to the record-steward soul. Adapted from the engineering template's maintainer, template-v2.2.0. Copied from the scientific research template, template-v2.1.1.",
+  "description": "The record steward keeps one study-records repository: called by a study lead at an exact commit, never a station, it locks an approved protocol by its sha256 in an append-only lock record, checks on every change that raw data (files and hash manifests) is write-once and that the notebook, the deviation log and the lock record only grow, and merges a run record into the default branch only when its landing conditions hold at that head, checked from the record itself: locked protocol, re-runnable, every attempt logged, the independent check agreeing by the protocol's rule and the methods review passed, the verdict following the locked rule or a logged deviation, and CI green through a forge. Mostly mechanism, with git and standard tools; standing, one per records repository, started top-level by the first lead that needs one; it decides nothing about a study's claims and opens no record without the person's yes. Assigned to the record-steward soul. Adapted from the engineering template's maintainer, template-v2.2.0. Copied from the scientific research template, template-v2.1.2.",
   "requires": [],
   "inject": "injects/record-steward.md",
   "skills": [

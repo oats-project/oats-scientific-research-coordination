@@ -18,7 +18,7 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    talk to it in the study's thread." Every instance is named this way, `<task>-<role>`:
    the task first, and last the role it plays in the study (lead, analyst, reviewer, helper,
    specialist, record steward, dispatcher), never its soul, which the sidebar already
-   shows. The person who asked is the study's scientist, by the landing rules' default.
+   shows, in five words at most. The person who asked is the study's scientist, by the landing rules' default.
 2. **The lead plans the study** (`/plan-the-study`). It reads its soul's knowledge and last
    spring's analysis first: exploratory, so a lead, not an answer. It frames the question
    with the scientist: the claim it would serve (the quarterly review), what would change
