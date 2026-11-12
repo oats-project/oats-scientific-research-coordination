@@ -75,6 +75,20 @@ its claim package goes for acceptance. Other studies need none: the methods revi
 Why: an independent statistical reviewer has improved papers in a medical journal's trial,
 a human finding, and the stakes of clinical and policy work justify one.
 
+**The models children run on.**
+<!-- adapt: Which is the weakest model tier a child may run on, in each model family the organisation launches? -->
+No agent runs a child, an OATS child or a native subagent, on a weaker model tier than its
+own, in its family or another: never a smaller, faster or cheaper model, to save cost or
+time. That is the floor, and it comes before model diversity: a child that checks work
+runs on another family's model only where one at or above the floor is available;
+otherwise on the parent's own model, and the parent says that diversity was lost. A model
+whose tier the parent can't establish is below the floor. The floor binds the model a child
+would actually launch on, wherever it comes from: a soul's default or a machine's override
+that is below it is not used. The parent spawns that child on a model at or above the
+floor instead, its own by default, and tells its person once that the configuration is
+below the floor, naming the soul and the machine. Why: a child's answer is used as its
+parent's own would be, and a weaker model fails without saying so.
+
 **Who does the work.** The study lead plans the study, writes the protocol, decides how
 many arms there are and which run in parallel, sends the analysts and its other helpers,
 has the claims checked, assembles the claim package and lands it with the scientist.

@@ -73,6 +73,16 @@ proves nothing: spawn the reviewer with `--harness`/`--model` (or a launch confi
 a model you know differs from the one you run, which your harness reports. If you can't
 establish a difference, say so in your report.
 
+**The floor comes first.** Check the model the reviewer would launch on against the floor
+your landing rules set ("The models children run on"), before anything above: the
+effective one from the preview as much as one you pick, and a native reviewer's too. A
+smaller, faster or cheaper model is not a different one. An effective model below the
+floor is not used, even where it is of another family than yours: pass
+`--harness`/`--model` for one at or above the floor, and tell your person once that the
+configuration is below it. Where no other family has a model at or above the floor, or you
+can't establish its tier, spawn the reviewer on your own model and say in your report that
+diversity was lost.
+
 ## Brief it: context, not conclusions
 Every round's `review-brief.md` holds exactly:
 1. The study's question and your arm, in two or three sentences.
@@ -240,6 +250,6 @@ Once you learn your record has landed, or the arm was dropped, finish unprompted
    parent, then retires you with `oats retire <name>`, without asking anyone.
 
 Adapted from the engineering template's developer, template-v2.2.0, with template-v3.0.1's
-Checked section, template-v3.0.2's knowledge checkpoint and template-v3.1.2's reviewer names; changed where it named a spec, a code reviewer, an expert, a PR the
+Checked section, template-v3.0.2's knowledge checkpoint, template-v3.1.2's reviewer names and template-v3.1.3's model floor; changed where it named a spec, a code reviewer, an expert, a PR the
 developer merges, or a harness or a model. Engineering's same-reviewer re-read of a minor's
 fix is not taken up: every round here has a fresh reviewer.

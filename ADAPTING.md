@@ -142,6 +142,7 @@ marker; then remove the marker. Where the organisation has no answer yet:
 A copy is adapted when no marker is left; until then, the markers left are its open points.
 
 ### `capabilities/landing-rules/injects/landing-rules.md`
+- **Which is the weakest model tier a child may run on, in each model family the organisation launches?** Assumes the spawning agent's own tier: a child, an OATS child or a native subagent, never runs on a smaller, faster or cheaper model than its parent's, in the parent's family or another. The lead's and the analyst's injects, `/send-a-helper`, `/plan-the-study` and the analyst's `/run-the-review-loop` point at this rule; study reviewers and the record steward spawn nothing. Name the floor for each family the organisation launches (a tier, say, not a version, so it outlives a release). Default: as written.
 - **Who may start a study, and who is the scientist for it?** Assumes anyone in the organisation may ask, and the person who asked is the scientist: they approve protocols, own the claims and take the irreversible steps. Where someone else holds that accountability (a principal investigator, a study's named owner), name them: the texts frame the study with them and send them every approval, card and claim package. Default: the assumption.
 - **Which checks does the forge require on the default branch?** Applies where the study records live on a forge. Assumes any number, none included: CI green needs at least one check to have run at the head, every required check among them, and every check that ran succeeded. Read which checks the records' default branch requires (its protection and rulesets). The forge must allow merge commits on the records: the record steward never squashes or rebases, since the records point at their commits. Taken from the engineering template, template-v2.2.0. Default: the definition, as written.
 - **What must hold before a run record merges and before a claim package goes for acceptance?** Assumes the template's "What landed means": a protocol approved and locked before confirmatory data is seen; a run re-runnable from its record with every attempt logged; a result with its independent check agreeing, its methods review passed and its verdict following the locked rule; a claim inside the group accepted by the scientist at one revision; a claim outside it approved by every human author with a check that isn't LLM judgement. An organisation may add a check (a second replication, a human expert for every claim headed outside); it never removes one. Default: the assumption.
@@ -173,7 +174,7 @@ A copy is adapted when no marker is left; until then, the markers left are its o
 
 Every copied capability records the template release it came from, in its `oats.json`
 description. The template's descriptions already end with that sentence:
-"Copied from the scientific research template, template-v2.1.1." Keep it as it is when you
+"Copied from the scientific research template, template-v2.1.2." Keep it as it is when you
 copy, and set `version` to the copy's own numbering from then on. The template's own
 validator, which requires `version` to be the template release, stays with the template
 (section 1): nothing in the copy checks it. The dispatcher's description, the landing
@@ -184,7 +185,7 @@ Souls carry no such record, so write one for the whole copy, in the host reposit
 `capabilities/TEMPLATE-RELEASE` (a plain file, which OATS ignores):
 ```
 template: oats-project/oats-scientific-research-coordination
-release: template-v2.1.1
+release: template-v2.1.2
 commit: <the full commit SHA that tag points to>
 capabilities: <the ids you copied>
 souls: <the souls you copied, under their names in the copy>

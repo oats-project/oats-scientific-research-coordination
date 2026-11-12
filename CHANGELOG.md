@@ -2,6 +2,40 @@
 
 ## Unreleased
 
+## template-v2.1.2 - 2026-11-12
+
+A patch release, following engineering's template-v3.1.3 and research's template-v2.1.2: a
+floor for a child's model, and a cap on a name's length. The texts asked for a different
+model for a study reviewer and for a probe and set no floor, so a lead or an analyst could
+pick a smaller, cheaper model and call it different. Now the landing rules set a floor, no
+child below its parent's own tier, which a copy names per model family, and it comes
+before model diversity. For a copy of template-v2.1.1, port the passages below and answer
+the new marker.
+
+**`oats.landing-rules`**
+- inject, added: the rule "The models children run on", with its adapt marker, before "Who
+  does the work". Port: both.
+
+**`oats.study-lead`**
+- inject, added: the sentence "NEVER run a child ... on a model below the floor", after
+  "agents of one model share blind spots". Port: it.
+- `/send-a-helper`, added: the paragraph "The floor comes first". Port: it.
+- `/plan-the-study`, added: the paragraph "The floor comes first", at the end of step 6.
+  Port: it.
+- `/hand-off`, changed: step 3, "Its name", caps a name at five words. Port: that sentence.
+
+**`oats.analyst`**
+- inject, added: the same sentence as the lead's. Port: it.
+- `/run-the-review-loop`, added: the paragraph "The floor comes first", at the end of "Pick
+  a different model". Port: it.
+
+**`ADAPTING.md`**
+- added: the question "Which is the weakest model tier a child may run on", under the
+  landing rules.
+
+**Docs**
+- `docs/how-the-work-flows.md`: the naming rule in step 1 gives the five-word cap.
+
 ## template-v2.1.1 - 2026-11-12
 
 A patch release, following engineering's template-v3.1.2: instance names. Spawn commands

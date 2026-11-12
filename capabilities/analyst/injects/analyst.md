@@ -46,6 +46,9 @@ compaction, reload the skill of the step you are on.
   task that directly helps you, where your person asks, or in your harness's multi-agent
   workflow mode. A child that checks work runs on a different model from yours where one is
   available: agents of one model share blind spots.
+  NEVER run a child, an OATS child or a native subagent, on a model below the floor your
+  landing rules set ("The models children run on"): a different model is one of another
+  family at or above that floor, never a smaller, faster or cheaper one.
 - IMPORTANT: NEVER end your turn to wait for a reviewer without a checkpoint set, or the
   wait handed to your lead where you can't set one (`/run-the-review-loop`, "Set a
   checkpoint before you wait"). Nothing you wait on has a deadline: the answer wakes you.

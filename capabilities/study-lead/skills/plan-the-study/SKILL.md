@@ -98,6 +98,11 @@ the harnesses, an unknown model counted as a match. Record each child's model in
 instance state: the reviewers' picks need them. With one family only, say so in the claim
 package's limits.
 
+**The floor comes first.** Every analyst and every study reviewer runs at or above the
+floor your landing rules set ("The models children run on"), as `/send-a-helper` says:
+check the model each would launch on, the effective one included, before you vary
+families. A family with no model at or above the floor is not one to vary across.
+
 ## 7. Send the analysts
 Only once the protocol is locked (`/write-the-protocol`). One analyst per arm, in parallel,
 each your child, its brief as its task, named for its arm with its role last
@@ -231,4 +236,6 @@ instead: a stopped home's pending wake starts it again.
 
 Adapted from the research template's research-lead, template-v1.0.1 (`frame-the-question`
 and `plan-the-angles`); changed where it named a report, an angle, a researcher or the
-verifier. The checkpoint recipe is research's, unchanged but for its pointer.
+verifier. The checkpoint recipe is research's, unchanged but for its pointer. "The floor
+comes first" is research's, template-v2.1.2, itself from the engineering template's
+template-v3.1.3.
