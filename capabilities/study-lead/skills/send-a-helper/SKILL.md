@@ -253,7 +253,8 @@ establish a difference, use the effective one and say so where you use its answe
 Spawn it as your child, the brief as its task. Name it for its task, with its role in your
 effort last: `<task-slug>-helper` (`power-check-helper`), or `<area-slug>-specialist` for
 a standing specialist (`survival-models-specialist`). Never name it for its soul, which the
-sidebar already shows, and give it a name no instance has had:
+sidebar already shows, and give it a name no instance has had: when the name is taken,
+make the task's part more specific.
 ```bash
 oats spawn <soul> --parent "$OATS_INSTANCE" --same-work --name <task-slug>-helper --task-file <brief.md>
 ```

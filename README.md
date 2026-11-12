@@ -136,8 +136,9 @@ Every place where the template assumes something about an organisation carries o
    ```bash
    oats spawn dispatcher --name <person>-dispatcher --task-file <brief.md>
    ```
-   Bring it your questions, or start a lead directly: `oats spawn study-lead --task
-   "<question>"`. A lead starts the study records' record steward when none runs.
+   Bring it your questions, or start a lead directly, named for the study with its role
+   last: `oats spawn study-lead --name <study-slug>-lead --task "<question>"`. A name is
+   used once: after a retired instance had it, make the study's part more specific. A lead starts the study records' record steward when none runs.
 
 A messaging capability (for example `oats.aweb`) is strongly recommended: hand-offs are
 messages that wake their recipient. Without one, reports land in session transcripts.

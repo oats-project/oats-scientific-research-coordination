@@ -48,7 +48,9 @@ Always give both `--work-dir` and `--repo`. `<records clone>` is the absolute pa
 clone you made your tree from (`/run-an-arm`). Each reviewer is your child, on your work
 (`--same-work`), shares your tree to read the code and re-run it, and must not edit it;
 name each for the arm it reviews and its round, with its role last
-(`holdout-arm-r2-reviewer`), so no two share a name.
+(`holdout-arm-r2-reviewer`), so no two share a name. A reviewer that replaces one in the
+same round adds a letter to the round (`holdout-arm-r2b-reviewer`): a name is used once,
+even after its instance retires.
 
 ## Pick a different model
 A reviewer on your model shares your blind spots. Before spawning, compare:
@@ -184,7 +186,8 @@ status --json` and `oats instance events <reviewer> --json` (`waitingClaims`), t
   question through your messaging layer, and set a second checkpoint, half as far out.
 
 **A second overdue checkpoint ends the wait.** Never set a third, and never read silence as
-approval. Spawn a new reviewer with the same brief, on another model if a provider refused
+approval. Spawn a new reviewer with the same brief, a letter added to its round in the
+name, on another model if a provider refused
 this one, retire the stalled one (`oats retire <name>`) and say so in your report.
 
 ## Close

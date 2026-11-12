@@ -29,7 +29,8 @@ For each arm, in turn:
 3. **The checks, at the run record's head.** Send each study reviewer as your child, on a
    model other than the analyst's (`/plan-the-study`, "Pick the models"), its brief its
    task, named for its check with its role last (`holdout-rerun-reviewer`), a name no
-   instance has had:
+   instance has had (a repeat of the same check names its round,
+   `holdout-rerun-r2-reviewer`):
    ```bash
    oats spawn study-reviewer --parent "$OATS_INSTANCE" --same-work --name <check-slug>-reviewer --task-file <check.md>
    ```

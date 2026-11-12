@@ -30,13 +30,15 @@ its soul. For a copy of template-v2.1.0, port the passages below.
 
 **`oats.analyst`**
 - `/run-the-review-loop`, changed: a reviewer is `--name <arm-slug>-r<round>-reviewer`.
-  Port: the command and the sentence "name each for the arm it reviews".
+  Port: the command, the two sentences from "name each for the arm it reviews", and "a
+  letter added to its round in the name" under the second overdue checkpoint.
 
 **`oats.landing-rules`**
 - inject, changed: the record stewards' name, `<records>-record-steward`. Port: that line.
 
 **Docs**
-- `README.md`: the dispatcher is `<person>-dispatcher`. `docs/how-the-work-flows.md`: the
+- `README.md`: the dispatcher is `<person>-dispatcher`, and a lead started directly is
+  `--name <study-slug>-lead`. `docs/how-the-work-flows.md`: the
   walkthrough's lead is `triage-model-lead`, with the naming rule in step 1.
 
 ## template-v2.1.0 - 2026-11-11
