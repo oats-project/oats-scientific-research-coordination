@@ -100,9 +100,11 @@ package's limits.
 
 ## 7. Send the analysts
 Only once the protocol is locked (`/write-the-protocol`). One analyst per arm, in parallel,
-each your child, its brief as its task, with a name no instance has had:
+each your child, its brief as its task, named for its arm with its role last
+(`holdout-arm-analyst`), a name no instance has had (a second round on the same arm names
+its round, `holdout-arm-r2-analyst`):
 ```bash
-oats spawn analyst --parent "$OATS_INSTANCE" --same-work --purpose <arm-slug> --task-file <arm.md>
+oats spawn analyst --parent "$OATS_INSTANCE" --same-work --name <arm-slug>-analyst --task-file <arm.md>
 ```
 `--same-work` records that the analyst does your work, and your person's sidebar draws its
 line to you; it shares no work tree: the analyst keeps its own branch of the study

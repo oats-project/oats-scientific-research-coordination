@@ -231,7 +231,7 @@ changes while work runs is kept where everyone reads and updates it live.
 - the claim packages: in `studies/<study>/claims/`, each revision with its link, and each
   check's verdict beside the revision it checked;
 - the record stewards: one standing instance per study records repository, named
-  `record-steward-<records>`;
+  `<records>-record-steward` (a count before the role after a retired one);
 - holds, each with its reason, its scope and who lifts it, read by the record steward
   before every merge and lock:
   - on one change: the `hold` label on its PR;

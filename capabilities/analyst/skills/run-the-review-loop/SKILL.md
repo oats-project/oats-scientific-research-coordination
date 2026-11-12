@@ -42,12 +42,15 @@ It is spawned attached to your run record's tree:
 ```bash
 oats spawn study-reviewer --work attached --work-dir <your run record's tree> \
   --parent "$OATS_INSTANCE" --same-work --repo <records clone> \
-  --purpose <short-slug> --task-file <review-brief.md>
+  --name <arm-slug>-r<round>-reviewer --task-file <review-brief.md>
 ```
 Always give both `--work-dir` and `--repo`. `<records clone>` is the absolute path of the
 clone you made your tree from (`/run-an-arm`). Each reviewer is your child, on your work
 (`--same-work`), shares your tree to read the code and re-run it, and must not edit it;
-each gets a purpose of its own, so no two share a name.
+name each for the arm it reviews and its round, with its role last
+(`holdout-arm-r2-reviewer`), so no two share a name. A reviewer that replaces one in the
+same round adds a letter to the round (`holdout-arm-r2b-reviewer`): a name is used once,
+even after its instance retires.
 
 ## Pick a different model
 A reviewer on your model shares your blind spots. Before spawning, compare:
@@ -183,7 +186,8 @@ status --json` and `oats instance events <reviewer> --json` (`waitingClaims`), t
   question through your messaging layer, and set a second checkpoint, half as far out.
 
 **A second overdue checkpoint ends the wait.** Never set a third, and never read silence as
-approval. Spawn a new reviewer with the same brief, on another model if a provider refused
+approval. Spawn a new reviewer with the same brief, a letter added to its round in the
+name, on another model if a provider refused
 this one, retire the stalled one (`oats retire <name>`) and say so in your report.
 
 ## Close
@@ -236,6 +240,6 @@ Once you learn your record has landed, or the arm was dropped, finish unprompted
    parent, then retires you with `oats retire <name>`, without asking anyone.
 
 Adapted from the engineering template's developer, template-v2.2.0, with template-v3.0.1's
-Checked section and template-v3.0.2's knowledge checkpoint; changed where it named a spec, a code reviewer, an expert, a PR the
+Checked section, template-v3.0.2's knowledge checkpoint and template-v3.1.2's reviewer names; changed where it named a spec, a code reviewer, an expert, a PR the
 developer merges, or a harness or a model. Engineering's same-reviewer re-read of a minor's
 fix is not taken up: every round here has a fresh reviewer.

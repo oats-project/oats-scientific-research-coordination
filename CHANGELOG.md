@@ -2,6 +2,47 @@
 
 ## Unreleased
 
+## template-v2.1.1 - 2026-11-12
+
+A patch release, following engineering's template-v3.1.2: instance names. Spawn commands
+used `--purpose`, which names an instance `<soul>-<purpose>`: the soul first, which the
+sidebar already shows, and the task last. Every spawn command now gives an exact `--name`,
+`<task>-<role>`: the task first, and last the role the instance plays in the study, never
+its soul. For a copy of template-v2.1.0, port the passages below.
+
+**`oats.dispatcher`**
+- `/dispatch`, changed: the lead is `--name <effort-slug>-lead`, with the sentences after
+  the command. Port: the command and those sentences.
+
+**`oats.study-lead`**
+- `/plan-the-study`, changed: an analyst is `--name <arm-slug>-analyst`. Port: the command
+  and the sentence before it.
+- `/assemble-the-claim-package`, changed: a study reviewer is
+  `--name <check-slug>-reviewer`. Port: the command and the sentence before it.
+- `/send-a-helper`, changed: `--name <task-slug>-helper`, or `<area-slug>-specialist` for a
+  standing specialist. Port: the paragraph before the command, and the command.
+- `/hand-off`, changed: a new lead, sibling or independent, is `--name <study-slug>-lead`.
+  Port: both commands, and step 3, "Its name", which now states the rule.
+- `/write-the-protocol`, changed: the record steward is `<records>-record-steward`, where
+  it was `record-steward-<records>`. Port: the name in step 1 and in the command, and the count before the role for a
+  retired steward's successor, in steps 1 and 2. A steward
+  already running under the old name keeps it: retire it and start one under the new name
+  between studies, or keep the old name in your copy until then.
+
+**`oats.analyst`**
+- `/run-the-review-loop`, changed: a reviewer is `--name <arm-slug>-r<round>-reviewer`.
+  Port: the command, the two sentences from "name each for the arm it reviews", and "a
+  letter added to its round in the name" under the second overdue checkpoint.
+
+**`oats.landing-rules`**
+- inject, changed: the record stewards' name, `<records>-record-steward`, with a count before
+  the role after a retired one. Port: that line.
+
+**Docs**
+- `README.md`: the dispatcher is `<person>-dispatcher`, and a lead started directly is
+  `--name <study-slug>-lead`. `docs/how-the-work-flows.md`: the
+  walkthrough's lead is `triage-model-lead`, with the naming rule in step 1.
+
 ## template-v2.1.0 - 2026-11-11
 
 A minor release, following research's template-v2.1.0 and engineering's template-v3.1.0:

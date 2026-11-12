@@ -250,9 +250,13 @@ line, or its model command), with `--harness <h> --model <m>` or a launch config
 this host defines (`oats launch-config list`). If none is available, or you can't
 establish a difference, use the effective one and say so where you use its answer.
 
-Spawn it as your child, the brief as its task, with a name no instance has had:
+Spawn it as your child, the brief as its task. Name it for its task, with its role in your
+effort last: `<task-slug>-helper` (`power-check-helper`), or `<area-slug>-specialist` for
+a standing specialist (`survival-models-specialist`). Never name it for its soul, which the
+sidebar already shows, and give it a name no instance has had: when the name is taken,
+make the task's part more specific.
 ```bash
-oats spawn <soul> --parent "$OATS_INSTANCE" --same-work --purpose <helper-slug> --task-file <brief.md>
+oats spawn <soul> --parent "$OATS_INSTANCE" --same-work --name <task-slug>-helper --task-file <brief.md>
 ```
 `--same-work` records that the helper does your work, and your person's sidebar draws its
 line to you. It shares no work tree: each helper keeps the work its soul gives it.
@@ -315,6 +319,6 @@ hope for. It may ask you for a fact.
 - Waiting on an instance, set its checkpoint first (`/plan-the-study`, "Set a checkpoint
   before you wait").
 
-Taken from the research template's research-lead, template-v2.1.0, itself from the
-engineering template's engineering-expert, template-v3.1.0; changed where it named a report,
+Taken from the research template's research-lead, template-v2.1.1, itself from the
+engineering template's engineering-expert, template-v3.1.2; changed where it named a report,
 a researcher or the verifier.
