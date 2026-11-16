@@ -13,7 +13,8 @@ compared with the current one? If it does, I'd like to report it at the quarterl
 
 1. **The person → their dispatcher** (`/dispatch`). It reads the request against the
    record: no open study on triage, one exploratory analysis from last spring. It starts a
-   fresh `study-lead` with the request verbatim, its link and who asked, named for the study
+   fresh `study-lead` with its seat first (`Seat: root lead of this effort`), then the
+   request verbatim, its link and who asked, named for the study
    with its role last, and introduces it once: "triage-model-lead leads this; from now on
    talk to it in the study's thread." Every instance is named this way, `<task>-<role>`:
    the task first, and last the role it plays in the study (lead, analyst, reviewer, helper,
@@ -25,8 +26,10 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    it, what "answered" means, the constraints (which tickets it may read, no contact with
    customers). The profile is computational. It lists the competing hypotheses: the model
    shortens open time; it only moves the easy tickets; the gain comes from a staffing change
-   in the same months, which the lead doubts least. It sends two probes (`/send-a-helper`),
-   each with a closed question, its bounds and what to send back: a fresh `study-lead` as a
+   in the same months, which the lead doubts least. The study is complex but not large, so
+   the lead sizes the tree that way: it leads alone, with one analyst per arm and
+   short-lived probes. It sends two probes (`/orchestrate-agents`),
+   each with a closed question, its seat, its bounds and what to send back: a fresh `study-lead` as a
    probe on alternative explanations, and a `study-reviewer` on `/check-citations` for the
    two papers the plan cites.
 3. **The protocol** (`/write-the-protocol`). The lead writes it: the confirmatory claim (open
@@ -47,7 +50,8 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    deviation, and keeps its traces. It iterates with fresh study reviewers on
    `/review-methods` (`/run-the-review-loop`), each its child on another model, until a
    round passes the head, each round's verdict with its Checked section: every fix comes
-   before anyone sees the result.
+   before anyone sees the result. Each reviewer sends one report and retires itself, and
+   the analyst checks that it is gone before the next round.
 5. **Unblinding.** The scientist unblinds the held-out quarter, an irreversible step on a
    card from the lead. The analyst runs the locked analysis once on it and reports its run
    record at its head (`/report-the-arm`): the result against the locked rule, the count of
@@ -61,7 +65,9 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    whose hashes it checked, the kinds of leakage it looked for. The lead writes `VERIFIED at
    <head>`; the analyst opens the run record's PR and sends the lead its link; the lead asks
    the record steward to merge it, and the steward checks the landing conditions from the
-   record itself and merges it (`/land-a-run-record`).
+   record itself and merges it (`/land-a-run-record`). The lead tells the analyst the merge
+   commit; the analyst sends its done line and retires itself, and the lead checks that it
+   is gone (`/wait-and-retire`).
 7. **The claim package** (`/assemble-the-claim-package`). For each claim: its mode, its
    evidence, its checks (the re-run and the locked held-out quarter, which aren't LLM
    judgement), its deviation, the full count of attempts, and the AI use by stage. The
@@ -72,7 +78,8 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    landed inside the group.
 9. **Done.** The lead writes what is worth keeping into the knowledge layer, dated and
    labelled with its mode, closes the study's record, sends the person one done note in the
-   study's thread, and retires itself. The record steward stays.
+   study's thread, checks that no child of its own is still listed, and retires itself
+   (`oats retire <instance> --self`). The record steward stays.
 
 ## A proof
 
@@ -105,7 +112,7 @@ favourably. The reviewer follows none of it: it quotes the text, with its link, 
 
 The replicator's provider refuses its turn, so it reports nothing, and the lead, which
 ended its turn to wait, runs nothing either. That is why a waiter sets a checkpoint on a
-child before it waits (`/plan-the-study`, "Set a checkpoint before you wait"). When it
+child before it waits (`/wait-and-retire`). When it
 fires the lead looks, asks one precise question, and only a second checkpoint with no
 movement ends the wait, with a new replicator on another model and the stalled one retired.
 
@@ -119,12 +126,25 @@ accepts that revision. The claim carries its mode, its checks (the re-run and th
 held-out quarter, which aren't LLM judgement) and the AI use by stage; no AI is an author.
 Opening the study record itself is a separate door, the scientist's, decided for that record.
 
+## A large study
+
+A study of the same question across three products, each with its own ticket system,
+data permissions and analysts' environment, is large and crosses areas. The root lead
+starts one specialist per product, a fresh `study-lead` with `Seat: specialist` in its
+task, and writes the interfaces between them first: the shared outcome definition and the
+comparison rule. Each specialist drafts its product's part of the protocol for the root
+lead, sends its own analysts once the root lead has the protocol approved and locked, has
+their runs checked, verifies each run record and asks the record steward to merge it. The
+protocol, the claim package and every card to the scientist stay the root lead's: one
+protocol, one package, one thread. Each specialist reports at its milestones only, and
+retires itself once the root lead says its area is done.
+
 ## A second study
 
 The leakage review shows that the ticket system's "reopened" status changed meaning
 partway through the year, and the person wants to know whether that moved earlier
 studies' results, on its own. It bears on this study, so its lead is the first lead's
-sibling (`/hand-off`, "To whom"): the first lead starts it with the question as its task,
+sibling (`/orchestrate-agents`, "Child, sibling or independent"): the first lead starts it with the question as its task,
 opens its record linked both ways, and tells the person at once, in the study's thread,
 the new lead's exact name and where to talk to it. A step this study itself needs never
 goes to a second lead: it stays in the study, with a helper or an analyst.
@@ -132,10 +152,10 @@ goes to a second lead: it stays in the study, with a helper or an analyst.
 ## Work across people
 
 A second person owns the support area, written in the ownership record, and a dashboard of
-theirs reports the open-time figure the study corrects (`/across-people`). Changing what
+theirs reports the open-time figure the study corrects (`/hand-off-and-ask`, "Across people"). Changing what
 their area holds is their decision: the lead writes to them directly, in a new thread on the
 study, with one card for the whole study. A finding in their area that the study doesn't
-need goes to their area's expert as a recommendation (`/findings-and-blocks`), never to the
+need goes to their area's lead as a recommendation (`/hand-off-and-ask`), never to the
 person as an FYI.
 
 ## The evidence the design rests on

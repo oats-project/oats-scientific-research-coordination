@@ -2,6 +2,155 @@
 
 ## Unreleased
 
+## template-v3.0.0 - 2026-11-16
+
+A major release, following the engineering template's template-v4.0.0: every text is
+recomposed, and the way of working gains seats, a tree sized to the study, a maintainer's
+green light as an option, and self-retirement. The briefings are shorter (the study
+lead's 2,249 words to 1,364, the landing rules' 3,115 to 2,023, the analyst's 1,573 to
+1,196, the study reviewer's 1,111 to 916, the record steward's 905 to 756), and 23 skills
+are 21. The capabilities' text as a whole shrinks less (about 38,000 words to about
+35,200): the protocol and its lock, the run records and their steward, the arms, the
+claim package and the four study reviews are this template's substance, recomposed and
+not thinned, and the landing rules gain the two shared skills every soul now composes.
+There is no passage to port: a copy takes this release up whole (ADAPTING.md, section 6).
+
+**How the texts are composed now**
+- A briefing has one order: what you are, how the work flows, the rules that aren't
+  obvious (each with its reason), and which skill to open at which moment.
+- A skill is one procedure for one moment. Longer material sits in `references/` files
+  one level down, which the skill names.
+- A rule lives in one place. The hosts, secrets and a person's word passed on, restated in
+  the lead's, the analyst's, the study reviewer's and the record steward's briefings,
+  are once in the landing rules' house rules, with instance names and the model floor.
+- What a current model does unprompted is no longer restated: the analyst's
+  `/test-first` and `/diagnose-before-fixing` are gone; the study's own rules from them
+  are in `/build-the-analysis`. template-v2.1.2 keeps the earlier skills for a copy that
+  wants them.
+- Capitals mark a handful of rules per briefing; the "LOAD THE SKILL" banners are one line.
+
+**What changes in how agents work**
+- **One agent is the default.** A child earns its place by one of three reasons, named in
+  its brief: protecting context, parallel work, specialisation (template-v2.1.2 listed
+  four; testing is a use of a probe). An analyst for an arm and the study reviewers of a
+  result are required by rule, not chosen this way.
+- **The tree is sized to the study.** Simple: one arm and its checks. Complex or creative
+  but not large: the lead alone, with short-lived probes and helpers. Large, or across
+  areas: one long-lived specialist per area, which leads its area's arms inside the
+  lead's plan (it drafts its part of the protocol, sends its own analysts, verifies their
+  run records and asks the record steward to merge them), up to their merge. The
+  protocol, the claim package and every card stay the root lead's. This replaces the
+  standing specialist, and its cap and marker are gone. No lead seat touches the data or
+  runs an arm.
+- **Seats.** Every lead instance holds exactly one seat, root lead, specialist, or helper
+  or probe, named on a `Seat:` line in its task by whoever launches it: a lead's briefs,
+  a dispatcher's dispatch. A lead with no seat named takes itself for a root lead. An
+  analyst, a study reviewer, a record steward and a dispatcher are their own seat.
+- **Who leads:** the lead soul whose specialisation fits the study best. It hands a whole
+  study to another lead only on its person's yes; the outgoing lead's children hand back
+  and retire first, and a transfer note replaces the done note.
+- **`VERIFIED at <head>`** is the note of whoever specified the arm (the lead, or the
+  specialist of its area), and it opens the run record for merging. It carries to a new
+  head only through an unchanged rebase or update; otherwise whoever gave it reads the
+  delta and gives it again.
+- **A maintainer's green light** is an option, off by default: this template ships no
+  maintainer, and a study records repository needs none. Where a study's work lands in a
+  lane an engineering copy's maintainer keeps, the landing rules say so, and the lead
+  calls it by its instance name, `<person>-<lane>-maintainer`. No lane map.
+- **Every finished instance retires itself,** children first, with `oats retire <name>
+  --self`, and its parent sweeps: it checks that the child is gone on its last message,
+  before any step that needs it gone and at every checkpoint wake, and retires what is
+  finished or stalled and still listed. Before, a parent retired its children on their
+  done line. The record steward and the dispatcher stand, and their person retires them.
+- **One reviewer, one report.** A study reviewer retires itself once its report is sent.
+  A verdict without its Checked lines, a citation left unchecked, or a question about a
+  finding goes to a fresh reviewer, never back to the same one. The analyst's loop keeps
+  its fresh round on every moved head (engineering's delta read of a minor's fix is not
+  taken up) and its cap of 4 rounds.
+- **The tasks layer holds outcomes only:** a study, a finding to own. An arm, a probe, a
+  helper's piece, a specialist's area and a review live on the study's record.
+
+**`oats.study-lead`**: seven skills.
+- new `/orchestrate-agents`: from `/send-a-helper`, with the tree, the specialist, the
+  child-or-sibling table and the brief templates (`references/briefs.md`,
+  `references/probes.md`, which now holds every child's model, from `/plan-the-study`'s
+  "Pick the models").
+- new `/hand-off-and-ask`: `/hand-off`, `/ask-a-person`, `/findings-and-blocks` and
+  `/across-people` (`references/across-people.md`), and handing a whole study over.
+- `/land-on-agreement` loses "Retire what's finished", now in `/wait-and-retire`, gains
+  the maintainer's green light as an option, and points to `/assemble-the-claim-package`
+  for the run record's way to its merge.
+- `/plan-the-study` gains the study's record and sizing the tree; the analyst's brief
+  moved to `references/analyst-brief.md`; "Set a checkpoint before you wait" moved to
+  `/wait-and-retire`.
+- `/assemble-the-claim-package`: section 1 moved to
+  `references/from-report-to-run-record.md`, the reviewer's brief to
+  `references/reviewer-brief.md`.
+- `/write-the-protocol`, `/land-the-claims`: pointers to the merged skills; a specialist
+  drafts its area's part of the protocol.
+- removed: `/send-a-helper`, `/hand-off`, `/ask-a-person`, `/findings-and-blocks`,
+  `/across-people`.
+
+**`oats.analyst`**: four skills.
+- new `/build-the-analysis`: the study records' own rules first; the tests a change
+  touches run before the first new one; tests on blinded, held-back or synthetic data for
+  a confirmatory arm; expected values from an independent source; fixed seeds; doubles
+  only at real boundaries; a command that shows a bug before its fix, never a fix that
+  changes the data, the seed or the protocol, every attempt logged, three failed fixes
+  then stop; the workflow cap of 10 agents, moved from the briefing.
+- removed, not restated: `/test-first`, `/diagnose-before-fixing`.
+- `/run-the-review-loop` (`references/reviewer-model.md`): rewritten from the
+  engineering template's; the checkpoint and the finish moved to `/wait-and-retire`.
+- `/run-an-arm`, `/report-the-arm`: pointers; the analyst retires itself.
+
+**`oats.study-reviewer`**: the briefing in the new order; the reviewer retires itself once
+its report is sent. The four skills are unchanged.
+
+**`oats.record-steward`**: the briefing in the new order; its hosts and relayed-word rules
+are the landing rules' house rules; its skills point to `/landing-rules-detail` for the
+records' layout and holds.
+
+**`oats.dispatcher`**: now the engineering template's at template-v4.0.0, changed only
+where it names the lead's children: a lead's task opens with its seat; a maintainer is
+found by its name.
+
+**`oats.landing-rules`**: a shorter briefing, with the house rules, and two skills every
+soul now composes.
+- new `/landing-rules-detail`: CI green, `VERIFIED` and what carries to a new head, the
+  green light, the model floor, the statistical sign-off, the profiles, publishing and
+  the findings worth keeping; in `references/study-records.md` the records' layout and
+  holds; in `references/more-rules.md` who does which work, the records, and what happens
+  after the rules change.
+- new `/wait-and-retire`: the checkpoint (`references/checkpoint.md`), what finished
+  means per seat, the done line, retiring yourself, and the parent's sweep.
+
+**Adapt markers**: 21, as before: one gone, one new, nine moved. A copy's earlier answers
+go here:
+
+| The marker in template-v2.1.2 | Now |
+|---|---|
+| "Which checks does the forge require on the default branch?" (the landing rules) | `/landing-rules-detail` |
+| "Which studies need a human statistician's sign-off, and who signs off?" | `/landing-rules-detail` |
+| "Which profiles apply to this organisation's studies: ...?" | `/landing-rules-detail` |
+| "Who decides to publish a claim outside the group, and what must it carry?" | `/landing-rules-detail` |
+| "Which knowledge layer keeps the findings worth keeping, ...?" | `/landing-rules-detail` |
+| "Where do study records live, where is raw data kept, and who decides to open a record?" | `/landing-rules-detail`, `references/study-records.md` |
+| "How many probes may a lead run in parallel for one decision?" (`/send-a-helper`) | `/orchestrate-agents`, `references/probes.md` |
+| "Which specialist souls can a lead call as helpers, ...?" (`/send-a-helper`) | `/orchestrate-agents`, as "Which lead souls can lead an area as a specialist, and what does each bring (knowledge, sources, instruments, an environment)?" |
+| "Which model families does this organisation have for analysts and study reviewers?" (`/plan-the-study`) | `/orchestrate-agents`, `references/probes.md` |
+| "How many standing specialists may a lead keep at once?" | gone |
+| (new) | the landing rules: "Where does the organisation require a maintainer's green light, for work a study lands in a lane a maintainer keeps?" Default: none |
+
+The other markers are where they were.
+
+**Docs**
+- `README.md`, `ADAPTING.md` (principles, "How the texts are composed", the green light
+  as an option, taking up this release whole, sitting beside an engineering copy) and
+  `docs/how-the-work-flows.md` (the seat line, sizing the tree, a large study with
+  specialists, every instance retired) follow the texts.
+- `THIRD-PARTY-NOTICES.md` names `/build-the-analysis` in place of the two removed skills.
+- The tests pin the new skill lists, the release and the counts.
+
 ## template-v2.1.2 - 2026-11-12
 
 A patch release, following engineering's template-v3.1.3 and research's template-v2.1.2: a

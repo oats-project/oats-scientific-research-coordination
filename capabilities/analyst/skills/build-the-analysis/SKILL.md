@@ -10,7 +10,7 @@ win, which data a test may see, and what stops a fix.
 
 ## 1. The records repository's rules win
 Before your first edit, read what the study records say about how they are changed: their
-agent instructions (`AGENTS.md`, `CLAUDE.md`) at the root and on the path to your arm's
+agent instructions (`AGENTS.md` and the like) at the root and on the path to your arm's
 directory, their test conventions and their CI workflows. They win over your habits. The
 locked protocol's checks go in as written; a test you write sits around them, never in
 place of one. Where the protocol and the repository disagree, ask your lead before you
