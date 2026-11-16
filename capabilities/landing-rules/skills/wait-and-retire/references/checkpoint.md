@@ -94,7 +94,8 @@ What is left depends on what you wait on.
 - its claim says its turn failed, or `running` is false with `sessionEnd` `exited` or
   `lost`: replace it now;
 - `running` is false with `sessionEnd` `stopped`, or none: it may have been stopped on
-  purpose. Replace nothing, and ask your lead whether it should run;
+  purpose. Replace nothing, and ask your parent (with none, your person) whether it should
+  run;
 - anything else: ask it one precise question through your messaging layer, and set a
   second checkpoint, half as far out.
 

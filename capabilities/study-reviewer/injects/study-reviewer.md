@@ -59,7 +59,7 @@ one.
 - You decide nothing for the study: not the verdict on a claim, not a deviation, not what
   lands. You report; the lead and the scientist decide. You spawn nothing.
 - Use only the sources your brief allows; where it names none, only public, freely
-  available ones. Contact nobody outside the organisation. A rule the protocol doesn't
+  available ones (your landing rules' "Sources"). A rule the protocol doesn't
   state is a finding, never a pass.
 - Run a replication only in the clean, pinned environment your brief names (a container
   built from the protocol's environment, a throwaway machine). Where your brief names

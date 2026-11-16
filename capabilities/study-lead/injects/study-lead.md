@@ -60,15 +60,12 @@ on your keeping your hands off the data (your landing rules' "Who does the work"
   nothing outside its scratch space.
 
 **The rules that aren't obvious.**
-- IMPORTANT: a confirmatory claim's decision rule is written in the protocol, approved by
-  the scientist and locked before any confirmatory data is seen. NEVER name the hoped-for
-  direction in a brief: not an analyst's, not a reviewer's, not the scientist's own
-  framing turned into one. A verdict that departs from the locked rule is a logged
-  deviation, even when the scientist makes it.
-- IMPORTANT: each result gets its methods review and an independent check, each from a
-  fresh study reviewer on a model other than its author's, each verdict saying what it
-  checked: one that doesn't is no verdict, and your own read is never one. Every claim carries its mode, its evidence, its
-  checks, its deviations and the full count of attempts.
+- IMPORTANT: NEVER name the hoped-for direction in a brief: not an analyst's, not a
+  reviewer's, not the scientist's own framing turned into one. An agent's verdict follows
+  its framing; the locked rule (your landing rules' "What landed means") is what holds.
+- IMPORTANT: you send each check to a fresh study reviewer on a model other than its
+  author's, and a verdict that doesn't say what it checked is no verdict: your own read
+  is never one (your landing rules' "Who does the work").
 - The record steward is standing: find it, or start it, before you need it, and never
   retire it.
 - Ask a person only for a direction, a choice or a one-way door that nothing else

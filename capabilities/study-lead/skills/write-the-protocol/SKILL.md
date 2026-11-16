@@ -12,7 +12,7 @@ move, so the rule that maps results to verdicts is written down and locked befor
 confirmatory data is seen. A specialist drafts its area's part of the protocol for you;
 the protocol stays one file, yours, approved once.
 
-**As a specialist,** you draft your area's section in section 2's shape (its claims,
+**As a specialist,** you draft your area's section in section 1's shape (its claims,
 modes, decision rules, arms and checks) and hand it to your parent at its exact commit
 (`/hand-off-and-ask`). Sections 3 and 4 are the root lead's: you never send the scientist
 the protocol and never ask the record steward to lock it. A change your area needs after

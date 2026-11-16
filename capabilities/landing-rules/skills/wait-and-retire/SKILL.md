@@ -59,8 +59,9 @@ wakes. In this order:
 1. **Your children are gone:** `oats status --json` lists no instance with you as its
    parent. Retire any that is (below). NEVER retire yourself over a child: that stops it
    and keeps its home, which is how instances are left behind.
-2. **Nothing uncommitted or unpushed,** and your extra worktrees removed. A retire keeps
-   a tree that holds work; it doesn't deliver it.
+2. **Nothing uncommitted or unpushed,** and each extra worktree removed
+   (`oats worktree remove --purpose <purpose>`; an analyst's purpose is its arm). A
+   retire keeps a tree that holds work; it doesn't deliver it.
 3. **Your final knowledge checkpoint,** where you have a duty to propose.
 4. **Your done line,** one message to your parent:
    - `done, proposed: <PR URLs>`;

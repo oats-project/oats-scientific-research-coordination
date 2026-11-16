@@ -20,19 +20,25 @@ pending. A skipped check didn't run. A head where no check ran isn't green.
   specialist of its area) for an analyst's run record, once its checks agree there and
   it follows the locked protocol. It lets the analyst open the run record for merging at
   that head. It asserts what was checked: each verdict, one line each.
-- **A review carries** to a new head with no re-read through a rebase whose range-diff
-  shows every commit unchanged, or an update from the default branch that leaves the
-  record's own diff unchanged. A run record has two more, which the analyst's report and the
-  record steward's checks spell out: the methods verdict carries to a head where only the
-  run's evidence grew (on a confirmatory arm, the reviewed code's run on the real data
-  adds its result, outputs and attempts), and every check's verdict carries through
-  commits that only add verdicts under the arm's `reviews/`. Any other new head of a run
-  record, a nit taken included, gets a fresh reviewer on the whole change: every round of
-  an analyst's loop is fresh, and engineering's read of a minor's fix as a delta is not
-  taken up here.
-- **A `VERIFIED` note and a green light** carry with no re-read through the same
-  unchanged rebase or update, and in no other way: at any other new head, whoever gave it
-  reads the delta and gives it again at that head. A reviewer's verdict never stands in
+- **A review of a run record carries** to a new head only as the record steward's checks
+  say: the reviewed head is an ancestor of the new one (an update from the default branch
+  by a merge keeps it; a rebase doesn't), and since it only what that review didn't read
+  has grown. For the methods verdict that is the run's evidence (on a confirmatory arm,
+  the reviewed code's run on the real data adds its result, outputs and attempts); for
+  every check, commits that only add verdicts under the arm's `reviews/`. Any other new
+  head of a run record, a rebase or a nit taken included, gets a fresh reviewer on the
+  whole change: every round of an analyst's loop is fresh, and engineering's read of a
+  minor's fix as a delta is not taken up here.
+- **`VERIFIED` for a PR outside the study records,** where a study's work lands in a lane
+  a maintainer keeps (the lead's green-light route): the note of the lead that
+  specified the piece, at that PR's head, once the review the lane's rules require has
+  passed there and the piece meets its brief, one line per check. It is not a run
+  record's note and never stands in for one.
+- **A run record's `VERIFIED`** carries to a new head only where every review it lists
+  carries there too. **Another PR's `VERIFIED` and a green light** carry with no re-read
+  through a rebase whose range-diff shows every commit unchanged, or an update from the
+  default branch that leaves the change's own diff unchanged, and in no other way. At any
+  other new head, whoever gave the note reads the delta and gives it again at that head. A reviewer's verdict never stands in
   for either.
 - **A claim package's checks** carry to a new revision only where it changes no claim
   (wording, layout, a fixed link): a revision that changes or adds a claim is checked

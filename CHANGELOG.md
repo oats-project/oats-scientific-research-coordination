@@ -51,8 +51,11 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
   and retire first, and a transfer note replaces the done note.
 - **`VERIFIED at <head>`** is the note of whoever specified the arm (the lead, or the
   specialist of its area), and it opens the run record for merging. It carries to a new
-  head only through an unchanged rebase or update; otherwise whoever gave it reads the
-  delta and gives it again.
+  head only where every review it lists carries there (the record steward's checks: an
+  update from the default branch by a merge, evidence growth, verdicts added; never a
+  rebase); otherwise whoever gave it reads the delta and gives it again. Where a study's
+  work lands as a PR in a lane a maintainer keeps, the specifying lead's `VERIFIED` at
+  that PR's head carries, with the green light, through an unchanged rebase or update.
 - **A maintainer's green light** is an option, off by default: this template ships no
   maintainer, and a study records repository needs none. Where a study's work lands in a
   lane an engineering copy's maintainer keeps, the landing rules say so, and the lead
@@ -103,7 +106,8 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
 - removed, not restated: `/test-first`, `/diagnose-before-fixing`.
 - `/run-the-review-loop` (`references/reviewer-model.md`): rewritten from the
   engineering template's; the checkpoint and the finish moved to `/wait-and-retire`.
-- `/run-an-arm`, `/report-the-arm`: pointers; the analyst retires itself.
+- `/run-an-arm`, `/report-the-arm`: pointers; the analyst retires itself, removing its
+  extra tree (`oats worktree remove`).
 
 **`oats.study-reviewer`**: the briefing in the new order; the reviewer retires itself once
 its report is sent. In `/review-methods`, an analyst's dispute of a finding goes to a fresh
