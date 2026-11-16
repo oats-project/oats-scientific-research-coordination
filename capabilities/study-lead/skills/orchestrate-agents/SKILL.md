@@ -56,7 +56,8 @@ is another study. In doubt, it is yours.
 - A sibling or independent lead gets your message as its task (`/hand-off-and-ask`),
   opening with its seat (root lead of the new study), and its own record, linked both
   ways with yours. A sibling records no parent, so it takes no `--same-work`. Tell your
-  person at once its exact name, what it leads and where its record is, and add it to
+  person at once, in your study's thread, in one message, its exact name, what it leads
+  and where its record is, and that they talk to it in the new study's thread; add it to
   your study's status line.
 - Only a root lead with no parent (a dispatcher or a person started it) spawns a
   sibling. As a specialist, hand a new study to your parent.

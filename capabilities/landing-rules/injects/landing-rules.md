@@ -48,8 +48,8 @@ anything.
 **Who does the work.** The study lead plans the study, writes the protocol, decides how
 many arms there are and which run in parallel, sends the analysts and its other helpers,
 has the claims checked, assembles the claim package and lands it with the scientist.
-Analysts run every arm, one each, of a locked protocol and own its run record: the lead
-runs none. Study reviewers check, one kind of review each; the record steward locks
+Analysts run every arm, one each, of a locked protocol and own its run record: a lead,
+in any seat, runs none, exploratory or confirmatory, and never touches the data. Study reviewers check, one kind of review each; the record steward locks
 protocols, keeps the records and merges run records. The lead never validates its own
 claim alone, and no analyst checks its own result. Why: a claim is checked by someone
 other than its author, and the one who wrote the protocol and reads the claims never

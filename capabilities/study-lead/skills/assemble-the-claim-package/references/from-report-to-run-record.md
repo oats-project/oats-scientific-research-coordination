@@ -56,9 +56,10 @@ For each arm, in turn:
    the head, ask the record steward by message to merge the run record there; the steward
    merges it once your landing rules' "What landed means" holds for a run, from the record
    itself, never from your note alone (`/write-the-protocol`, "Find the record steward").
-   You never merge. Your note carries to a new head only where every review it lists
-   carries there too (`/landing-rules-detail`, "What carries to a new head"); otherwise
-   read the delta and write it again at the new head. Tell the analyst the merge commit: it then
+   You never merge. Your note carries to a new head only through an update from the default
+   branch that leaves the record's own diff unchanged, never a rebase
+   (`/landing-rules-detail`, "What carries to a new head"); at any other new head, a
+   commit adding a verdict included, read the delta and write it again there. Tell the analyst the merge commit: it then
    sends its done line and retires itself.
 
 Each study reviewer retires itself once its verdict is sent: one reviewer, one report.

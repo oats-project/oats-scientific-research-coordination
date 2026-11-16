@@ -59,5 +59,3 @@ Where the harness itself requires a person's opt-in, use a standing opt-in they 
 ask once per task with the agent count. Read what the agents produced: it goes through
 your review loop as your own work. A path that needs a soul's knowledge or a testing
 capability you lack is no workflow agent's: ask your lead for an OATS child.
-
-Adapted from sources listed in THIRD-PARTY-NOTICES.md

@@ -42,8 +42,9 @@ on your branch, run your loop again at the new head, and report the new head the
 Once the lead writes `VERIFIED at <head>`, open the run record's PR to the records
 repository at that head, naming the record steward (with no forge, push the branch at that
 head), and tell the lead its link and head in one line: the lead asks the steward to merge
-it. Answer what the steward asks. Your lead's `VERIFIED` holds at a new head only where
-every review it lists carries there too (`/landing-rules-detail`): any other new head,
-a rebase included, goes back to your lead first. Once your
+it. Answer what the steward asks. Your lead's `VERIFIED` holds at a new head only through
+an update from the default branch that leaves the record's own diff unchanged
+(`/landing-rules-detail`): any other new head, a rebase included, goes back to your lead
+first. Once your
 record has landed, or the lead has dropped the arm, and nothing waits on you, finish:
 send your done line and retire yourself (`/wait-and-retire`, "Retire yourself").

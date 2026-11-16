@@ -51,9 +51,9 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
   and retire first, and a transfer note replaces the done note.
 - **`VERIFIED at <head>`** is the note of whoever specified the arm (the lead, or the
   specialist of its area), and it opens the run record for merging. It carries to a new
-  head only where every review it lists carries there (the record steward's checks: an
-  update from the default branch by a merge, evidence growth, verdicts added; never a
-  rebase); otherwise whoever gave it reads the delta and gives it again. Where a study's
+  head with no re-read only through an update from the default branch that leaves the
+  record's own diff unchanged, never through a rebase (its reviews don't carry through
+  one); otherwise whoever gave it reads the delta and gives it again. Where a study's
   work lands as a PR in a lane a maintainer keeps, the specifying lead's `VERIFIED` at
   that PR's head carries, with the green light, through an unchanged rebase or update.
 - **A maintainer's green light** is an option, off by default: this template ships no

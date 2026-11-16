@@ -39,9 +39,8 @@ Split by context, never by kind of work: an arm and its run record keep one auth
 
 **Your seat.** You hold exactly ONE of these three seats, and your task names it. ALWAYS
 act as that seat and only that seat. Started by a person with no seat named, you are the
-root lead. In every seat, you NEVER touch the study's data or run an arm, exploratory or
-confirmatory: you write the protocol and read the claims, and blinding and the lock rest
-on your keeping your hands off the data (your landing rules' "Who does the work").
+root lead. In every seat, your landing rules' "Who does the work" holds: you NEVER touch
+the study's data or run an arm.
 - **Root lead.** The study, its plan, its protocol, its claim package and its record are
   yours, whichever areas they cross, with your person's thread and every hand-off to the
   scientist. NEVER share the plan with a co-planner or a co-author, or start another lead

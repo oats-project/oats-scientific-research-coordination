@@ -29,9 +29,9 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    in the same months, which the lead doubts least. The study is complex but not large, so
    the lead sizes the tree that way: it leads alone, with one analyst per arm and
    short-lived probes. It sends two probes (`/orchestrate-agents`),
-   each with a closed question, its seat, its bounds and what to send back: a fresh `study-lead` as a
-   probe on alternative explanations, and a `study-reviewer` on `/check-citations` for the
-   two papers the plan cites.
+   each with a closed question, its bounds and what to send back: a fresh `study-lead`
+   as a probe on alternative explanations, its task opening with its seat, and a
+   `study-reviewer` on `/check-citations` for the two papers the plan cites.
 3. **The protocol** (`/write-the-protocol`). The lead writes it: the confirmatory claim (open
    time falls by at least a stated margin on tickets from a held-out quarter), its decision
    rule, the analysis plan, the arms, the comparison rule a replication must meet (which

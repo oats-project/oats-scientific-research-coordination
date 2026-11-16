@@ -31,8 +31,7 @@ and nothing goes ahead by default.
   give, over git and standard tools, and its output is your evidence. Where a check can't
   run, or its output doesn't say what the skill needs, the answer is no, with why: never
   a judgement that it is probably fine.
-- IMPORTANT: you merge into the records' default branch, and you are the only one who
-  does. NEVER merge a record whose landing conditions you haven't checked from the record
+- IMPORTANT: NEVER merge a record whose landing conditions you haven't checked from the record
   itself at that head (`/land-a-run-record`): a lead's `VERIFIED` or a reviewer's word is
   not the check.
 - NEVER change what the records keep: no edit to raw data, and no line changed or

@@ -34,10 +34,12 @@ pending. A skipped check didn't run. A head where no check ran isn't green.
   specified the piece, at that PR's head, once the review the lane's rules require has
   passed there and the piece meets its brief, one line per check. It is not a run
   record's note and never stands in for one.
-- **A run record's `VERIFIED`** carries to a new head only where every review it lists
-  carries there too. **Another PR's `VERIFIED` and a green light** carry with no re-read
-  through a rebase whose range-diff shows every commit unchanged, or an update from the
-  default branch that leaves the change's own diff unchanged, and in no other way. At any
+- **A run record's `VERIFIED`** carries with no re-read only through an update from the
+  default branch that leaves the record's own diff unchanged, never through a rebase
+  (its reviews don't carry through one). **Another PR's `VERIFIED` and a green light**
+  carry with no re-read through a rebase whose range-diff shows every commit unchanged,
+  or an update from the default branch that leaves the change's own diff unchanged, and
+  in no other way. At any
   other new head, whoever gave the note reads the delta and gives it again at that head. A reviewer's verdict never stands in
   for either.
 - **A claim package's checks** carry to a new revision only where it changes no claim

@@ -1,6 +1,6 @@
 ---
 name: run-the-review-loop
-description: The analyst's review loop, the arm's methods review - you, never your lead, iterate with a fresh study reviewer each round, spawned as your OATS child attached to your run record's tree, on a model at or above the floor and of another family than yours, briefed with the locked protocol, the range, its bounds and when to stop, and never your reasoning or the hoped-for direction, until a round whose Checked section covers the arm's plan passes the head (APPROVE or APPROVE WITH NITS); on a confirmatory arm before unblinding; every verdict in the run record; the cap of 4 rounds; the report at a passing head and what comes after it. Use when your arm runs end to end, before you report it, for whatever your lead's checks return, and for a fix the record steward asks for.
+description: The analyst's review loop, the arm's methods review - you, never your lead, iterate with a fresh study reviewer each round, spawned as your OATS child attached to your run record's tree, on a model at or above the floor and of another family than yours where one is available, briefed with the locked protocol, the range, its bounds and when to stop, and never your reasoning or the hoped-for direction, until a round whose Checked section covers the arm's plan passes the head (APPROVE or APPROVE WITH NITS); on a confirmatory arm before unblinding; every verdict in the run record; the cap of 4 rounds; the report at a passing head and what comes after it. Use when your arm runs end to end, before you report it, for whatever your lead's checks return, and for a fix the record steward asks for.
 ---
 
 # Run the review loop
@@ -39,8 +39,9 @@ oats spawn study-reviewer --work attached --work-dir <your run record's tree> \
 - **One reviewer, one report.** It retires itself once its report is sent, so every
   round gets a new one, which reads the run record as it is, without the earlier rounds.
 - **Its model:** at or above the floor your landing rules set, and of another family
-  than yours: [references/reviewer-model.md](references/reviewer-model.md) says how to
-  compare and choose.
+  than yours where one is available, else as the floor's fallback says:
+  [references/reviewer-model.md](references/reviewer-model.md) says how to compare and
+  choose.
 - An OATS child, not a native subagent, unless your person asks for one or your
   harness's multi-agent workflow mode is in use: a review is work your person can see.
 
