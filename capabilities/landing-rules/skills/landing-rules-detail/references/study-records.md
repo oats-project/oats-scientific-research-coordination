@@ -34,6 +34,7 @@ these rules name, lifts it, and a lead lifts only a hold it placed itself, never
 person placed. The record steward merges these lines alone, even while a hold stands.
 
 ## The record stewards
-One standing instance per study records repository, named `<records>-record-steward`
-(after a retired one, a count before the role: `<records>-2-record-steward`, then `-3-`);
-the one of these not retired is the steward. The name is the seat: never a second one for a repository while one is listed, even a stopped one.
+One standing instance per study records repository, named `<records>-record-steward`,
+or, after a retired holder, with a count before the role (`<records>-2-record-steward`,
+then `-3-`): a name is used once, and the kernel doesn't refuse a retired one's name, so
+a new steward takes the first of the family no instance has had. The name is the seat: never a second one for a repository while one is listed, even a stopped one.

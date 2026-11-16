@@ -97,9 +97,12 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
 - `/write-the-protocol`, `/land-the-claims`: pointers to the merged skills; a specialist
   drafts its area's part of the protocol for its parent, which alone sends it for approval
   and locking.
-- A lane's maintainer and the record steward are found by their name and its numbered
-  successors (`-2-`, `-3-`): the one not retired holds the seat, and a spawn refused for
-  a taken name takes the next count only once that name's instance is retired.
+- A lane's maintainer and the record steward are looked for under every name of their
+  family (the name, then `-2-`, `-3-` before the role): with more than one running or
+  stopped, the lead asks its person; before it starts one, it finds the first name no
+  instance has had, with `oats instance events <name>`, since the kernel doesn't refuse
+  a retired instance's name; a spawn refused because the name is taken means a holder
+  is running or stopped.
 - removed: `/send-a-helper`, `/hand-off`, `/ask-a-person`, `/findings-and-blocks`,
   `/across-people`.
 
@@ -125,8 +128,10 @@ are the landing rules' house rules; its skills point to `/landing-rules-detail` 
 records' layout and holds.
 
 **`oats.dispatcher`**: now the engineering template's at template-v4.0.1 (its
-template-v4.0.0 text with that patch's one clause: a lane's maintainer is looked for by
-its name and its numbered successors, the one not retired), changed only where it names
+template-v4.0.0 text with that patch's lookup: every name of a lane's maintainer family,
+the person asked where more than one holds it or a name is only on the roster, a new
+one named with the first name no instance has had, and a spawn refused for a taken name
+read as a live holder, as engineering's template-v4.0.2 adds), changed only where it names
 the lead's children: a lead's task opens with its seat; a maintainer is found by its
 name.
 

@@ -38,11 +38,29 @@ fresh reviewers.
 Only where your landing rules ask for one, for work that lands in a lane a maintainer
 keeps (a shared code repository, say); a study records repository needs none. This
 template ships no maintainer: where the organisation runs one, it is the engineering
-template's, found by its instance name `<person>-<lane>-maintainer` and its numbered
-successors (`<person>-<lane>-2-maintainer`, `-3-`, ...): look for each with `oats status
---json` and your messaging layer's roster across machines; the one not retired is the
-maintainer. Call it by message at the
-exact head once CI is green and every review thread is answered, with the task, your
+template's, found by its instance name: `<person>-<lane>-maintainer`, or, after a retired
+holder, with a count before the role (`<person>-<lane>-2-maintainer`, then `-3-`). Look
+for every name of that family with `oats status --json` on this machine and your
+messaging layer's roster across machines:
+- **One is running:** call it.
+- **One is stopped, or known but not active:** message it anyway (messages wait), and
+  tell its person it is stopped, so they can start it.
+- **More than one is running or stopped:** ask your person which holds the seat, and
+  start none.
+- **Named on the roster with nothing running anywhere you can see:** it may be retired,
+  or run where you can't look. Ask its person before you start one.
+- **None,** where the workspace has a maintainer soul: start one for your person,
+  independent of you (`oats spawn <maintainer soul> --relation unrelated --name
+  <person>-<lane>[-<count>]-maintainer --task-file <brief.md>`), named with the first of
+  the family no instance has had. The kernel doesn't refuse a retired instance's name,
+  so check each in order: `oats instance events <name>` lists a used name's events, a
+  `retired` one among them, and says "no instance" for a name never used on this
+  machine; a name the roster still lists is used too. A spawn refused because the name
+  is taken means a holder is running or stopped: find it, and start none under another
+  name. Tell your person, in one line, its name and that it holds the lane. As a
+  specialist, ask your parent instead.
+
+Call it by message at the exact head once CI is green and every review thread is answered, with the task, your
 `VERIFIED` note and what was run. Its verdict is `GREEN LIGHT at <head>`, `RETURN at
 <head>` with findings (they go to the author; the fixed head goes back to it; after 3
 returns on one PR, put both positions to your person in one card), or `ESCALATE`, which

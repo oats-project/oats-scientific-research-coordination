@@ -102,25 +102,30 @@ makes it. Nothing is changed in place: the lock record and the deviation log onl
 The record steward holds custody of the study records: it locks protocols and merges run
 records. It is standing, one per study-records repository, and never your child, so it
 outlives your study.
-1. **Look for it:** `oats status` lists `<records>-record-steward`, named for the study
-   records repository your landing rules name, and its numbered successors
-   (`<records>-2-record-steward`, `-3-`, ...): the one not retired is the steward.
-   Running: send it what you need, by message at an exact reference
-   (`/hand-off-and-ask`). Listed but not running: message it anyway (messages wait), and
-   tell your person it is stopped, so they can start it.
+1. **Look for it:** the steward is named for the study records repository your landing
+   rules name: `<records>-record-steward`, or, after a retired holder, with a count
+   before the role (`<records>-2-record-steward`, then `-3-`). Look for every name of
+   that family with `oats status --json`:
+   - **One is running:** send it what you need, by message at an exact reference
+     (`/hand-off-and-ask`).
+   - **One is stopped:** message it anyway (messages wait), and tell your person it is
+     stopped, so they can start it.
+   - **More than one is running or stopped:** ask your person which holds the seat, and
+     start none.
 2. **None:** start one yourself, independent of you, never as your child, so your
    retirement can't stop it (as a specialist, ask your parent to):
    ```bash
-   oats spawn record-steward --relation unrelated --name <records>-record-steward --task-file <brief.md>
+   oats spawn record-steward --relation unrelated --name <records>[-<count>]-record-steward --task-file <brief.md>
    ```
-   Brief: "record steward for <the study records repository>; first call: <your instance>
-   asks for <a lock | a merge> of <path or branch> at <commit>". Tell your person, in one
-   line, its instance name and that it holds custody of those records. That is no one-way
-   door, so it is no card. Where that name was used by a retired steward, put a count before
-   the role, one more than the highest earlier one (`<records>-2-record-steward`).
+   Name it with the first of the family no instance has had. The kernel doesn't refuse a
+   retired instance's name, so check each in order: `oats instance events <name>` lists
+   a used name's events, a `retired` one among them, and says "no instance" for a name
+   never used on this machine. Brief: "record steward for <the study records
+   repository>; first call: <your instance> asks for <a lock | a merge> of <path or
+   branch> at <commit>". Tell your person, in one line, its instance name and that it
+   holds custody of those records. That is no one-way door, so it is no card.
 3. The name is the seat: never a second steward for one repository while one is listed,
-   even a stopped one. A spawn refused because the name is taken: check whether that
-   name's instance is live (`oats status`); it is the steward unless it is retired, and
-   only then take the next count.
+   even a stopped one. A spawn refused because the name is taken means a holder is
+   running or stopped: find it, and start none under another name.
    Nothing is locked or merged until a steward runs. You never retire it: it is
    standing, and its person retires it.
