@@ -31,7 +31,8 @@ build that part.
   verdict every run. A seed is never changed to get another result.
 - **Doubles only at real boundaries** (the network, the clock, a paid service, an
   instrument), never for your own collaborators, and no test asserts on a double instead
-  of the behaviour.
+  of the behaviour. A double of an external tool, API or instrument is checked against the
+  real one at least once, with the command in your report.
 
 ## 3. A bug: diagnose before you fix
 Every attempt below is an attempt of your arm: log it in `attempts.md` (`/run-an-arm`).
