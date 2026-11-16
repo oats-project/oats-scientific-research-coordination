@@ -7,10 +7,10 @@
 A major release, following the engineering template's template-v4.0.0: every text is
 recomposed, and the way of working gains seats, a tree sized to the study, a maintainer's
 green light as an option, and self-retirement. The briefings are shorter (the study
-lead's 2,249 words to 1,364, the landing rules' 3,115 to 2,023, the analyst's 1,573 to
-1,196, the study reviewer's 1,111 to 916, the record steward's 905 to 756), and 23 skills
+lead's 2,249 words to 1,222, the landing rules' 3,115 to 2,042, the analyst's 1,573 to
+1,116, the study reviewer's 1,111 to 891, the record steward's 905 to 735), and 23 skills
 are 21. The capabilities' text as a whole shrinks less (about 38,000 words to about
-35,200): the protocol and its lock, the run records and their steward, the arms, the
+35,500): the protocol and its lock, the run records and their steward, the arms, the
 claim package and the four study reviews are this template's substance, recomposed and
 not thinned, and the landing rules gain the two shared skills every soul now composes.
 There is no passage to port: a copy takes this release up whole (ADAPTING.md, section 6).
@@ -50,12 +50,16 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
   study to another lead only on its person's yes; the outgoing lead's children hand back
   and retire first, and a transfer note replaces the done note.
 - **`VERIFIED at <head>`** is the note of whoever specified the arm (the lead, or the
-  specialist of its area), and it opens the run record for merging. It carries to a new
-  head with no re-read only through an update from the default branch that leaves the
-  record's own diff unchanged, never through a rebase (its reviews don't carry through
-  one); otherwise whoever gave it reads the delta and gives it again. Where a study's
-  work lands as a PR in a lane a maintainer keeps, the specifying lead's `VERIFIED` at
-  that PR's head carries, with the green light, through an unchanged rebase or update.
+  specialist of its area), and it opens the run record for merging. A run record's note
+  carries to a new head with no re-read only through an update from the default branch
+  that leaves the record's own diff unchanged, never through a rebase: the record
+  steward refuses a review whose head is not an ancestor of the head it merges, and a
+  rebase rewrites the reviewed commits, so a note that lists those reviews can't carry
+  either. At any other new head, a commit adding a verdict included, whoever gave it
+  reads the delta and gives it again. This is narrower than the engineering template,
+  whose note also carries through an unchanged rebase; that rule stays here for a PR in
+  a lane a maintainer keeps, where the specifying lead's `VERIFIED` at that PR's head
+  carries, with the green light, through an unchanged rebase or update.
 - **A maintainer's green light** is an option, off by default: this template ships no
   maintainer, and a study records repository needs none. Where a study's work lands in a
   lane an engineering copy's maintainer keeps, the landing rules say so, and the lead
@@ -93,6 +97,9 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
 - `/write-the-protocol`, `/land-the-claims`: pointers to the merged skills; a specialist
   drafts its area's part of the protocol for its parent, which alone sends it for approval
   and locking.
+- A lane's maintainer and the record steward are found by their name and its numbered
+  successors (`-2-`, `-3-`): the one not retired holds the seat, and a spawn refused for
+  a taken name takes the next count only once that name's instance is retired.
 - removed: `/send-a-helper`, `/hand-off`, `/ask-a-person`, `/findings-and-blocks`,
   `/across-people`.
 
@@ -117,9 +124,11 @@ reviewer, no longer back to the same one; the four skills are otherwise unchange
 are the landing rules' house rules; its skills point to `/landing-rules-detail` for the
 records' layout and holds.
 
-**`oats.dispatcher`**: now the engineering template's at template-v4.0.0, changed only
-where it names the lead's children: a lead's task opens with its seat; a maintainer is
-found by its name.
+**`oats.dispatcher`**: now the engineering template's at template-v4.0.1 (its
+template-v4.0.0 text with that patch's one clause: a lane's maintainer is looked for by
+its name and its numbered successors, the one not retired), changed only where it names
+the lead's children: a lead's task opens with its seat; a maintainer is found by its
+name.
 
 **`oats.landing-rules`**: a shorter briefing, with the house rules, and two skills every
 soul now composes.

@@ -48,7 +48,7 @@ The template's roles:
 
 - **Dispatcher,** for each person who wants a front door. It reads a request against the
   record, starts a fresh lead for it with its seat named, introduces that lead once and
-  steps aside. It is the engineering template's, at template-v4.0.0, changed only where it
+  steps aside. It is the engineering template's, at template-v4.0.1, changed only where it
   names the lead's children.
 - **Study lead,** one soul per way of working that plainly differs, plus a generalist. Each
   instance holds one seat its task names (root lead, specialist for one area, or helper
@@ -98,7 +98,7 @@ around it, and the evidence the design rests on.
   order: what you are, how the work flows, the rules that aren't obvious, which skill at
   which moment) plus the skills an agent loads when it needs them, each one procedure for
   one moment, with longer material in `references/`.
-  - `oats.dispatcher`: `/dispatch`. The engineering template's at template-v4.0.0, shared
+  - `oats.dispatcher`: `/dispatch`. The engineering template's at template-v4.0.1, shared
     by every template's copy in a workspace, changed only where it names the lead's
     children.
   - `oats.study-lead`: `/plan-the-study`, `/write-the-protocol`, `/orchestrate-agents`,

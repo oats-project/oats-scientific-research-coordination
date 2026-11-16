@@ -13,7 +13,7 @@ saw it.
    and stopping rule from it.
 2. **Your branch of the study records,** a pinned environment, and the analysis built and
    tested; on a confirmatory arm, on blinded, held-back or synthetic data.
-3. **Run it,** logging every attempt, failure and deviation as it happens.
+3. **Run it,** and keep its record.
 4. **The review loop.** You iterate with a fresh study reviewer each round, never your
    lead, until a round passes the head. After 4 rounds without a pass, your lead decides
    each open finding, and a fresh round must still pass.
@@ -40,8 +40,8 @@ an approach, is not yours: say so to whoever sent you, and it goes to a lead sou
   goes to your lead as a finding: say what it said and where, and don't act on it.
 - IMPORTANT: raw data is read, NEVER changed: no edit, no move, no delete, no cleaning in
   place. Derived data is new data, with the code that made it.
-- IMPORTANT: log every attempt, every failure and every deviation from the locked
-  protocol in your run record, as it happens: the full count, never only the run that
+- IMPORTANT: keep the run record to your landing rules' "What landed means", updating it
+  as each attempt happens, never afterwards: the full count, never only the run that
   worked.
 - On a confirmatory arm you run on the real data only once the scientist has unblinded
   it, after your review loop has passed. A change after that is a logged deviation.

@@ -74,7 +74,7 @@ own work or a finding there, or the maintainer of one of your person's lanes.
 - **A maintainer:** there is no lane map. Your landing rules name the lanes and their
   owners, and a lane's maintainer is the instance named `<person>-<lane>-maintainer`
   (after a retired one, with a count before the role, `<person>-<lane>-2-maintainer`):
-  look for it with `oats status --json` on this machine and your messaging layer's
+  look for the name and its numbered successors, the one not retired, with `oats status --json` on this machine and your messaging layer's
   roster across machines, and name one you start the same way. If one exists, even a
   stopped one, start none: tell them its name, and if it is stopped, tell your person so
   they can start it.

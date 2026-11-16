@@ -38,8 +38,10 @@ fresh reviewers.
 Only where your landing rules ask for one, for work that lands in a lane a maintainer
 keeps (a shared code repository, say); a study records repository needs none. This
 template ships no maintainer: where the organisation runs one, it is the engineering
-template's, found by its instance name `<person>-<lane>-maintainer` (`oats status
---json`, and your messaging layer's roster across machines). Call it by message at the
+template's, found by its instance name `<person>-<lane>-maintainer` and its numbered
+successors (`<person>-<lane>-2-maintainer`, `-3-`, ...): look for each with `oats status
+--json` and your messaging layer's roster across machines; the one not retired is the
+maintainer. Call it by message at the
 exact head once CI is green and every review thread is answered, with the task, your
 `VERIFIED` note and what was run. Its verdict is `GREEN LIGHT at <head>`, `RETURN at
 <head>` with findings (they go to the author; the fixed head goes back to it; after 3
