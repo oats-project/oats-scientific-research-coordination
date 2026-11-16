@@ -103,6 +103,12 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
   instance has had, with `oats instance events <name>`, since the kernel doesn't refuse
   a retired instance's name; a spawn refused because the name is taken means a holder
   is running or stopped.
+- The record steward is looked for across machines too, with the messaging layer's
+  roster: a name only on the roster, with nothing running anywhere visible, goes to the
+  person before a lead starts one. A lead starts a steward only for records its own
+  person's area holds (for another person's, their dispatcher or that person), and none
+  where the workspace has no record-steward soul. Before, the lookup read this machine
+  only, so a steward running elsewhere could be missed and a second one started.
 - removed: `/send-a-helper`, `/hand-off`, `/ask-a-person`, `/findings-and-blocks`,
   `/across-people`.
 
@@ -127,13 +133,14 @@ reviewer, no longer back to the same one; the four skills are otherwise unchange
 are the landing rules' house rules; its skills point to `/landing-rules-detail` for the
 records' layout and holds.
 
-**`oats.dispatcher`**: now the engineering template's at template-v4.0.1 (its
-template-v4.0.0 text with that patch's lookup: every name of a lane's maintainer family,
-the person asked where more than one holds it or a name is only on the roster, a new
-one named with the first name no instance has had, and a spawn refused for a taken name
-read as a live holder, as engineering's template-v4.0.2 adds), changed only where it names
-the lead's children: a lead's task opens with its seat; a maintainer is found by its
-name.
+**`oats.dispatcher`**: now the engineering template's at template-v4.0.2 (its
+template-v4.0.0 text with the two patches' lookup: every name of a lane's maintainer
+family, across machines; the person asked where more than one holds it, a name is only
+on the roster, the lane or its owner can't be told, or the workspace has no maintainer
+soul; the owner of a shared lane; another person's lane through their dispatcher; a new
+one named with the first name no instance has had; a spawn refused for a taken name read
+as a live holder), changed only where it names the lead's children: a lead's task opens
+with its seat; a maintainer is found by its name.
 
 **`oats.landing-rules`**: a shorter briefing, with the house rules, and two skills every
 soul now composes.

@@ -105,13 +105,16 @@ outlives your study.
 1. **Look for it:** the steward is named for the study records repository your landing
    rules name: `<records>-record-steward`, or, after a retired holder, with a count
    before the role (`<records>-2-record-steward`, then `-3-`). Look for every name of
-   that family with `oats status --json`:
+   that family with `oats status --json` on this machine and your messaging layer's
+   roster across machines:
    - **One is running:** send it what you need, by message at an exact reference
      (`/hand-off-and-ask`).
    - **One is stopped:** message it anyway (messages wait), and tell your person it is
      stopped, so they can start it.
    - **More than one is running or stopped:** ask your person which holds the seat, and
      start none.
+   - **Named on the roster with nothing running anywhere you can see:** it may be
+     retired, or run where you can't look. Ask your person before you start one.
 2. **None:** start one yourself, independent of you, never as your child, so your
    retirement can't stop it (as a specialist, ask your parent to):
    ```bash
@@ -123,7 +126,10 @@ outlives your study.
    never used on this machine. Brief: "record steward for <the study records
    repository>; first call: <your instance> asks for <a lock | a merge> of <path or
    branch> at <commit>". Tell your person, in one line, its instance name and that it
-   holds custody of those records. That is no one-way door, so it is no card.
+   holds custody of those records. That is no one-way door, so it is no card. You start
+   a steward only for records your own person's area holds: for records another person's
+   area holds, ask their dispatcher to start it, or that person where they have none.
+   Where the workspace has no record-steward soul, ask your person and start none.
 3. The name is the seat: never a second steward for one repository while one is listed,
    even a stopped one. A spawn refused because the name is taken means a holder is
    running or stopped: find it, and start none under another name.

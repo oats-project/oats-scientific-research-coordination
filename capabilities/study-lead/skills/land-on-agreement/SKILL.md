@@ -39,12 +39,14 @@ Only where your landing rules ask for one, for work that lands in a lane a maint
 keeps (a shared code repository, say); a study records repository needs none. This
 template ships no maintainer: where the organisation runs one, it is the engineering
 template's, found by its instance name: `<person>-<lane>-maintainer`, or, after a retired
-holder, with a count before the role (`<person>-<lane>-2-maintainer`, then `-3-`). Look
-for every name of that family with `oats status --json` on this machine and your
-messaging layer's roster across machines:
+holder, with a count before the role (`<person>-<lane>-2-maintainer`, then `-3-`). Where
+several people own the lane, the person is your own when they are among them, otherwise
+the first owner named; if you can't tell the lane or its owner, ask your person, and call
+and start none until you can. Look for every name of that family with `oats status
+--json` on this machine and your messaging layer's roster across machines:
 - **One is running:** call it.
-- **One is stopped:** message it anyway (messages wait), and
-  tell its person it is stopped, so they can start it.
+- **One is stopped:** message it anyway (messages wait), and tell its person it is
+  stopped, so they can start it.
 - **More than one is running or stopped:** ask your person which holds the seat, and
   start none.
 - **Named on the roster with nothing running anywhere you can see:** it may be retired,
@@ -58,10 +60,11 @@ messaging layer's roster across machines:
   machine; a name the roster still lists is used too. A spawn refused because the name
   is taken means a holder is running or stopped: find it, and start none under another
   name. Tell your person, in one line, its name and that it holds the lane. As a
-  specialist, ask your parent instead.
+  specialist, ask your parent instead. In another person's lane, ask their dispatcher
+  to start it, or that person where they have none.
 
-Call it by message at the exact head once CI is green and every review thread is answered, with the task, your
-`VERIFIED` note and what was run. Its verdict is `GREEN LIGHT at <head>`, `RETURN at
+Call it by message at the exact head once CI is green and every review thread is
+answered, with the task, your `VERIFIED` note and what was run. Its verdict is `GREEN LIGHT at <head>`, `RETURN at
 <head>` with findings (they go to the author; the fixed head goes back to it; after 3
 returns on one PR, put both positions to your person in one card), or `ESCALATE`, which
 you wait on. Where the workspace has no maintainer soul, start none: ask your person.
