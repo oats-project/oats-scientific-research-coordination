@@ -78,5 +78,5 @@ anything about whether the result is good news.
 
 ## 6. One round, at one head
 You review the head in your brief, not a later one: the analyst's next round has a fresh
-reviewer. If the analyst disputes a finding, re-read it against its reason. Withdraw it if
-they're right; say why if they aren't.
+reviewer. A dispute, or a question about a finding after your report, goes to a fresh
+reviewer: your report is your last message.

@@ -80,14 +80,16 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
 - `/land-on-agreement` loses "Retire what's finished", now in `/wait-and-retire`, gains
   the maintainer's green light as an option, and points to `/assemble-the-claim-package`
   for the run record's way to its merge.
-- `/plan-the-study` gains the study's record and sizing the tree; the analyst's brief
+- `/plan-the-study` gains the study's record, sizing the tree and a specialist's way in
+  (the frame and the scientist stay the root lead's); the analyst's brief
   moved to `references/analyst-brief.md`; "Set a checkpoint before you wait" moved to
   `/wait-and-retire`.
 - `/assemble-the-claim-package`: section 1 moved to
   `references/from-report-to-run-record.md`, the reviewer's brief to
   `references/reviewer-brief.md`.
 - `/write-the-protocol`, `/land-the-claims`: pointers to the merged skills; a specialist
-  drafts its area's part of the protocol.
+  drafts its area's part of the protocol for its parent, which alone sends it for approval
+  and locking.
 - removed: `/send-a-helper`, `/hand-off`, `/ask-a-person`, `/findings-and-blocks`,
   `/across-people`.
 
@@ -104,7 +106,8 @@ There is no passage to port: a copy takes this release up whole (ADAPTING.md, se
 - `/run-an-arm`, `/report-the-arm`: pointers; the analyst retires itself.
 
 **`oats.study-reviewer`**: the briefing in the new order; the reviewer retires itself once
-its report is sent. The four skills are unchanged.
+its report is sent. In `/review-methods`, an analyst's dispute of a finding goes to a fresh
+reviewer, no longer back to the same one; the four skills are otherwise unchanged.
 
 **`oats.record-steward`**: the briefing in the new order; its hosts and relayed-word rules
 are the landing rules' house rules; its skills point to `/landing-rules-detail` for the

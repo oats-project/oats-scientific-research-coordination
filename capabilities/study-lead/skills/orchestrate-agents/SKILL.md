@@ -100,9 +100,7 @@ A helper with a scoped piece (a simulation tool built and tested, a literature m
 field you don't know) never touches the study's data. What it hands back is a source,
 not a verdict: keep it on the study's record at its exact reference; a claim the claim
 package takes from it is checked by study reviewers, never by the helper that made it;
-anything an arm runs is named in the locked protocol first. A helper whose piece is code
-for a shared repository runs its own review loop and opens no PR until you have verified
-it (`/land-on-agreement`).
+anything an arm runs is named in the locked protocol first.
 
 An OATS child is visible to your person and retired on record. Use a native subagent of
 your harness only for a small lookup that needs no soul's knowledge or testing

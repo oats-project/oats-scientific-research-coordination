@@ -29,7 +29,8 @@ a message to it waits for it, and a stopped one is its person's to start.
 
 ## Finished
 An instance is finished when all of these hold:
-- **Its work has landed:** its run record is merged, its claim package accepted, or the
+- **Its work has landed:** its run record is merged (with CI green on the merged commit
+  where the records run through a forge), its claim package accepted, or the
   work was explicitly dropped. Handed back is not landed: it may still be needed for a
   revision. A reviewer's work is its report, and a probe's is its answer.
 - **Nothing waits on it:** no open protocol, run record, check, question, hand-back or
@@ -43,8 +44,8 @@ An instance is finished when all of these hold:
 |---|---|
 | A study reviewer | its report is sent: one reviewer, one report |
 | A probe | its answer is sent |
-| An analyst | its run record is merged, or its arm was dropped: its lead tells it the merge commit |
-| A helper with a scoped piece | its artefact is on the study's record and its parent's questions are answered (a piece of code for a shared repository: its PR merged or closed) |
+| An analyst | its run record is merged into the records' default branch, with CI green on the merged commit where the records run through a forge, or its arm was dropped: its lead tells it the merge commit |
+| A helper with a scoped piece | its artefact is on the study's record and its parent's questions are answered |
 | A specialist | its lead says its area is done |
 | A lead | its study's "answered" holds (the claim package accepted, or the study dropped), and each finding has an owner |
 

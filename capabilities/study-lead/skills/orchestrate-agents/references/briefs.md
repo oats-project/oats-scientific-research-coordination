@@ -118,9 +118,12 @@ oats spawn <soul> --relation sibling --relative-to "$OATS_INSTANCE" --name <stud
 oats spawn <soul> --relation unrelated --name <study-slug>-lead --task-file <message.md>
 ```
 
-A helper that needs a repository other than its soul's own also gets `--repo <clone>
---base origin/<its default branch>`. `--base` is a ref read in the clone, never fetched:
-preview the command first (`--preview`) and check its start point,
-`from <ref>@<commit>`, against `git -C <clone> ls-remote origin <branch>`. If they
-differ, update the clone's ref (`git -C <clone> fetch origin
-refs/heads/<branch>:refs/remotes/origin/<branch>`) and preview again before you apply.
+A helper that works in its soul's own repository gets neither `--repo` nor `--base`: its
+tree starts at the commit the spawn observed on the remote. One that needs another
+repository also gets `--repo <clone> --base origin/<its default branch>`; `--base` is a
+ref read in the clone, never fetched. Either way, preview the command first (`--preview`)
+and check its start point, `from <ref or repository>@<commit>`, against
+`git -C <clone> ls-remote origin <branch>`. If they differ, don't apply. For the soul's
+own repository the remote moved since the preview: preview again. For another, the clone
+is behind: update its ref (`git -C <clone> fetch origin
+refs/heads/<branch>:refs/remotes/origin/<branch>`), then preview again.

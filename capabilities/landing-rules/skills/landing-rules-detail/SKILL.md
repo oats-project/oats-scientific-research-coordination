@@ -20,11 +20,16 @@ pending. A skipped check didn't run. A head where no check ran isn't green.
   specialist of its area) for an analyst's run record, once its checks agree there and
   it follows the locked protocol. It lets the analyst open the run record for merging at
   that head. It asserts what was checked: each verdict, one line each.
-- **A review carries** to a new head with no re-read only through a rebase whose
-  range-diff shows every commit unchanged, or an update from the default branch that
-  leaves the record's own diff unchanged. Any other new head of a run record, a nit taken
-  included, gets a fresh reviewer on the whole change: every round of an analyst's loop
-  is fresh, and engineering's read of a minor's fix as a delta is not taken up here.
+- **A review carries** to a new head with no re-read through a rebase whose range-diff
+  shows every commit unchanged, or an update from the default branch that leaves the
+  record's own diff unchanged. A run record has two more, which the analyst's report and the
+  record steward's checks spell out: the methods verdict carries to a head where only the
+  run's evidence grew (on a confirmatory arm, the reviewed code's run on the real data
+  adds its result, outputs and attempts), and every check's verdict carries through
+  commits that only add verdicts under the arm's `reviews/`. Any other new head of a run
+  record, a nit taken included, gets a fresh reviewer on the whole change: every round of
+  an analyst's loop is fresh, and engineering's read of a minor's fix as a delta is not
+  taken up here.
 - **A `VERIFIED` note and a green light** carry with no re-read through the same
   unchanged rebase or update, and in no other way: at any other new head, whoever gave it
   reads the delta and gives it again at that head. A reviewer's verdict never stands in

@@ -9,6 +9,13 @@ A study answers a question the scientist is accountable for. Frame it before you
 an arm planned for the wrong question is an analyst wasted. The plan, the protocol and
 the claim package stay yours; the claims are the scientist's.
 
+**As a specialist,** you plan your area inside the root lead's plan, not a study of your
+own. Take the frame and the record from your brief; sections 1 and 2 are the root lead's,
+and a question for the scientist or a change you'd propose to the frame goes to your
+parent. Run sections 3 to 9 for your area's arms: your plan for them goes to your parent
+as your draft of the protocol's part for your area (`/write-the-protocol`), and you send
+analysts only once your parent tells you the protocol is locked.
+
 ## 1. Read first, and the record
 - the request verbatim, and who asked; your landing rules name the scientist for the
   study ("Who asks, and who is the scientist");

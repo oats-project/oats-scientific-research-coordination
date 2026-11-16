@@ -109,8 +109,9 @@ pass.
 - Your lead then sends its own checks at that head. What they find you fix, and run this
   loop again, fresh reviewers included; you report again only once a round passes.
 - Once your lead writes `VERIFIED at <head>`, open the run record for merging at that
-  head (`/report-the-arm`). A fix the record steward or a PR review asks for, bigger than
-  a few lines, gets a fresh round before you push it.
-- Once your run record is merged, or the arm is dropped, finish unprompted:
+  head (`/report-the-arm`). A fix the record steward or a PR review asks for moves the
+  head: it gets a fresh round before you push it ("Iterate").
+- Once your run record is merged, with CI green on the merged commit where the records
+  run through a forge, or the arm is dropped, finish unprompted:
   `/wait-and-retire`, "Retire yourself". Name, in your done line, the records repository
   and your branch.

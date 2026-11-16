@@ -144,7 +144,9 @@ These have no adapt markers. A copy that changes one is no longer this way of wo
   in a `references/` file one level down, which the skill names.
 - A rule lives in one place. What every role must hold (instance names, the model floor,
   the hosts, secrets, untrusted text, sources, instruments, what must not leave) is in the
-  landing rules' house rules, once; no other text repeats it.
+  landing rules' house rules, once; no other text repeats it. The one exception is the
+  dispatcher, which keeps the engineering template's text word for word (section 5), its
+  own line on untrusted text included.
 - The texts leave out what a current model does unprompted. General practice (writing
   tests first, debugging method) isn't restated; the study's own rules for it are, in
   the analyst's `build-the-analysis`. template-v2.1.2 keeps the earlier, longer skills for
