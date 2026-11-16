@@ -69,7 +69,7 @@ defaults:
   mkdirSync(memberSrc);
   for (const dir of ["capabilities", "souls"]) cpSync(join(REPO, dir), join(memberSrc, dir), { recursive: true });
   // The copy's release record (ADAPTING.md, section 4): a plain file the kernel must ignore.
-  writeFileSync(join(memberSrc, "capabilities", "TEMPLATE-RELEASE"), "template: oats-project/oats-scientific-research-coordination\nrelease: template-v2.1.2\n");
+  writeFileSync(join(memberSrc, "capabilities", "TEMPLATE-RELEASE"), "template: oats-project/oats-scientific-research-coordination\nrelease: template-v3.0.0\n");
   writeFileSync(join(memberSrc, "oats-membership.yaml"), `schemaVersion: 2
 workspace: file://${workspaceBare}
 `);
@@ -124,24 +124,24 @@ async function checkKernel(t, label, ref) {
 
   const dispatcher = preview("dispatcher");
   assert.deepEqual(modules(dispatcher), ["oats.dispatcher", "oats.landing-rules"]);
-  assert.deepEqual(skills(dispatcher), ["dispatch"], "the dispatcher leads nothing: no expert or maintainer skills");
+  assert.deepEqual(skills(dispatcher), ["dispatch", "landing-rules-detail", "wait-and-retire"], "the dispatcher leads nothing: no lead or maintainer skills");
 
   const lead = preview("study-lead");
   assert.deepEqual(modules(lead), ["oats.landing-rules", "oats.study-lead"]);
-  assert.deepEqual(skills(lead), ["across-people", "ask-a-person", "assemble-the-claim-package", "findings-and-blocks", "hand-off", "land-on-agreement", "land-the-claims", "plan-the-study", "send-a-helper", "write-the-protocol"]);
+  assert.deepEqual(skills(lead), ["assemble-the-claim-package", "hand-off-and-ask", "land-on-agreement", "land-the-claims", "landing-rules-detail", "orchestrate-agents", "plan-the-study", "wait-and-retire", "write-the-protocol"]);
 
   // Every role composes the landing rules: they are the one home of the safety rules.
   const analyst = preview("analyst");
   assert.deepEqual(modules(analyst), ["oats.analyst", "oats.landing-rules"], "an analyst composes its own role and the landing rules");
-  assert.deepEqual(skills(analyst), ["diagnose-before-fixing", "report-the-arm", "run-an-arm", "run-the-review-loop", "test-first"]);
+  assert.deepEqual(skills(analyst), ["build-the-analysis", "landing-rules-detail", "report-the-arm", "run-an-arm", "run-the-review-loop", "wait-and-retire"]);
 
   const reviewer = preview("study-reviewer");
   assert.deepEqual(modules(reviewer), ["oats.landing-rules", "oats.study-reviewer"], "a study reviewer composes its own role and the landing rules");
-  assert.deepEqual(skills(reviewer), ["check-citations", "replicate", "review-for-leakage-and-selection", "review-methods"]);
+  assert.deepEqual(skills(reviewer), ["check-citations", "landing-rules-detail", "replicate", "review-for-leakage-and-selection", "review-methods", "wait-and-retire"]);
 
   const steward = preview("record-steward");
   assert.deepEqual(modules(steward), ["oats.landing-rules", "oats.record-steward"], "the record steward composes its own role and the landing rules");
-  assert.deepEqual(skills(steward), ["keep-the-records", "land-a-run-record", "lock-the-protocol"]);
+  assert.deepEqual(skills(steward), ["keep-the-records", "land-a-run-record", "landing-rules-detail", "lock-the-protocol", "wait-and-retire"]);
 
   // The kernel reads each skill's description with its own YAML parser and gives null when the
   // frontmatter doesn't parse, as the harnesses would drop the skill.

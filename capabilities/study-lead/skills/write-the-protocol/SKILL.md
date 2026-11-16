@@ -1,9 +1,7 @@
 ---
 name: write-the-protocol
-description: Write a study's protocol at an exact revision - the mode of each claim, a decision rule for each confirmatory one, the analysis plan, the comparison rule for replication, the profile, the checks each claim gets (marking which are not LLM judgement), stopping rules and the deviation policy - with no brief naming the hoped-for direction, the scientist's own included; have the scientist approve one revision and the record steward lock it before any confirmatory data is seen, finding or starting that steward first. Use once the study is planned, for every change to a protocol, and whenever you need the record steward.
+description: Writes a study's protocol at an exact revision - the mode of each claim, a decision rule for each confirmatory one, the analysis plan, the comparison rule for replication, the profile, the checks each claim gets (marking which are not LLM judgement), stopping rules and the deviation policy - with no brief naming the hoped-for direction, the scientist's own included; have the scientist approve one revision and the record steward lock it before any confirmatory data is seen, finding or starting that steward first. Use once the study is planned, for every change to a protocol, and whenever you need the record steward.
 ---
-
-IMPORTANT: after a compaction, reload this skill before you continue the step.
 
 # Write the protocol
 
@@ -11,11 +9,18 @@ The protocol is the study's spec: what each arm does, and how a result becomes a
 fixed before the result exists. You write it; the scientist approves it; the record steward
 locks it. An agent's verdict follows the framing it was given, even when its numbers don't
 move, so the rule that maps results to verdicts is written down and locked before any
-confirmatory data is seen.
+confirmatory data is seen. A specialist drafts its area's part of the protocol for you;
+the protocol stays one file, yours, approved once.
+
+**As a specialist,** you draft your area's section in section 1's shape (its claims,
+modes, decision rules, arms and checks) and hand it to your parent at its exact commit
+(`/hand-off-and-ask`). Sections 3 and 4 are the root lead's: you never send the scientist
+the protocol and never ask the record steward to lock it. A change your area needs after
+the lock goes to your parent, which runs section 5.
 
 ## 1. The shape
-One file, `protocol.md` in the study's directory of the study records (your landing rules,
-"Where things are kept"), at an exact commit:
+One file, `protocol.md` in the study's directory of the study records
+(`/landing-rules-detail`, references/study-records.md), at an exact commit:
 ~~~
 # <the study's question, as framed>
 Profile:      <theory | computational | experimental, or a combination, and what each
@@ -39,7 +44,7 @@ Stopping:     <when an arm stops: the sample, the budget, the attempts>
 Deviations:   <what counts as one, who records it, and who decides it>
 Approvals:    <the ethics and safety approvals each step needs, by your landing rules'
                "Irreversible steps, all the scientist's", and the statistical sign-off where
-               your landing rules' "Statistical sign-off" turns it on>
+               `/landing-rules-detail`, "Statistical sign-off", turns it on>
 Data:         <the raw data, where it is kept, and what each arm may read>
 ~~~
 - **Each confirmatory claim gets a decision rule:** a claim without one is exploratory, and
@@ -65,7 +70,7 @@ brief that never names the hoped-for direction do. Write the hypotheses with the
 opposites, and the rules in both directions.
 
 ## 3. The scientist approves one revision
-Send the scientist the protocol at its commit, in the study's thread (`/hand-off`):
+Send the scientist the protocol at its commit, in the study's thread (`/hand-off-and-ask`):
 - first line: "The protocol for <the study>, for your approval, at <commit>";
 - the claims with their modes and decision rules, in plain words;
 - the checks each claim gets, and which are not LLM judgement;
@@ -97,20 +102,36 @@ makes it. Nothing is changed in place: the lock record and the deviation log onl
 The record steward holds custody of the study records: it locks protocols and merges run
 records. It is standing, one per study-records repository, and never your child, so it
 outlives your study.
-1. **Look for it:** `oats status` lists `<records>-record-steward`, named for the study
-   records repository your landing rules name (`<records>-<n>-record-steward` after a
-   retired one). Running: send it what you need, by message
-   at an exact reference (`/hand-off`). Listed but not running: message it anyway (messages
-   wait), and tell your person it is stopped, so they can start it.
-2. **None:** start one yourself, top-level, never as your child, so your retirement can't
-   stop it:
+1. **Look for it:** the steward is named for the study records repository your landing
+   rules name: `<records>-record-steward`, or, after a retired holder, with a count
+   before the role (`<records>-2-record-steward`, then `-3-`). Look for every name of
+   that family with `oats status --json` on this machine and your messaging layer's
+   roster across machines:
+   - **One is running:** send it what you need, by message at an exact reference
+     (`/hand-off-and-ask`).
+   - **One is stopped:** message it anyway (messages wait), and tell your person it is
+     stopped, so they can start it.
+   - **More than one is running or stopped:** ask your person which holds the seat, and
+     start none.
+   - **Named on the roster with nothing running anywhere you can see:** it may be
+     retired, or run where you can't look. Ask your person before you start one.
+2. **None:** start one yourself, independent of you, never as your child, so your
+   retirement can't stop it (as a specialist, ask your parent to):
    ```bash
-   oats spawn record-steward --relation unrelated --name <records>-record-steward --task-file <brief.md>
+   oats spawn record-steward --relation unrelated --name <records>[-<count>]-record-steward --task-file <brief.md>
    ```
-   Brief: "record steward for <the study records repository>; first call: <your instance>
-   asks for <a lock | a merge> of <path or branch> at <commit>". Tell your person, in one
-   line, its instance name and that it holds custody of those records. That is no one-way
-   door, so it is no card. Where that name was used by a retired steward, put a count before
-   the role, one more than the earlier ones (`<records>-2-record-steward`).
-3. Never a second steward for one repository while one is listed, even a stopped one.
-   Nothing is locked or merged until a steward runs.
+   Name it with the first of the family no instance has had. The kernel doesn't refuse a
+   retired instance's name, so check each in order: `oats instance events <name>` lists
+   a used name's events, a `retired` one among them, and says "no instance" for a name
+   never used on this machine. Brief: "record steward for <the study records
+   repository>; first call: <your instance> asks for <a lock | a merge> of <path or
+   branch> at <commit>". Tell your person, in one line, its instance name and that it
+   holds custody of those records. That is no one-way door, so it is no card. You start
+   a steward only for records your own person's area holds: for records another person's
+   area holds, ask their dispatcher to start it, or that person where they have none.
+   Where the workspace has no record-steward soul, ask your person and start none.
+3. The name is the seat: never a second steward for one repository while one is listed,
+   even a stopped one. A spawn refused because the name is taken means a holder is
+   running or stopped: find it, and start none under another name.
+   Nothing is locked or merged until a steward runs. You never retire it: it is
+   standing, and its person retires it.

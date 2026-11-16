@@ -66,6 +66,3 @@ the statement it names, and succeeds.
    assumed, and an empty `diff`; otherwise `DISAGREES`, or `COULDN'T RE-RUN` where the
    checker can't be built or run. Whether the statement is the intended problem is a
    person's check, never yours.
-
-Adapted from the research template's verifier, template-v1.0.1; changed where it named a
-report's claims and their sources.

@@ -54,6 +54,3 @@ checks is not a review. A kind you didn't check is named there too, with why.
 
 **Keep out:** the methods review's ground (the test's fit, the code's style) unless it
 leaks; whether the result is good news.
-
-Adapted from the engineering template's code-review, template-v2.2.0, and the research
-template's verifier, template-v1.0.1; changed where it named a diff or a report.

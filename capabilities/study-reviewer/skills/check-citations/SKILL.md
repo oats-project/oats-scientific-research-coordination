@@ -41,6 +41,3 @@ what it checked is no verdict, and your caller sends the citation back.
 
 **Keep out:** the claim's wording beyond what its citation supports; sources the claim
 doesn't cite (one line under "On the way", at most).
-
-Adapted from the research template's verifier, template-v1.0.1; changed where it named a
-report's claims.

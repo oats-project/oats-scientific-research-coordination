@@ -3,8 +3,6 @@ name: keep-the-records
 description: Check that a change to the study records keeps what must not change, in every commit it brings in and not only at its ends - no file under any study's raw data modified, deleted or renamed (the files and their hash manifests alike), and every notebook, deviation log, lock record and arm's attempt and deviation log only grown, each old version a byte prefix of the new one - with exact git and standard-tool commands whose output is the evidence; refuse on any failure; and merge a study's other records (its status, notebook, deviations and claims) on its lead's call. Use on every record you merge, and whenever a lead asks you to check or merge one.
 ---
 
-IMPORTANT: after a compaction, reload this skill before you continue the step.
-
 # Keep the records
 
 Two rules, checked by commands, on every change you merge. `<base>` is the commit the
@@ -104,7 +102,7 @@ checked again. Never fix a record yourself, and never merge part of a change.
 ## A study's other records
 A lead's change to a study's `README.md` (its status), `notebook.md`, the study's
 `deviations.md` or its `claims/` merges on the lead's call at an exact head, once this
-skill passes and no hold covers it (your landing rules, "Where things are kept"), through
+skill passes and no hold covers it (`/landing-rules-detail`, references/study-records.md, "Holds"), through
 the forge's merge guarded by that head, or a merge of that commit with no forge
 (`/land-a-run-record`, "Merge it"). It may touch nothing else: a protocol or a lock lands
 only by `/lock-the-protocol`, and a run record only by `/land-a-run-record`:
@@ -115,7 +113,7 @@ git -C <tree> diff --no-renames --name-status <base>...<head> \
 
 ## Holds without a forge
 Where the records have no forge, a hold is a line in `holds.md` at the repository's root,
-and a later line lifts it (your landing rules, "Where things are kept"). Each is one line:
+and a later line lifts it (`/landing-rules-detail`, references/study-records.md, "Holds"). Each is one line:
 ```
 <time, UTC, ISO 8601> | hold <id> | scope: <a change at its head, or the default branch> | reason: <why> | lifted by: <who> | called by <who>, <link>
 <time, UTC, ISO 8601> | lifts <id> | called by <who>, <link>
@@ -136,6 +134,3 @@ git -C <tree> diff <base>...<head> -- holds.md | grep '^+[^+]'       # the lines
   names in `lifted by`, or a person your landing rules name. A lead lifts only a hold it
   placed itself, never one a person placed.
 - Nothing else rides with it: any other change goes by its own route.
-
-Adapted from the engineering template's maintainer, template-v2.2.0; new for a study's
-records.

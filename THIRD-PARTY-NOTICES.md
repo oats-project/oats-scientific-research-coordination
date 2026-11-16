@@ -1,16 +1,18 @@
 # Third-party notices
 
-Two of the analyst's skills and its inject's quality floor adapt rules from MIT-licensed
-skill collections, through the engineering template's developer texts
+The analyst's `build-the-analysis` skill and its inject's quality floor adapt rules from
+MIT-licensed skill collections, through the engineering template's developer texts
 (oats-project/oats-engineering-coordination, template-v2.2.0). The rules were rewritten in
-that template's words; no file was copied. Each source's copyright notice and licence
-follow, as the MIT licence asks. Keep this file with any copy of those skills or of the
-analyst's inject (ADAPTING.md, section 1).
+that template's words; no file was copied. template-v3.0.0 folded the two skills that
+carried most of them (`test-first`, `diagnose-before-fixing`) into `build-the-analysis`,
+keeping only the rules that are the study's own. Each source's copyright notice and
+licence follow, as the MIT licence asks. Keep this file with any copy of that skill or of
+the analyst's inject (ADAPTING.md, section 1).
 
-| Template skill | Adapted from |
+| Template text | Adapted from |
 |---|---|
-| `capabilities/analyst/skills/test-first` | mattpocock/skills (`tdd`); obra/superpowers (`test-driven-development`) |
-| `capabilities/analyst/skills/diagnose-before-fixing` | mattpocock/skills (`diagnosing-bugs`); obra/superpowers (`systematic-debugging`) |
+| `capabilities/analyst/skills/build-the-analysis`, "Tests" | mattpocock/skills (`tdd`); obra/superpowers (`test-driven-development`) |
+| `capabilities/analyst/skills/build-the-analysis`, "A bug: diagnose before you fix" | mattpocock/skills (`diagnosing-bugs`); obra/superpowers (`systematic-debugging`) |
 | `capabilities/analyst/injects/analyst.md`, the quality floor | addyosmani/agent-skills (`constraint-driven-development`) |
 
 ## mattpocock/skills
