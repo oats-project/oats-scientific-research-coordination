@@ -143,7 +143,7 @@ Every place where the template assumes something about an organisation carries o
    ```
    Bring it your questions, or start a lead directly, named for the study with its role
    last: `oats spawn study-lead --name <study-slug>-lead --task "<question>"`. A name is
-   used once: after a retired instance had it, make the study's part more specific. A lead starts the study records' record steward when none runs.
+   used once: after a retired instance had it, make the study's part more specific. A lead starts the study records' record steward when none is running or stopped.
 
 A messaging capability (for example `oats.aweb`) is strongly recommended: hand-offs are
 messages that wake their recipient. Without one, reports land in session transcripts.

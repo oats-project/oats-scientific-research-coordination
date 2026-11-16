@@ -38,7 +38,7 @@ compared with the current one? If it does, I'd like to report it at the quarterl
    outputs, what tolerance), the checks each claim gets, and the stalled-staffing analysis
    as an exploratory arm, labelled so. No brief, the scientist's framing included, names
    the hoped-for direction. The scientist approves that revision in the thread. The lead
-   finds the study records' record steward, starts one where none runs, and asks it to lock
+   finds the study records' record steward, starts one where none is running or stopped, and asks it to lock
    the protocol: the steward records its hash, who approved it and when (`/lock-the-protocol`).
    The held-out quarter is locked away from every agent.
 4. **The analysts** (`/run-an-arm`). One `analyst` per arm, the small exploratory staffing

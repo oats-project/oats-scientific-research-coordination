@@ -43,7 +43,7 @@ holder, with a count before the role (`<person>-<lane>-2-maintainer`, then `-3-`
 for every name of that family with `oats status --json` on this machine and your
 messaging layer's roster across machines:
 - **One is running:** call it.
-- **One is stopped, or known but not active:** message it anyway (messages wait), and
+- **One is stopped:** message it anyway (messages wait), and
   tell its person it is stopped, so they can start it.
 - **More than one is running or stopped:** ask your person which holds the seat, and
   start none.
