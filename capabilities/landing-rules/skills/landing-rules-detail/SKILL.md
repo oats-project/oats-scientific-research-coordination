@@ -22,12 +22,9 @@ pending. A skipped check didn't run. A head where no check ran isn't green.
   that head. It asserts what was checked: each verdict, one line each.
 - **A review carries** to a new head with no re-read only through a rebase whose
   range-diff shows every commit unchanged, or an update from the default branch that
-  leaves the record's own diff unchanged. A fix to a minor, a nit taken or a CI fix with
-  no change in behaviour is read as a delta by a fresh reviewer briefed with the delta,
-  the findings it answers and the protocol: never the same reviewer again. Anything else
-  (a fix to a blocker or a major, a change to a result, a method or the protocol) gets a
-  fresh reviewer on the whole change. The reviewer's severity decides which, not the
-  author's wish.
+  leaves the record's own diff unchanged. Any other new head of a run record, a nit taken
+  included, gets a fresh reviewer on the whole change: every round of an analyst's loop
+  is fresh, and engineering's read of a minor's fix as a delta is not taken up here.
 - **A `VERIFIED` note and a green light** carry with no re-read through the same
   unchanged rebase or update, and in no other way: at any other new head, whoever gave it
   reads the delta and gives it again at that head. A reviewer's verdict never stands in

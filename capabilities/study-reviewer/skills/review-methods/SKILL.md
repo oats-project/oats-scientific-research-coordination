@@ -80,6 +80,3 @@ anything about whether the result is good news.
 You review the head in your brief, not a later one: the analyst's next round has a fresh
 reviewer. If the analyst disputes a finding, re-read it against its reason. Withdraw it if
 they're right; say why if they aren't.
-
-Adapted from the engineering template's code-review, template-v2.2.0, and the research
-template's verifier, template-v1.0.1; changed where it named a diff, a spec or a report.

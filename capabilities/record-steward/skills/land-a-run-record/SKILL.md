@@ -3,8 +3,6 @@ name: land-a-run-record
 description: Merge one arm's run record into the study records only when its landing conditions hold at its exact head, checked from the record itself and never from a lead's note alone - the protocol's lock hash matches, it can be re-run from its record, every attempt is logged, the independent check agrees by the protocol's rule and the methods review passed (their verdicts in the record), the verdict follows the locked rule or the departure is a logged deviation, the records rules pass, and through a forge CI is green at that head; then merge that head. Use before every merge of a run record.
 ---
 
-IMPORTANT: after a compaction, reload this skill before you continue the step.
-
 # Land a run record
 
 A run record lands when someone other than its author could re-run it from the record, and
@@ -96,15 +94,15 @@ new raw file can change what the arm's code reads, even with the arm unchanged.
    the lead. An exploratory arm has no decision rule: its record says `exploratory`, and so
    does every result in it.
 6. **The records rules pass:** `/keep-the-records` between `origin/<default>` and `H`.
-7. **No hold, no RETURN:** read both places your landing rules keep holds ("Where things
-   are kept"), before every merge: the PR's own hold, and a hold on the records' default
+7. **No hold, no RETURN:** read both places holds are kept (`/landing-rules-detail`,
+   references/study-records.md, "Holds"), before every merge: the PR's own hold, and a hold on the records' default
    branch, which binds every PR, opened before it or after.
-8. **Through a forge, CI is green at `H`,** as your landing rules define it.
+8. **Through a forge, CI is green at `H`,** as `/landing-rules-detail` defines it.
 
 ## 3. Merge it
 Every route you merge by uses this section: a run record, a protocol and its lock line, a
 study's other records, a hold's line.
-- **Through a forge:** CI is green at `H`, as your landing rules define it, before any
+- **Through a forge:** CI is green at `H`, as `/landing-rules-detail` defines it, before any
   merge. Then merge with the forge's merge commit, never a squash or a rebase, guarded by
   `H`: the merge happens only if the PR's head is still `H`. A head that moved is a new
   call. The records point at their commits (each attempt's code, a lock's approved
@@ -128,7 +126,3 @@ study's other records, a hold's line.
 Tell the lead, by message: merged, with the merge commit, or not, with each failing
 condition and its evidence (the command and its output). A no is never partial: nothing of
 the record lands until every condition holds at one head.
-
-Adapted from the engineering template's maintainer, template-v2.2.0 (its read and merge at
-an exact head, and the definition of CI green); changed where it named a pull request's
-review and merge.

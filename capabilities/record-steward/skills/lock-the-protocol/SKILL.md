@@ -3,8 +3,6 @@ name: lock-the-protocol
 description: Lock a study's protocol at the commit the scientist approved - check their approval of that exact revision on a record you can read, merge the protocol, hash it with sha256sum and append one line to the study's append-only lock record (the hash, the commit, the approver and the link to their approval, the time in UTC); never lock an unapproved revision, never change an earlier lock, and mark a lock made after unblinding as such. Use whenever a study lead asks you to lock a protocol.
 ---
 
-IMPORTANT: after a compaction, reload this skill before you continue the step.
-
 # Lock the protocol
 
 A lock fixes what the study committed to before it saw its confirmatory data. It is a hash
@@ -65,8 +63,8 @@ git -C <tree> diff --no-renames --name-status origin/<default>...<lock commit> \
 ```
 
 ## 5. What you refuse
-- **A hold** on the protocol's change or on the records' default branch (your landing
-  rules, "Where things are kept"): no merge and no lock until it is lifted.
+- **A hold** on the protocol's change or on the records' default branch (`/landing-rules-detail`,
+  references/study-records.md, "Holds"): no merge and no lock until it is lifted.
 - **No readable approval of that revision:** no lock (step 2).
 - **A change to an earlier lock:** never. A revised protocol gets a new line that also says
   `supersedes <the earlier hash>`, on the scientist's approval of the new revision. Where
@@ -79,6 +77,3 @@ git -C <tree> diff --no-renames --name-status origin/<default>...<lock commit> \
 ## 6. Answer
 Tell the lead, by message: the lock line, the commit it is on, and the hash. Its note
 `LOCKED at <hash>, <commit>` rests on your line, not the other way round.
-
-Adapted from the engineering template's maintainer, template-v2.2.0; new for a study's
-records.
