@@ -3,8 +3,6 @@ name: report-the-arm
 description: Report one arm once, by message, to the lead that started you - the run record at its exact head, the mode label, the result against the locked rule or the deviation, the full count of attempts and failures, the review rounds and their verdicts, and what you couldn't run - then answer the lead's questions, open the PR once the lead has verified it, and send your done line once it lands. Use when your arm has run and your review loop has converged, when you reach a limit, or when you can't go on.
 ---
 
-IMPORTANT: after a compaction, reload this skill before you continue the step.
-
 # Report the arm
 
 One report, once, to the lead:
@@ -44,9 +42,7 @@ on your branch, run your loop again at the new head, and report the new head the
 Once the lead writes `VERIFIED at <head>`, open the run record's PR to the records
 repository at that head, naming the record steward (with no forge, push the branch at that
 head), and tell the lead its link and head in one line: the lead asks the steward to merge
-it. Answer what the steward asks. Once your record has
-landed, or the lead has dropped the arm, and nothing waits on you, send your done line
-(your briefing): it retires you.
-
-Adapted from the research template's researcher (`report-the-angle`), template-v1.0.1;
-changed where it named an angle, a source's finding or a report.
+it. Answer what the steward asks. Your lead's `VERIFIED` holds at a new head only through
+an unchanged rebase or update: any other new head goes back to your lead first. Once your
+record has landed, or the lead has dropped the arm, and nothing waits on you, finish:
+send your done line and retire yourself (`/wait-and-retire`, "Retire yourself").

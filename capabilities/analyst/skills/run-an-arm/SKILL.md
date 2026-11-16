@@ -3,8 +3,6 @@ name: run-an-arm
 description: The analyst's method for one arm of a locked protocol - read the protocol at its locked hash, make your own branch of the study records repository, pin the environment, log every attempt, failure and deviation as it happens, keep full traces wherever the runtime exposes them, read raw data and never change it, and on a confirmatory arm build and review on blinded, held-back or synthetic data and run on the real data only once the scientist unblinds it. Use from the brief to the last attempt of your arm.
 ---
 
-IMPORTANT: after a compaction, reload this skill before you continue the step.
-
 # Run an arm
 
 Your run record is the arm's evidence: someone other than you must be able to repeat the
@@ -72,7 +70,8 @@ repository's hashes, and record that you did. Anything you derive (a cleaned tab
 subsample, an imputed value) is new data, written under `outputs/` with the code that made
 it. Never substitute, impute or synthesise data without the protocol naming it, and never
 present derived data as raw. Human subjects' data and raw instrument data stay in custody:
-they never leave the place your landing rules name.
+they never leave the place your landing rules name
+(`/landing-rules-detail`, references/study-records.md).
 
 ## 5. Every attempt, failure and deviation
 Append to `attempts.md` as each attempt runs, not afterwards: a crash, a bug, a run you
@@ -83,7 +82,7 @@ extra analysis) goes in `deviations.md` with why, whether you think it matters o
 Keep each attempt's raw outputs, and its full traces wherever the runtime exposes them.
 
 ## 6. A confirmatory arm: blind first
-1. Build the analysis and write its tests (`/test-first`) on blinded, held-back or synthetic
+1. Build the analysis and write its tests (`/build-the-analysis`) on blinded, held-back or synthetic
    data the protocol names, never on the real outcome data.
 2. Run your review loop on that (`/run-the-review-loop`): the code and the method against
    the locked protocol. Every fix comes before anyone sees the result.
